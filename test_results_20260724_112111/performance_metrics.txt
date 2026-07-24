@@ -1,0 +1,5 @@
+=== PID Performance Comparison ===
+               Rise Time (s) Max Overshoot (%) Settling Time (s) Steady-State Error Max Abs Error     MAE    RMSE
+P Controller             0.0               0.0       Not Settled              0.166         0.163   0.163   0.163
+PI Controller            0.0               0.0       Not Settled              0.166         0.163   0.163   0.163
+PID Controller           0.0              2.15            41.115              0.002         0.999  0.2541  0.3399

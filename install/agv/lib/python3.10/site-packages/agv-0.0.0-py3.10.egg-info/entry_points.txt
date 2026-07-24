@@ -1,0 +1,5 @@
+[console_scripts]
+analyze_results = agv.analyze_results:main
+goal_pid_controller = agv.goal_pid_controller:main
+run_tests = agv.run_tests:main
+

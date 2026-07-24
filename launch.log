@@ -1,0 +1,36 @@
+[INFO] [launch]: All log files can be found below /home/sanket/.ros/log/2026-07-24-00-13-54-465775-sanket-Victus-by-HP-Laptop-16-d0xxx-37205
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [robot_state_publisher-1]: process started with pid [37206]
+[INFO] [gzserver-2]: process started with pid [37208]
+[INFO] [gzclient-3]: process started with pid [37210]
+[INFO] [spawn_entity.py-4]: process started with pid [37212]
+[INFO] [rviz2-5]: process started with pid [37214]
+[INFO] [goal_pid_controller-6]: process started with pid [37216]
+[robot_state_publisher-1] [INFO] [1784832234.688448508] [robot_state_publisher]: got segment AGV_Body-v1
+[robot_state_publisher-1] [INFO] [1784832234.688587405] [robot_state_publisher]: got segment ZLtech_6.5inch-v3
+[robot_state_publisher-1] [INFO] [1784832234.688596269] [robot_state_publisher]: got segment ZLtech_6.5inch-v3-1
+[robot_state_publisher-1] [INFO] [1784832234.688601873] [robot_state_publisher]: got segment base_link
+[robot_state_publisher-1] [INFO] [1784832234.688606576] [robot_state_publisher]: got segment caster_back
+[robot_state_publisher-1] [INFO] [1784832234.688611152] [robot_state_publisher]: got segment caster_front
+[robot_state_publisher-1] [INFO] [1784832234.688615748] [robot_state_publisher]: got segment front_indicator
+[robot_state_publisher-1] [INFO] [1784832234.688620161] [robot_state_publisher]: got segment scanner-v2
+[goal_pid_controller-6] [INFO] [1784832235.473105642] [goal_pid_controller]: Started PID Controller Node
+[goal_pid_controller-6] [INFO] [1784832235.473745474] [goal_pid_controller]: Awaiting goal...
+[spawn_entity.py-4] [INFO] [1784832235.476999225] [spawn_entity]: Spawn Entity started
+[spawn_entity.py-4] [INFO] [1784832235.477457269] [spawn_entity]: Loading entity XML from file /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/install/agv/share/agv/AGV.urdf
+[spawn_entity.py-4] [INFO] [1784832235.480563263] [spawn_entity]: Waiting for service /spawn_entity, timeout = 30
+[spawn_entity.py-4] [INFO] [1784832235.480952049] [spawn_entity]: Waiting for service /spawn_entity
+[rviz2-5] [INFO] [1784832235.507122866] [rviz2]: Stereo is NOT SUPPORTED
+[rviz2-5] [INFO] [1784832235.507820832] [rviz2]: OpenGl version: 4.6 (GLSL 4.6)
+[rviz2-5] [INFO] [1784832235.545151931] [rviz2]: Stereo is NOT SUPPORTED
+[spawn_entity.py-4] [INFO] [1784832236.496568798] [spawn_entity]: Calling service /spawn_entity
+[spawn_entity.py-4] [INFO] [1784832236.788990645] [spawn_entity]: Spawn status: SpawnEntity: Successfully spawned entity [agv]
+[INFO] [spawn_entity.py-4]: process has finished cleanly [pid 37212]
+[gzserver-2] [INFO] [1784832237.325419202] [diff_drive]: Wheel pair 1 separation set to [0.560000m]
+[gzserver-2] [INFO] [1784832237.329597682] [diff_drive]: Wheel pair 1 diameter set to [0.165000m]
+[gzserver-2] [INFO] [1784832237.332632341] [diff_drive]: Subscribed to [/cmd_vel]
+[gzserver-2] [INFO] [1784832237.336650812] [diff_drive]: Advertise odometry on [/odom]
+[gzserver-2] [INFO] [1784832237.340604037] [diff_drive]: Publishing odom transforms between [odom] and [base_link]
+[gzserver-2] [INFO] [1784832237.340655459] [diff_drive]: Publishing wheel transforms between [base_link], [AGV_Body-v1_Revolute-3] and [AGV_Body-v1_Revolute-2]
+[gzserver-2] [INFO] [1784832237.356747396] [joint_state]: Going to publish joint [AGV_Body-v1_Revolute-2]
+[gzserver-2] [INFO] [1784832237.356809488] [joint_state]: Going to publish joint [AGV_Body-v1_Revolute-3]
