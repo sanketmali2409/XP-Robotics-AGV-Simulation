@@ -15,6 +15,7 @@ setup(
         (os.path.join('share', package_name, 'launch'), glob('launch/*.py')),
         (os.path.join('share', package_name, 'config'), glob('config/*')),
         (os.path.join('share', package_name), glob('*.urdf')),
+        (os.path.join('share', package_name), glob('*.xacro')),
         (os.path.join('share', package_name), glob('*.sdf')),
         (os.path.join('share', package_name), glob('*.world')),
         (os.path.join('share', package_name, 'meshes'), glob('meshes/*')),
@@ -29,6 +30,7 @@ setup(
     entry_points={
         'console_scripts': [
             'goal_pid_controller = agv.goal_pid_controller:main',
+            'tf_to_odom = agv.tf_to_odom:main',
             'run_tests = agv.run_tests:main',
             'analyze_results = agv.analyze_results:main'
         ],

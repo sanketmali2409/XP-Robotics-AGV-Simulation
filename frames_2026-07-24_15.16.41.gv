@@ -1,0 +1,24 @@
+digraph G {
+"robot1/AGV_Body-v1" -> "robot1/ZLtech_6.5inch-v3"[label=" Broadcaster: default_authority\nAverage rate: 30.286\nBuffer length: 3.5\nMost recent transform: 121.583\nOldest transform: 118.083\n"];
+"robot1/base_link" -> "robot1/AGV_Body-v1"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"robot1/AGV_Body-v1" -> "robot1/ZLtech_6.5inch-v3-1"[label=" Broadcaster: default_authority\nAverage rate: 30.286\nBuffer length: 3.5\nMost recent transform: 121.583\nOldest transform: 118.083\n"];
+"map" -> "robot1/odom"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"robot2/odom" -> "robot2/base_link"[label=" Broadcaster: default_authority\nAverage rate: 8.824\nBuffer length: 3.4\nMost recent transform: 121.49\nOldest transform: 118.09\n"];
+"map" -> "robot2/odom"[label=" Broadcaster: default_authority\nAverage rate: 19.638\nBuffer length: 3.87\nMost recent transform: 121.973\nOldest transform: 118.103\n"];
+"robot1/AGV_Body-v1" -> "robot1/scanner-v2"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"robot1/odom" -> "robot1/base_link"[label=" Broadcaster: default_authority\nAverage rate: 9.936\nBuffer length: 3.12\nMost recent transform: 121.483\nOldest transform: 118.363\n"];
+"robot1/base_link" -> "robot1/caster_back"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"robot1/base_link" -> "robot1/caster_front"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"robot1/base_link" -> "robot1/front_indicator"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"robot2/AGV_Body-v1" -> "robot2/ZLtech_6.5inch-v3"[label=" Broadcaster: default_authority\nAverage rate: 30.818\nBuffer length: 3.18\nMost recent transform: 121.59\nOldest transform: 118.41\n"];
+"robot2/base_link" -> "robot2/AGV_Body-v1"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"robot2/AGV_Body-v1" -> "robot2/ZLtech_6.5inch-v3-1"[label=" Broadcaster: default_authority\nAverage rate: 30.818\nBuffer length: 3.18\nMost recent transform: 121.59\nOldest transform: 118.41\n"];
+"robot2/AGV_Body-v1" -> "robot2/scanner-v2"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"robot2/base_link" -> "robot2/caster_back"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"robot2/base_link" -> "robot2/caster_front"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"robot2/base_link" -> "robot2/front_indicator"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1784886401.7589514"[ shape=plaintext ] ;
+}->"map";
+}

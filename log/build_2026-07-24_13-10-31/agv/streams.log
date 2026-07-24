@@ -1,0 +1,26 @@
+[0.607s] Invoking command in '/home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV': PYTHONPATH=/home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/build/agv/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/install/agv/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/agv build --build-base /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/build/agv/build install --record /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/build/agv/install.log --install-scripts $base/lib/agv --single-version-externally-managed install_data
+[0.813s] running egg_info
+[0.813s] writing build/agv/agv.egg-info/PKG-INFO
+[0.814s] writing dependency_links to build/agv/agv.egg-info/dependency_links.txt
+[0.814s] writing entry points to build/agv/agv.egg-info/entry_points.txt
+[0.814s] writing requirements to build/agv/agv.egg-info/requires.txt
+[0.814s] writing top-level names to build/agv/agv.egg-info/top_level.txt
+[0.815s] reading manifest file 'build/agv/agv.egg-info/SOURCES.txt'
+[0.819s] writing manifest file 'build/agv/agv.egg-info/SOURCES.txt'
+[0.819s] running build
+[0.819s] running build_py
+[0.819s] running install
+[0.819s] running install_lib
+[0.820s] running install_data
+[0.820s] copying launch/multi_robot_bringup.launch.py -> /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/install/agv/share/agv/launch
+[0.821s] copying agv.urdf.xacro -> /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/install/agv/share/agv
+[0.821s] running install_egg_info
+[0.822s] removing '/home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/install/agv/lib/python3.10/site-packages/agv-0.0.0-py3.10.egg-info' (and everything under it)
+[0.823s] Copying build/agv/agv.egg-info to /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/install/agv/lib/python3.10/site-packages/agv-0.0.0-py3.10.egg-info
+[0.823s] running install_scripts
+[0.838s] Installing analyze_results script to /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/install/agv/lib/agv
+[0.838s] Installing goal_pid_controller script to /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/install/agv/lib/agv
+[0.838s] Installing run_tests script to /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/install/agv/lib/agv
+[0.839s] Installing tf_to_odom script to /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/install/agv/lib/agv
+[0.839s] writing list of installed files to '/home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/build/agv/install.log'
+[0.859s] Invoked command in '/home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV' returned '0': PYTHONPATH=/home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/build/agv/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/install/agv/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/agv build --build-base /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/build/agv/build install --record /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/build/agv/install.log --install-scripts $base/lib/agv --single-version-externally-managed install_data

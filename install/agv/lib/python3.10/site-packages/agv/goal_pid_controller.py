@@ -23,9 +23,9 @@ class GoalPIDController(Node):
         self.declare_parameter('test_name', 'manual_controller')
         
         # Publishers and Subscribers
-        self.cmd_vel_pub = self.create_publisher(Twist, '/cmd_vel', 10)
-        self.odom_sub = self.create_subscription(Odometry, '/odometry/filtered', self.odom_callback, 10)
-        self.goal_sub = self.create_subscription(PoseStamped, '/goal_pose', self.goal_callback, 10)
+        self.cmd_vel_pub = self.create_publisher(Twist, 'cmd_vel', 10)
+        self.odom_sub = self.create_subscription(Odometry, 'odometry/filtered', self.odom_callback, 10)
+        self.goal_sub = self.create_subscription(PoseStamped, 'goal_pose', self.goal_callback, 10)
         
         # Timer for control loop
         self.timer = self.create_timer(0.1, self.control_loop) # 10 Hz
