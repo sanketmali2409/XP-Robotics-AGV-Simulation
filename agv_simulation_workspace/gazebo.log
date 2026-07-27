@@ -1,0 +1,127 @@
+[INFO] [launch]: All log files can be found below /home/sanket/.ros/log/2026-07-27-13-49-04-126555-sanket-Victus-by-HP-Laptop-16-d0xxx-15162
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [gzserver-1]: process started with pid [15164]
+[INFO] [gzclient-2]: process started with pid [15166]
+[INFO] [rviz2-3]: process started with pid [15168]
+[INFO] [robot_state_publisher-4]: process started with pid [15170]
+[INFO] [spawn_entity.py-5]: process started with pid [15172]
+[INFO] [ekf_node-6]: process started with pid [15174]
+[INFO] [goal_pid_controller-7]: process started with pid [15176]
+[INFO] [static_transform_publisher-8]: process started with pid [15178]
+[INFO] [robot_state_publisher-9]: process started with pid [15180]
+[INFO] [spawn_entity.py-10]: process started with pid [15182]
+[INFO] [ekf_node-11]: process started with pid [15184]
+[INFO] [tf_to_odom-12]: process started with pid [15186]
+[INFO] [goal_pid_controller-13]: process started with pid [15194]
+[INFO] [static_transform_publisher-14]: process started with pid [15212]
+[INFO] [robot_state_publisher-15]: process started with pid [15220]
+[INFO] [spawn_entity.py-16]: process started with pid [15225]
+[INFO] [ekf_node-17]: process started with pid [15237]
+[INFO] [async_slam_toolbox_node-18]: process started with pid [15246]
+[INFO] [tf_to_odom-19]: process started with pid [15250]
+[INFO] [goal_pid_controller-20]: process started with pid [15255]
+[static_transform_publisher-8] [WARN] [1785140344.282052617] []: Old-style arguments are deprecated; see --help for new-style arguments
+[static_transform_publisher-14] [WARN] [1785140344.399215973] []: Old-style arguments are deprecated; see --help for new-style arguments
+[static_transform_publisher-8] [INFO] [1785140344.436047379] [static_transform_publisher_HmCDxexlg3Efgd83]: Spinning until stopped - publishing transform
+[static_transform_publisher-8] translation: ('0.000000', '1.000000', '0.000000')
+[static_transform_publisher-8] rotation: ('0.000000', '0.000000', '0.000000', '1.000000')
+[static_transform_publisher-8] from 'map' to 'robot1/odom'
+[static_transform_publisher-14] [INFO] [1785140344.563104889] [static_transform_publisher_VHciqpsp9B7Z4tqv]: Spinning until stopped - publishing transform
+[static_transform_publisher-14] translation: ('0.000000', '-1.000000', '0.000000')
+[static_transform_publisher-14] rotation: ('0.000000', '0.000000', '0.000000', '1.000000')
+[static_transform_publisher-14] from 'map' to 'robot2/odom'
+[robot_state_publisher-15] [INFO] [1785140344.758818707] [robot3.robot_state_publisher]: got segment robot3/AGV_Body-v1
+[robot_state_publisher-9] [INFO] [1785140344.765397631] [robot2.robot_state_publisher]: got segment robot2/AGV_Body-v1
+[robot_state_publisher-9] [INFO] [1785140344.765562443] [robot2.robot_state_publisher]: got segment robot2/ZLtech_6.5inch-v3
+[robot_state_publisher-9] [INFO] [1785140344.765571259] [robot2.robot_state_publisher]: got segment robot2/ZLtech_6.5inch-v3-1
+[robot_state_publisher-9] [INFO] [1785140344.765577651] [robot2.robot_state_publisher]: got segment robot2/base_link
+[robot_state_publisher-9] [INFO] [1785140344.765584525] [robot2.robot_state_publisher]: got segment robot2/caster_back
+[robot_state_publisher-9] [INFO] [1785140344.765591061] [robot2.robot_state_publisher]: got segment robot2/caster_front
+[robot_state_publisher-9] [INFO] [1785140344.765597455] [robot2.robot_state_publisher]: got segment robot2/front_indicator
+[robot_state_publisher-9] [INFO] [1785140344.765603640] [robot2.robot_state_publisher]: got segment robot2/laser_frame
+[robot_state_publisher-9] [INFO] [1785140344.765610191] [robot2.robot_state_publisher]: got segment robot2/scanner-v2
+[robot_state_publisher-15] [INFO] [1785140344.767572862] [robot3.robot_state_publisher]: got segment robot3/ZLtech_6.5inch-v3
+[robot_state_publisher-15] [INFO] [1785140344.767593954] [robot3.robot_state_publisher]: got segment robot3/ZLtech_6.5inch-v3-1
+[robot_state_publisher-15] [INFO] [1785140344.767602382] [robot3.robot_state_publisher]: got segment robot3/base_link
+[robot_state_publisher-15] [INFO] [1785140344.767614319] [robot3.robot_state_publisher]: got segment robot3/caster_back
+[robot_state_publisher-15] [INFO] [1785140344.767622484] [robot3.robot_state_publisher]: got segment robot3/caster_front
+[robot_state_publisher-15] [INFO] [1785140344.767630735] [robot3.robot_state_publisher]: got segment robot3/front_indicator
+[robot_state_publisher-15] [INFO] [1785140344.767638900] [robot3.robot_state_publisher]: got segment robot3/laser_frame
+[robot_state_publisher-15] [INFO] [1785140344.767646629] [robot3.robot_state_publisher]: got segment robot3/scanner-v2
+[robot_state_publisher-4] [INFO] [1785140345.197052297] [robot1.robot_state_publisher]: got segment robot1/AGV_Body-v1
+[robot_state_publisher-4] [INFO] [1785140345.197197900] [robot1.robot_state_publisher]: got segment robot1/ZLtech_6.5inch-v3
+[robot_state_publisher-4] [INFO] [1785140345.197207594] [robot1.robot_state_publisher]: got segment robot1/ZLtech_6.5inch-v3-1
+[robot_state_publisher-4] [INFO] [1785140345.197214415] [robot1.robot_state_publisher]: got segment robot1/base_link
+[robot_state_publisher-4] [INFO] [1785140345.197221249] [robot1.robot_state_publisher]: got segment robot1/caster_back
+[robot_state_publisher-4] [INFO] [1785140345.197227657] [robot1.robot_state_publisher]: got segment robot1/caster_front
+[robot_state_publisher-4] [INFO] [1785140345.197234364] [robot1.robot_state_publisher]: got segment robot1/front_indicator
+[robot_state_publisher-4] [INFO] [1785140345.197241031] [robot1.robot_state_publisher]: got segment robot1/laser_frame
+[robot_state_publisher-4] [INFO] [1785140345.197247296] [robot1.robot_state_publisher]: got segment robot1/scanner-v2
+[goal_pid_controller-20] [INFO] [1785140345.665816542] [robot3.goal_pid_controller]: Obstacle Avoidance DISABLED
+[goal_pid_controller-20] [INFO] [1785140345.666589586] [robot3.goal_pid_controller]: Started PID Controller Node
+[goal_pid_controller-20] [INFO] [1785140345.667143751] [robot3.goal_pid_controller]: Awaiting goal...
+[async_slam_toolbox_node-18] [INFO] [1785140345.896362077] [robot3.slam_toolbox]: Using solver plugin solver_plugins::CeresSolver
+[tf_to_odom-12] [INFO] [1785140346.404111353] [robot2.tf_to_odom]: Publishing TF (robot2/odom -> robot2/base_link) to odometry/filtered
+[goal_pid_controller-13] [INFO] [1785140346.550361802] [robot2.goal_pid_controller]: Obstacle Avoidance DISABLED
+[goal_pid_controller-13] [INFO] [1785140346.551089504] [robot2.goal_pid_controller]: Started PID Controller Node
+[goal_pid_controller-13] [INFO] [1785140346.551535637] [robot2.goal_pid_controller]: Awaiting goal...
+[spawn_entity.py-10] [INFO] [1785140347.063108371] [spawn_entity]: Spawn Entity started
+[spawn_entity.py-10] [INFO] [1785140347.078405437] [spawn_entity]: Loading entity published on topic /robot2/robot_description
+[spawn_entity.py-10] [INFO] [1785140347.142780632] [spawn_entity]: Waiting for entity xml on /robot2/robot_description
+[spawn_entity.py-5] [INFO] [1785140347.215150837] [spawn_entity]: Spawn Entity started
+[spawn_entity.py-5] [INFO] [1785140347.215658476] [spawn_entity]: Loading entity published on topic /robot1/robot_description
+[spawn_entity.py-5] [INFO] [1785140347.245927304] [spawn_entity]: Waiting for entity xml on /robot1/robot_description
+[spawn_entity.py-10] [INFO] [1785140347.262292406] [spawn_entity]: Waiting for service /spawn_entity, timeout = 30
+[spawn_entity.py-10] [INFO] [1785140347.262757988] [spawn_entity]: Waiting for service /spawn_entity
+[goal_pid_controller-7] [INFO] [1785140347.387151767] [robot1.goal_pid_controller]: Obstacle Avoidance DISABLED
+[goal_pid_controller-7] [INFO] [1785140347.409640535] [robot1.goal_pid_controller]: Started PID Controller Node
+[goal_pid_controller-7] [INFO] [1785140347.412550607] [robot1.goal_pid_controller]: Awaiting goal...
+[tf_to_odom-19] [INFO] [1785140348.079479897] [robot3.tf_to_odom]: Publishing TF (map -> robot3/base_link) to odometry/filtered
+[spawn_entity.py-16] [INFO] [1785140348.159923345] [spawn_entity]: Spawn Entity started
+[spawn_entity.py-16] [INFO] [1785140348.160429301] [spawn_entity]: Loading entity published on topic /robot3/robot_description
+[spawn_entity.py-5] [INFO] [1785140348.187679616] [spawn_entity]: Waiting for service /spawn_entity, timeout = 30
+[spawn_entity.py-5] [INFO] [1785140348.188131969] [spawn_entity]: Waiting for service /spawn_entity
+[spawn_entity.py-16] [INFO] [1785140348.195168297] [spawn_entity]: Waiting for entity xml on /robot3/robot_description
+[spawn_entity.py-16] [INFO] [1785140348.261944464] [spawn_entity]: Waiting for service /spawn_entity, timeout = 30
+[spawn_entity.py-16] [INFO] [1785140348.262469742] [spawn_entity]: Waiting for service /spawn_entity
+[rviz2-3] [INFO] [1785140348.525950388] [rviz2]: Stereo is NOT SUPPORTED
+[rviz2-3] [INFO] [1785140348.526068324] [rviz2]: OpenGl version: 4.6 (GLSL 4.6)
+[rviz2-3] [INFO] [1785140348.629428010] [rviz2]: Stereo is NOT SUPPORTED
+[spawn_entity.py-5] [INFO] [1785140349.329219086] [spawn_entity]: Calling service /spawn_entity
+[spawn_entity.py-16] [INFO] [1785140349.332460668] [spawn_entity]: Calling service /spawn_entity
+[spawn_entity.py-10] [INFO] [1785140349.523012811] [spawn_entity]: Calling service /spawn_entity
+[spawn_entity.py-5] [INFO] [1785140349.656477423] [spawn_entity]: Spawn status: SpawnEntity: Successfully spawned entity [robot1]
+[gzserver-1] [INFO] [1785140349.864241154] [robot1.diff_drive]: Wheel pair 1 separation set to [0.560000m]
+[gzserver-1] [INFO] [1785140349.865243781] [robot1.diff_drive]: Wheel pair 1 diameter set to [0.165000m]
+[gzserver-1] [INFO] [1785140349.883747094] [robot1.diff_drive]: Subscribed to [/robot1/cmd_vel]
+[gzserver-1] [INFO] [1785140349.894714386] [robot1.diff_drive]: Advertise odometry on [/robot1/odom]
+[gzserver-1] [INFO] [1785140349.982993227] [robot1.joint_state]: Going to publish joint [robot1/AGV_Body-v1_Revolute-2]
+[gzserver-1] [INFO] [1785140349.983124857] [robot1.joint_state]: Going to publish joint [robot1/AGV_Body-v1_Revolute-3]
+[INFO] [spawn_entity.py-5]: process has finished cleanly [pid 15172]
+[spawn_entity.py-16] [INFO] [1785140350.344118690] [spawn_entity]: Spawn status: SpawnEntity: Successfully spawned entity [robot3]
+[gzserver-1] [INFO] [1785140350.518264314] [robot3.diff_drive]: Wheel pair 1 separation set to [0.560000m]
+[gzserver-1] [INFO] [1785140350.522085903] [robot3.diff_drive]: Wheel pair 1 diameter set to [0.165000m]
+[gzserver-1] [INFO] [1785140350.530234248] [robot3.diff_drive]: Subscribed to [/robot3/cmd_vel]
+[gzserver-1] [INFO] [1785140350.534431038] [robot3.diff_drive]: Advertise odometry on [/robot3/odom]
+[gzserver-1] [INFO] [1785140350.572959204] [robot3.joint_state]: Going to publish joint [robot3/AGV_Body-v1_Revolute-2]
+[gzserver-1] [INFO] [1785140350.573069788] [robot3.joint_state]: Going to publish joint [robot3/AGV_Body-v1_Revolute-3]
+[INFO] [spawn_entity.py-16]: process has finished cleanly [pid 15225]
+[async_slam_toolbox_node-18] [WARN] [1785140350.708724631] [robot3.slam_toolbox]: minimum laser range setting (0.0 m) exceeds the capabilities of the used Lidar (0.2 m)
+[async_slam_toolbox_node-18] [WARN] [1785140350.711052109] [robot3.slam_toolbox]: maximum laser range setting (25.0 m) exceeds the capabilities of the used Lidar (12.0 m)
+[spawn_entity.py-10] [INFO] [1785140350.899832071] [spawn_entity]: Spawn status: SpawnEntity: Successfully spawned entity [robot2]
+[gzserver-1] [INFO] [1785140351.045028778] [robot2.diff_drive]: Wheel pair 1 separation set to [0.560000m]
+[gzserver-1] [INFO] [1785140351.045118172] [robot2.diff_drive]: Wheel pair 1 diameter set to [0.165000m]
+[gzserver-1] [INFO] [1785140351.048164278] [robot2.diff_drive]: Subscribed to [/robot2/cmd_vel]
+[gzserver-1] [INFO] [1785140351.052618672] [robot2.diff_drive]: Advertise odometry on [/robot2/odom]
+[gzserver-1] [INFO] [1785140351.087597191] [robot2.joint_state]: Going to publish joint [robot2/AGV_Body-v1_Revolute-2]
+[gzserver-1] [INFO] [1785140351.087684728] [robot2.joint_state]: Going to publish joint [robot2/AGV_Body-v1_Revolute-3]
+[INFO] [spawn_entity.py-10]: process has finished cleanly [pid 15182]
+[rviz2-3] [INFO] [1785140356.160481244] [rviz2]: Trying to create a map of size 197 x 197 using 1 swatches
+[rviz2-3] [INFO] [1785140361.444415510] [rviz]: Message Filter dropping message: frame 'robot2/laser_frame' at time 0.473 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[async_slam_toolbox_node-18] [INFO] [1785140367.880514270] [robot3.slam_toolbox]: Message Filter dropping message: frame 'robot3/laser_frame' at time 13.890 for reason 'discarding message because the queue is full'
+[gzserver-1] [WARN] [1785140372.314594051] [gazebo.rclcpp]: failed to send response to /spawn_entity (timeout): client will not receive response, at ./src/rmw_response.cpp:154, at ./src/rcl/service.c:314
+[async_slam_toolbox_node-18] [INFO] [1785140431.880833862] [robot3.slam_toolbox]: Message Filter dropping message: frame 'robot3/laser_frame' at time 69.795 for reason 'discarding message because the queue is full'
+[async_slam_toolbox_node-18] [INFO] [1785140434.439800617] [robot3.slam_toolbox]: Message Filter dropping message: frame 'robot3/laser_frame' at time 72.295 for reason 'discarding message because the queue is full'
+[async_slam_toolbox_node-18] [INFO] [1785140437.004244008] [robot3.slam_toolbox]: Message Filter dropping message: frame 'robot3/laser_frame' at time 74.798 for reason 'discarding message because the queue is full'
+[async_slam_toolbox_node-18] [INFO] [1785140439.589089624] [robot3.slam_toolbox]: Message Filter dropping message: frame 'robot3/laser_frame' at time 77.299 for reason 'discarding message because the queue is full'
+[async_slam_toolbox_node-18] [INFO] [1785140442.040591448] [robot3.slam_toolbox]: Message Filter dropping message: frame 'robot3/laser_frame' at time 79.700 for reason 'discarding message because the queue is full'

@@ -1,0 +1,552 @@
+[INFO] [launch]: All log files can be found below /home/sanket/.ros/log/2026-07-27-14-00-45-682610-sanket-Victus-by-HP-Laptop-16-d0xxx-20155
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [gzserver-1]: process started with pid [20157]
+[INFO] [gzclient-2]: process started with pid [20159]
+[INFO] [rviz2-3]: process started with pid [20161]
+[INFO] [map_server-4]: process started with pid [20163]
+[INFO] [lifecycle_manager-5]: process started with pid [20165]
+[INFO] [robot_state_publisher-6]: process started with pid [20167]
+[INFO] [spawn_entity.py-7]: process started with pid [20169]
+[INFO] [ekf_node-8]: process started with pid [20171]
+[INFO] [amcl-9]: process started with pid [20173]
+[INFO] [tf_to_odom-10]: process started with pid [20175]
+[INFO] [ros2-11]: process started with pid [20177]
+[amcl-9] [37;1m2026-07-27 14:00:46.101 [31;1m[[37;1mRTPS_TRANSPORT_SHM[31;1m Error] [37mFailed init_port fastrtps_port7477: open_and_lock_file failed[34;1m -> Function [36mopen_port_internal[m
+[robot_state_publisher-6] [INFO] [1785141046.203197228] [robot3.robot_state_publisher]: got segment robot3/AGV_Body-v1
+[robot_state_publisher-6] [INFO] [1785141046.206677853] [robot3.robot_state_publisher]: got segment robot3/ZLtech_6.5inch-v3
+[robot_state_publisher-6] [INFO] [1785141046.206757584] [robot3.robot_state_publisher]: got segment robot3/ZLtech_6.5inch-v3-1
+[robot_state_publisher-6] [INFO] [1785141046.206769257] [robot3.robot_state_publisher]: got segment robot3/base_link
+[robot_state_publisher-6] [INFO] [1785141046.206778460] [robot3.robot_state_publisher]: got segment robot3/caster_back
+[robot_state_publisher-6] [INFO] [1785141046.206786556] [robot3.robot_state_publisher]: got segment robot3/caster_front
+[robot_state_publisher-6] [INFO] [1785141046.206794840] [robot3.robot_state_publisher]: got segment robot3/front_indicator
+[robot_state_publisher-6] [INFO] [1785141046.206802817] [robot3.robot_state_publisher]: got segment robot3/laser_frame
+[robot_state_publisher-6] [INFO] [1785141046.206810132] [robot3.robot_state_publisher]: got segment robot3/scanner-v2
+[lifecycle_manager-5] [INFO] [1785141046.219890762] [lifecycle_manager_localization]: Creating
+[lifecycle_manager-5] [INFO] [1785141046.288556596] [lifecycle_manager_localization]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+[map_server-4] [INFO] [1785141046.499476605] [map_server]: 
+[map_server-4] 	map_server lifecycle node launched. 
+[map_server-4] 	Waiting on external lifecycle transitions to activate
+[map_server-4] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[map_server-4] [INFO] [1785141046.499660500] [map_server]: Creating
+[amcl-9] [INFO] [1785141046.577300760] [amcl3]: 
+[amcl-9] 	amcl3 lifecycle node launched. 
+[amcl-9] 	Waiting on external lifecycle transitions to activate
+[amcl-9] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[amcl-9] [INFO] [1785141046.577912282] [amcl3]: Creating
+[ros2-11] [INFO] [launch]: All log files can be found below /home/sanket/.ros/log/2026-07-27-14-00-47-429570-sanket-Victus-by-HP-Laptop-16-d0xxx-20177
+[ros2-11] [INFO] [launch]: Default logging verbosity is set to INFO
+[tf_to_odom-10] [INFO] [1785141048.034589742] [robot3.tf_to_odom]: Publishing TF (map -> robot3/base_link) to odometry/filtered
+[lifecycle_manager-5] [INFO] [1785141048.345137660] [lifecycle_manager_localization]: Waiting for service map_server/get_state...
+[ros2-11] [INFO] [controller_server-1]: process started with pid [20308]
+[ros2-11] [INFO] [smoother_server-2]: process started with pid [20310]
+[ros2-11] [INFO] [planner_server-3]: process started with pid [20313]
+[ros2-11] [INFO] [behavior_server-4]: process started with pid [20315]
+[ros2-11] [INFO] [bt_navigator-5]: process started with pid [20317]
+[ros2-11] [INFO] [waypoint_follower-6]: process started with pid [20321]
+[ros2-11] [INFO] [velocity_smoother-7]: process started with pid [20323]
+[ros2-11] [INFO] [lifecycle_manager-8]: process started with pid [20328]
+[ros2-11] [controller_server-1] [INFO] [1785141049.779321971] [robot3.controller_server]: 
+[ros2-11] [controller_server-1] 	controller_server lifecycle node launched. 
+[ros2-11] [controller_server-1] 	Waiting on external lifecycle transitions to activate
+[ros2-11] [controller_server-1] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[ros2-11] [behavior_server-4] [37;1m2026-07-27 14:00:49.792 [31;1m[[37;1mRTPS_TRANSPORT_SHM[31;1m Error] [37mFailed init_port fastrtps_port7477: open_and_lock_file failed[34;1m -> Function [36mopen_port_internal[m
+[ros2-11] [controller_server-1] [INFO] [1785141049.834441172] [robot3.controller_server]: Creating controller server
+[ros2-11] [planner_server-3] [INFO] [1785141049.971384035] [robot3.planner_server]: 
+[ros2-11] [planner_server-3] 	planner_server lifecycle node launched. 
+[ros2-11] [planner_server-3] 	Waiting on external lifecycle transitions to activate
+[ros2-11] [planner_server-3] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[ros2-11] [planner_server-3] [INFO] [1785141049.974816692] [robot3.planner_server]: Creating
+[spawn_entity.py-7] [INFO] [1785141050.032644625] [spawn_entity]: Spawn Entity started
+[ros2-11] [smoother_server-2] [INFO] [1785141050.041028767] [robot3.smoother_server]: 
+[ros2-11] [smoother_server-2] 	smoother_server lifecycle node launched. 
+[ros2-11] [smoother_server-2] 	Waiting on external lifecycle transitions to activate
+[ros2-11] [smoother_server-2] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[spawn_entity.py-7] [INFO] [1785141050.052700940] [spawn_entity]: Loading entity published on topic /robot3/robot_description
+[ros2-11] [smoother_server-2] [INFO] [1785141050.061384282] [robot3.smoother_server]: Creating smoother server
+[spawn_entity.py-7] [INFO] [1785141050.103906291] [spawn_entity]: Waiting for entity xml on /robot3/robot_description
+[ros2-11] [planner_server-3] [INFO] [1785141050.125009975] [robot3.global_costmap.global_costmap]: 
+[ros2-11] [planner_server-3] 	global_costmap lifecycle node launched. 
+[ros2-11] [planner_server-3] 	Waiting on external lifecycle transitions to activate
+[ros2-11] [planner_server-3] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[ros2-11] [planner_server-3] [INFO] [1785141050.125699626] [robot3.global_costmap.global_costmap]: Creating Costmap
+[ros2-11] [waypoint_follower-6] [INFO] [1785141050.131978262] [robot3.waypoint_follower]: 
+[ros2-11] [waypoint_follower-6] 	waypoint_follower lifecycle node launched. 
+[ros2-11] [waypoint_follower-6] 	Waiting on external lifecycle transitions to activate
+[ros2-11] [waypoint_follower-6] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[ros2-11] [bt_navigator-5] [INFO] [1785141050.155440107] [robot3.bt_navigator]: 
+[ros2-11] [bt_navigator-5] 	bt_navigator lifecycle node launched. 
+[ros2-11] [bt_navigator-5] 	Waiting on external lifecycle transitions to activate
+[ros2-11] [bt_navigator-5] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[ros2-11] [bt_navigator-5] [INFO] [1785141050.155602088] [robot3.bt_navigator]: Creating
+[ros2-11] [behavior_server-4] [INFO] [1785141050.153179102] [robot3.behavior_server]: 
+[ros2-11] [behavior_server-4] 	behavior_server lifecycle node launched. 
+[ros2-11] [behavior_server-4] 	Waiting on external lifecycle transitions to activate
+[ros2-11] [behavior_server-4] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[ros2-11] [waypoint_follower-6] [INFO] [1785141050.164389110] [robot3.waypoint_follower]: Creating
+[ros2-11] [lifecycle_manager-8] [INFO] [1785141050.180983946] [robot3.lifecycle_manager_navigation]: Creating
+[ros2-11] [lifecycle_manager-8] [INFO] [1785141050.236092420] [robot3.lifecycle_manager_navigation]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+[lifecycle_manager-5] [INFO] [1785141050.345562925] [lifecycle_manager_localization]: Waiting for service map_server/get_state...
+[ros2-11] [velocity_smoother-7] [INFO] [1785141050.393250864] [robot3.velocity_smoother]: 
+[ros2-11] [velocity_smoother-7] 	velocity_smoother lifecycle node launched. 
+[ros2-11] [velocity_smoother-7] 	Waiting on external lifecycle transitions to activate
+[ros2-11] [velocity_smoother-7] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[rviz2-3] [INFO] [1785141050.567480367] [rviz2]: Stereo is NOT SUPPORTED
+[rviz2-3] [INFO] [1785141050.567747938] [rviz2]: OpenGl version: 4.6 (GLSL 4.6)
+[rviz2-3] [INFO] [1785141050.655464032] [rviz2]: Stereo is NOT SUPPORTED
+[ros2-11] [controller_server-1] [INFO] [1785141050.805654790] [robot3.local_costmap.local_costmap]: 
+[ros2-11] [controller_server-1] 	local_costmap lifecycle node launched. 
+[ros2-11] [controller_server-1] 	Waiting on external lifecycle transitions to activate
+[ros2-11] [controller_server-1] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[ros2-11] [controller_server-1] [INFO] [1785141050.808141166] [robot3.local_costmap.local_costmap]: Creating Costmap
+[spawn_entity.py-7] [INFO] [1785141051.526605386] [spawn_entity]: Waiting for service /spawn_entity, timeout = 30
+[spawn_entity.py-7] [INFO] [1785141051.539841918] [spawn_entity]: Waiting for service /spawn_entity
+[lifecycle_manager-5] [INFO] [1785141052.346154472] [lifecycle_manager_localization]: Waiting for service map_server/get_state...
+[spawn_entity.py-7] [INFO] [1785141052.948315733] [spawn_entity]: Calling service /spawn_entity
+[spawn_entity.py-7] [INFO] [1785141053.127647513] [spawn_entity]: Spawn status: SpawnEntity: Successfully spawned entity [robot3]
+[INFO] [spawn_entity.py-7]: process has finished cleanly [pid 20169]
+[ros2-11] [lifecycle_manager-8] [INFO] [1785141054.064037678] [robot3.lifecycle_manager_navigation]: Waiting for service smoother_server/get_state...
+[lifecycle_manager-5] [INFO] [1785141054.351295167] [lifecycle_manager_localization]: Waiting for service map_server/get_state...
+[ros2-11] [lifecycle_manager-8] [INFO] [1785141056.064835339] [robot3.lifecycle_manager_navigation]: Waiting for service smoother_server/get_state...
+[lifecycle_manager-5] [INFO] [1785141056.351731984] [lifecycle_manager_localization]: Waiting for service map_server/get_state...
+[ros2-11] [lifecycle_manager-8] [INFO] [1785141058.065123260] [robot3.lifecycle_manager_navigation]: Waiting for service smoother_server/get_state...
+[lifecycle_manager-5] [INFO] [1785141058.352105169] [lifecycle_manager_localization]: Waiting for service map_server/get_state...
+[ros2-11] [lifecycle_manager-8] [INFO] [1785141060.065460269] [robot3.lifecycle_manager_navigation]: Waiting for service smoother_server/get_state...
+[gzserver-1] [INFO] [1785141060.301731613] [robot3.diff_drive]: Wheel pair 1 separation set to [0.560000m]
+[gzserver-1] [INFO] [1785141060.302251197] [robot3.diff_drive]: Wheel pair 1 diameter set to [0.165000m]
+[gzserver-1] [INFO] [1785141060.307233802] [robot3.diff_drive]: Subscribed to [/robot3/cmd_vel]
+[gzserver-1] [INFO] [1785141060.323637515] [robot3.diff_drive]: Advertise odometry on [/robot3/odom]
+[lifecycle_manager-5] [INFO] [1785141060.353626890] [lifecycle_manager_localization]: Waiting for service map_server/get_state...
+[ros2-11] [lifecycle_manager-8] [INFO] [1785141062.065770460] [robot3.lifecycle_manager_navigation]: Waiting for service smoother_server/get_state...
+[lifecycle_manager-5] [INFO] [1785141062.354338112] [lifecycle_manager_localization]: Waiting for service map_server/get_state...
+[gzserver-1] [INFO] [1785141062.506735627] [robot3.joint_state]: Going to publish joint [robot3/AGV_Body-v1_Revolute-2]
+[gzserver-1] [INFO] [1785141062.506794937] [robot3.joint_state]: Going to publish joint [robot3/AGV_Body-v1_Revolute-3]
+[ros2-11] [lifecycle_manager-8] [INFO] [1785141064.066052570] [robot3.lifecycle_manager_navigation]: Waiting for service smoother_server/get_state...
+[lifecycle_manager-5] [INFO] [1785141064.355222398] [lifecycle_manager_localization]: Waiting for service map_server/get_state...
+[ros2-11] [lifecycle_manager-8] [INFO] [1785141066.066389708] [robot3.lifecycle_manager_navigation]: Waiting for service smoother_server/get_state...
+[ekf_node-8] Failed to meet update rate! Took 1.5seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.
+[lifecycle_manager-5] [INFO] [1785141066.355767011] [lifecycle_manager_localization]: Waiting for service map_server/get_state...
+[ros2-11] [lifecycle_manager-8] [INFO] [1785141068.066772215] [robot3.lifecycle_manager_navigation]: Waiting for service smoother_server/get_state...
+[lifecycle_manager-5] [INFO] [1785141068.356163093] [lifecycle_manager_localization]: Waiting for service map_server/get_state...
+[ros2-11] [lifecycle_manager-8] [INFO] [1785141070.068980079] [robot3.lifecycle_manager_navigation]: Waiting for service smoother_server/get_state...
+[rviz2-3] [INFO] [1785141070.297520284] [rviz2]: Trying to create a map of size 275 x 241 using 1 swatches
+[lifecycle_manager-5] [INFO] [1785141070.356598493] [lifecycle_manager_localization]: Waiting for service map_server/get_state...
+[ros2-11] [lifecycle_manager-8] [INFO] [1785141072.069453434] [robot3.lifecycle_manager_navigation]: Waiting for service smoother_server/get_state...
+[lifecycle_manager-5] [INFO] [1785141072.357018335] [lifecycle_manager_localization]: Waiting for service map_server/get_state...
+[lifecycle_manager-5] [INFO] [1785141072.947413961] [lifecycle_manager_localization]: [34m[1mStarting managed nodes bringup...[0m[0m
+[lifecycle_manager-5] [INFO] [1785141072.947481307] [lifecycle_manager_localization]: [34m[1mConfiguring map_server[0m[0m
+[map_server-4] [INFO] [1785141072.953967508] [map_server]: Configuring
+[map_server-4] [INFO] [1785141072.954083686] [map_io]: Loading yaml file: /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/share/agv/maps/my_new_map.yaml
+[map_server-4] [INFO] [1785141072.954418307] [map_io]: resolution: 0.05
+[map_server-4] [INFO] [1785141072.954434092] [map_io]: origin[0]: -7.275
+[map_server-4] [INFO] [1785141072.954439125] [map_io]: origin[1]: -6.625
+[map_server-4] [INFO] [1785141072.954443452] [map_io]: origin[2]: 0
+[map_server-4] [INFO] [1785141072.954448139] [map_io]: free_thresh: 0.25
+[map_server-4] [INFO] [1785141072.954452824] [map_io]: occupied_thresh: 0.65
+[map_server-4] [INFO] [1785141072.954458851] [map_io]: mode: trinary
+[map_server-4] [INFO] [1785141072.954465495] [map_io]: negate: 0
+[map_server-4] [INFO] [1785141072.954685989] [map_io]: Loading image_file: /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/share/agv/maps/my_new_map.pgm
+[map_server-4] [INFO] [1785141072.982643538] [map_io]: Read map /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/share/agv/maps/my_new_map.pgm: 275 X 241 map @ 0.05 m/cell
+[lifecycle_manager-5] [INFO] [1785141073.063686603] [lifecycle_manager_localization]: [34m[1mConfiguring amcl3[0m[0m
+[amcl-9] [INFO] [1785141073.064211300] [amcl3]: Configuring
+[amcl-9] [INFO] [1785141073.064316978] [amcl3]: initTransforms
+[amcl-9] [INFO] [1785141073.124585708] [amcl3]: initPubSub
+[amcl-9] [INFO] [1785141073.148667517] [amcl3]: Subscribed to map topic.
+[lifecycle_manager-5] [INFO] [1785141073.177128365] [lifecycle_manager_localization]: [34m[1mActivating map_server[0m[0m
+[map_server-4] [INFO] [1785141073.178502157] [map_server]: Activating
+[map_server-4] [INFO] [1785141073.180710777] [map_server]: Creating bond (map_server) to lifecycle manager.
+[amcl-9] [INFO] [1785141073.180845752] [amcl3]: Received a 275 X 241 map @ 0.050 m/pix
+[lifecycle_manager-5] [INFO] [1785141073.322824663] [lifecycle_manager_localization]: Server map_server connected with bond.
+[lifecycle_manager-5] [INFO] [1785141073.322880067] [lifecycle_manager_localization]: [34m[1mActivating amcl3[0m[0m
+[amcl-9] [INFO] [1785141073.323367549] [amcl3]: Activating
+[amcl-9] [INFO] [1785141073.323405655] [amcl3]: initialPoseReceived
+[amcl-9] [INFO] [1785141073.323482375] [amcl3]: Setting pose (4.600000): 0.000 3.000 0.000
+[amcl-9] [INFO] [1785141073.323827002] [amcl3]: Creating bond (amcl3) to lifecycle manager.
+[amcl-9] [INFO] [1785141073.409229422] [amcl3]: createLaserObject
+[lifecycle_manager-5] [INFO] [1785141073.442338469] [lifecycle_manager_localization]: Server amcl3 connected with bond.
+[lifecycle_manager-5] [INFO] [1785141073.442417049] [lifecycle_manager_localization]: [34m[1mManaged nodes are active[0m[0m
+[lifecycle_manager-5] [INFO] [1785141073.442445466] [lifecycle_manager_localization]: [34m[1mCreating bond timer...[0m[0m
+[ros2-11] [lifecycle_manager-8] [INFO] [1785141074.149343699] [robot3.lifecycle_manager_navigation]: [34m[1mStarting managed nodes bringup...[0m[0m
+[ros2-11] [lifecycle_manager-8] [INFO] [1785141074.149395485] [robot3.lifecycle_manager_navigation]: [34m[1mConfiguring controller_server[0m[0m
+[ros2-11] [controller_server-1] [INFO] [1785141074.149954663] [robot3.controller_server]: Configuring controller interface
+[ros2-11] [controller_server-1] [INFO] [1785141074.151208536] [robot3.controller_server]: getting goal checker plugins..
+[ros2-11] [controller_server-1] [INFO] [1785141074.152761250] [robot3.controller_server]: Controller frequency set to 20.0000Hz
+[ros2-11] [controller_server-1] [INFO] [1785141074.152888626] [robot3.local_costmap.local_costmap]: Configuring
+[ros2-11] [controller_server-1] [INFO] [1785141074.199676345] [robot3.local_costmap.local_costmap]: Using plugin "voxel_layer"
+[ros2-11] [controller_server-1] [INFO] [1785141074.272203958] [robot3.local_costmap.local_costmap]: Subscribed to Topics: robot3/scan
+[ros2-11] [controller_server-1] [INFO] [1785141075.070580365] [robot3.local_costmap.local_costmap]: Initialized plugin "voxel_layer"
+[ros2-11] [controller_server-1] [INFO] [1785141075.070647690] [robot3.local_costmap.local_costmap]: Using plugin "inflation_layer"
+[ros2-11] [controller_server-1] [INFO] [1785141075.086000755] [robot3.local_costmap.local_costmap]: Initialized plugin "inflation_layer"
+[ros2-11] [controller_server-1] [INFO] [1785141075.419755539] [robot3.controller_server]: Created progress_checker : progress_checker of type nav2_controller::SimpleProgressChecker
+[ros2-11] [controller_server-1] [INFO] [1785141075.465611457] [robot3.controller_server]: Created goal checker : general_goal_checker of type nav2_controller::SimpleGoalChecker
+[ros2-11] [controller_server-1] [INFO] [1785141075.525475711] [robot3.controller_server]: Controller Server has general_goal_checker  goal checkers available.
+[ros2-11] [controller_server-1] [INFO] [1785141075.528530501] [robot3.controller_server]: Created controller : FollowPath of type nav2_regulated_pure_pursuit_controller::RegulatedPurePursuitController
+[ros2-11] [controller_server-1] [INFO] [1785141076.295229254] [robot3.controller_server]: Controller Server has FollowPath  controllers available.
+[ros2-11] [lifecycle_manager-8] [INFO] [1785141076.832680971] [robot3.lifecycle_manager_navigation]: [34m[1mConfiguring smoother_server[0m[0m
+[ros2-11] [smoother_server-2] [INFO] [1785141076.833711724] [robot3.smoother_server]: Configuring smoother server
+[ros2-11] [smoother_server-2] [INFO] [1785141077.430230148] [robot3.smoother_server]: Created smoother : simple_smoother of type nav2_smoother::SimpleSmoother
+[ros2-11] [smoother_server-2] [INFO] [1785141077.498830120] [robot3.smoother_server]: Smoother Server has simple_smoother  smoothers available.
+[ros2-11] [lifecycle_manager-8] [INFO] [1785141077.606486480] [robot3.lifecycle_manager_navigation]: [34m[1mConfiguring planner_server[0m[0m
+[ros2-11] [planner_server-3] [INFO] [1785141077.606879545] [robot3.planner_server]: Configuring
+[ros2-11] [planner_server-3] [INFO] [1785141077.606942351] [robot3.global_costmap.global_costmap]: Configuring
+[ros2-11] [planner_server-3] [INFO] [1785141077.775791857] [robot3.global_costmap.global_costmap]: Using plugin "static_layer"
+[ros2-11] [planner_server-3] [INFO] [1785141077.840418595] [robot3.global_costmap.global_costmap]: Subscribing to the map topic (/map) with transient local durability
+[ros2-11] [planner_server-3] [INFO] [1785141077.853482583] [robot3.global_costmap.global_costmap]: Initialized plugin "static_layer"
+[ros2-11] [planner_server-3] [INFO] [1785141077.853585521] [robot3.global_costmap.global_costmap]: Using plugin "obstacle_layer"
+[ros2-11] [planner_server-3] [INFO] [1785141077.865558136] [robot3.global_costmap.global_costmap]: Subscribed to Topics: robot3/scan
+[ros2-11] [planner_server-3] [INFO] [1785141077.955532548] [robot3.global_costmap.global_costmap]: Initialized plugin "obstacle_layer"
+[ros2-11] [planner_server-3] [INFO] [1785141077.955701921] [robot3.global_costmap.global_costmap]: Using plugin "inflation_layer"
+[ros2-11] [planner_server-3] [INFO] [1785141077.980618959] [robot3.global_costmap.global_costmap]: Initialized plugin "inflation_layer"
+[ros2-11] [planner_server-3] [INFO] [1785141078.126450420] [robot3.global_costmap.global_costmap]: StaticLayer: Resizing costmap to 275 X 241 at 0.050000 m/pix
+[ros2-11] [planner_server-3] [INFO] [1785141078.129244163] [robot3.planner_server]: Created global planner plugin GridBased of type nav2_navfn_planner/NavfnPlanner
+[ros2-11] [planner_server-3] [INFO] [1785141078.129816877] [robot3.planner_server]: Configuring plugin GridBased of type NavfnPlanner
+[ros2-11] [planner_server-3] [INFO] [1785141078.162556935] [robot3.planner_server]: Planner Server has GridBased  planners available.
+[ros2-11] [lifecycle_manager-8] [INFO] [1785141078.399181008] [robot3.lifecycle_manager_navigation]: [34m[1mConfiguring behavior_server[0m[0m
+[ros2-11] [behavior_server-4] [INFO] [1785141078.412527997] [robot3.behavior_server]: Configuring
+[ros2-11] [behavior_server-4] [INFO] [1785141078.584943205] [robot3.behavior_server]: Creating behavior plugin spin of type nav2_behaviors/Spin
+[ros2-11] [behavior_server-4] [INFO] [1785141078.586493747] [robot3.behavior_server]: Configuring spin
+[ros2-11] [behavior_server-4] [INFO] [1785141078.900891454] [robot3.behavior_server]: Creating behavior plugin backup of type nav2_behaviors/BackUp
+[ros2-11] [behavior_server-4] [INFO] [1785141078.904675242] [robot3.behavior_server]: Configuring backup
+[ros2-11] [behavior_server-4] [INFO] [1785141079.097036789] [robot3.behavior_server]: Creating behavior plugin drive_on_heading of type nav2_behaviors/DriveOnHeading
+[ros2-11] [behavior_server-4] [INFO] [1785141079.099270246] [robot3.behavior_server]: Configuring drive_on_heading
+[ros2-11] [behavior_server-4] [INFO] [1785141079.251483277] [robot3.behavior_server]: Creating behavior plugin assisted_teleop of type nav2_behaviors/AssistedTeleop
+[ros2-11] [behavior_server-4] [INFO] [1785141079.260541586] [robot3.behavior_server]: Configuring assisted_teleop
+[ros2-11] [behavior_server-4] [INFO] [1785141079.361907682] [robot3.behavior_server]: Creating behavior plugin wait of type nav2_behaviors/Wait
+[ros2-11] [behavior_server-4] [INFO] [1785141079.363505071] [robot3.behavior_server]: Configuring wait
+[ros2-11] [lifecycle_manager-8] [INFO] [1785141079.443945331] [robot3.lifecycle_manager_navigation]: [34m[1mConfiguring bt_navigator[0m[0m
+[ros2-11] [bt_navigator-5] [INFO] [1785141079.444910578] [robot3.bt_navigator]: Configuring
+[ros2-11] [lifecycle_manager-8] [INFO] [1785141079.998367569] [robot3.lifecycle_manager_navigation]: [34m[1mConfiguring waypoint_follower[0m[0m
+[ros2-11] [bt_navigator-5] [WARN] [1785141392.413888545] [robot3.bt_navigator.rclcpp]: failed to send response to /robot3/bt_navigator/get_state (timeout): client will not receive response, at ./src/rmw_response.cpp:154, at ./src/rcl/service.c:314
+[gzclient-2] Exception sending a multicast message:Network is unreachable
+[gzclient-2] Exception sending a multicast message:Network is unreachable
+[gzclient-2] Exception sending a multicast message:Network is unreachable
+[gzclient-2] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzclient-2] Exception sending a multicast message:Network is unreachable
+[gzclient-2] Exception sending a multicast message:Network is unreachable
+[gzclient-2] Exception sending a multicast message:Network is unreachable
+[gzclient-2] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzclient-2] Exception sending a multicast message:Network is unreachable
+[gzclient-2] Exception sending a multicast message:Network is unreachable
+[gzclient-2] Exception sending a multicast message:Network is unreachable
+[gzclient-2] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzclient-2] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzclient-2] Exception sending a multicast message:Network is unreachable
+[gzclient-2] Exception sending a multicast message:Network is unreachable
+[gzclient-2] Exception sending a multicast message:Network is unreachable
+[gzclient-2] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzclient-2] Exception sending a multicast message:Network is unreachable
+[gzclient-2] Exception sending a multicast message:Network is unreachable
+[gzclient-2] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzclient-2] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzclient-2] Exception sending a multicast message:Network is unreachable
+[gzclient-2] Exception sending a multicast message:Network is unreachable
+[gzclient-2] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzclient-2] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzclient-2] Exception sending a multicast message:Network is unreachable
+[gzclient-2] Exception sending a multicast message:Network is unreachable
+[gzclient-2] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[gzserver-1] Exception sending a multicast message:Network is unreachable
+[amcl-9] [INFO] [1785144041.673014433] [amcl3]: Message Filter dropping message: frame 'robot3/laser_frame' at time 849.617 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[ekf_node-8] Failed to meet update rate! Took 1.1999999999999999556seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.
+[amcl-9] [INFO] [1785144650.689539709] [amcl3]: Message Filter dropping message: frame 'robot3/laser_frame' at time 1455.022 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[ekf_node-8] Failed to meet update rate! Took 0.69999999999999995559seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.
+[amcl-9] [INFO] [1785144689.742353670] [amcl3]: Message Filter dropping message: frame 'robot3/laser_frame' at time 1493.822 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[amcl-9] [INFO] [1785144698.693748343] [amcl3]: Message Filter dropping message: frame 'robot3/laser_frame' at time 1502.722 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[ekf_node-8] Failed to meet update rate! Took 0.9000000000000000222seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.
+[INFO] [rviz2-3]: process has finished cleanly [pid 20161]
+[INFO] [gzclient-2]: process has finished cleanly [pid 20159]
+[amcl-9] [WARN] [1785145125.032453318] [rcl_lifecycle]: No transition matching 1 found for current state active
+[amcl-9] [WARN] [1785145125.034762990] [rcl_lifecycle]: No transition matching 1 found for current state active
+[amcl-9] [ERROR] [1785145125.034801587] [amcl3]: Unable to start transition 1 from current state active: Transition is not registered., at ./src/rcl_lifecycle.c:355
+[map_server-4] [WARN] [1785145368.969910565] [rcl_lifecycle]: No transition matching 1 found for current state active
+[map_server-4] [WARN] [1785145368.973334230] [rcl_lifecycle]: No transition matching 1 found for current state active
+[map_server-4] [ERROR] [1785145368.974014488] [map_server]: Unable to start transition 1 from current state active: Transition is not registered., at ./src/rcl_lifecycle.c:355
+[ekf_node-8] Failed to meet update rate! Took 0.10000000000000000555seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.
+[map_server-4] [WARN] [1785145645.931293782] [rcl_lifecycle]: No transition matching 1 found for current state active
+[map_server-4] [WARN] [1785145645.931412463] [rcl_lifecycle]: No transition matching 1 found for current state active
+[map_server-4] [ERROR] [1785145645.931424105] [map_server]: Unable to start transition 1 from current state active: Transition is not registered., at ./src/rcl_lifecycle.c:355
+[lifecycle_manager-5] [INFO] [1785145714.701253314] [lifecycle_manager_localization]: [34m[1mHave not received a heartbeat from amcl3.[0m[0m
+[lifecycle_manager-5] [ERROR] [1785145714.740123363] [lifecycle_manager_localization]: CRITICAL FAILURE: SERVER amcl3 IS DOWN after not receiving a heartbeat for 4000 ms. Shutting down related nodes.
+[lifecycle_manager-5] [INFO] [1785145714.757477629] [lifecycle_manager_localization]: [34m[1mTerminating bond timer...[0m[0m
+[lifecycle_manager-5] [INFO] [1785145714.759502860] [lifecycle_manager_localization]: [34m[1mResetting managed nodes...[0m[0m
+[lifecycle_manager-5] [INFO] [1785145714.759559488] [lifecycle_manager_localization]: [34m[1mDeactivating amcl3[0m[0m
+[amcl-9] [INFO] [1785145715.154953016] [amcl3]: Deactivating
+[amcl-9] [INFO] [1785145715.204043612] [amcl3]: Destroying bond (amcl3) to lifecycle manager.
+[lifecycle_manager-5] [ERROR] [1785145715.271691281] [lifecycle_manager_localization]: Failed to change state for node: amcl3
+[lifecycle_manager-5] [INFO] [1785145715.273302651] [lifecycle_manager_localization]: [34m[1mDeactivating map_server[0m[0m
+[map_server-4] [INFO] [1785145715.276927294] [map_server]: Deactivating
+[map_server-4] [INFO] [1785145715.282850196] [map_server]: Destroying bond (map_server) to lifecycle manager.
+[lifecycle_manager-5] [INFO] [1785145715.294407917] [lifecycle_manager_localization]: [34m[1mCleaning up amcl3[0m[0m
+[lifecycle_manager-5] [INFO] [1785145715.296621324] [lifecycle_manager_localization]: [34m[1mCleaning up map_server[0m[0m
+[lifecycle_manager-5] [INFO] [1785145715.433697247] [lifecycle_manager_localization]: [34m[1mManaged nodes have been reset[0m[0m
+[amcl-9] [INFO] [1785145715.445489924] [amcl3]: Cleaning up
+[map_server-4] [INFO] [1785145715.455572139] [map_server]: Cleaning up
+[lifecycle_manager-5] [INFO] [1785145716.461047619] [lifecycle_manager_localization]: [34m[1mSuccessfully re-established connections from server respawns, starting back up.[0m[0m
+[lifecycle_manager-5] [INFO] [1785145716.463744589] [lifecycle_manager_localization]: [34m[1mStarting managed nodes bringup...[0m[0m
+[lifecycle_manager-5] [INFO] [1785145716.463784828] [lifecycle_manager_localization]: [34m[1mConfiguring map_server[0m[0m
+[map_server-4] [INFO] [1785145716.466512374] [map_server]: Configuring
+[map_server-4] [INFO] [1785145716.468780752] [map_io]: Loading yaml file: /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/share/agv/maps/my_new_map.yaml
+[map_server-4] [INFO] [1785145716.482276387] [map_io]: resolution: 0.05
+[map_server-4] [INFO] [1785145716.482304854] [map_io]: origin[0]: -7.275
+[map_server-4] [INFO] [1785145716.482310649] [map_io]: origin[1]: -6.625
+[map_server-4] [INFO] [1785145716.482319601] [map_io]: origin[2]: 0
+[map_server-4] [INFO] [1785145716.482326068] [map_io]: free_thresh: 0.25
+[map_server-4] [INFO] [1785145716.482331921] [map_io]: occupied_thresh: 0.65
+[map_server-4] [INFO] [1785145716.482337751] [map_io]: mode: trinary
+[map_server-4] [INFO] [1785145716.482344201] [map_io]: negate: 0
+[map_server-4] [INFO] [1785145716.486011393] [map_io]: Loading image_file: /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/share/agv/maps/my_new_map.pgm
+[map_server-4] [INFO] [1785145716.512616806] [map_io]: Read map /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/share/agv/maps/my_new_map.pgm: 275 X 241 map @ 0.05 m/cell
+[lifecycle_manager-5] [INFO] [1785145716.580039662] [lifecycle_manager_localization]: [34m[1mConfiguring amcl3[0m[0m
+[amcl-9] [INFO] [1785145716.582083219] [amcl3]: Configuring
+[amcl-9] [INFO] [1785145716.583571117] [amcl3]: initTransforms
+[amcl-9] [INFO] [1785145716.812001846] [amcl3]: initPubSub
+[amcl-9] [INFO] [1785145716.866086032] [amcl3]: Subscribed to map topic.
+[lifecycle_manager-5] [INFO] [1785145716.912157277] [lifecycle_manager_localization]: [34m[1mActivating map_server[0m[0m
+[map_server-4] [INFO] [1785145716.914793001] [map_server]: Activating
+[map_server-4] [INFO] [1785145716.923955684] [map_server]: Creating bond (map_server) to lifecycle manager.
+[amcl-9] [INFO] [1785145716.928400287] [amcl3]: Received a 275 X 241 map @ 0.050 m/pix
+[amcl-9] [INFO] [1785145716.965814342] [amcl3]: Received a 275 X 241 map @ 0.050 m/pix
+[lifecycle_manager-5] [INFO] [1785145717.052215630] [lifecycle_manager_localization]: Server map_server connected with bond.
+[lifecycle_manager-5] [INFO] [1785145717.052860127] [lifecycle_manager_localization]: [34m[1mActivating amcl3[0m[0m
+[amcl-9] [INFO] [1785145717.055763306] [amcl3]: Activating
+[amcl-9] [INFO] [1785145717.056028647] [amcl3]: initialPoseReceived
+[amcl-9] [INFO] [1785145717.056138138] [amcl3]: Setting pose (2426.600000): 0.000 3.000 0.000
+[amcl-9] [INFO] [1785145717.057279511] [amcl3]: Creating bond (amcl3) to lifecycle manager.
+[amcl-9] [INFO] [1785145717.135452867] [amcl3]: createLaserObject
+[lifecycle_manager-5] [INFO] [1785145717.189821727] [lifecycle_manager_localization]: Server amcl3 connected with bond.
+[lifecycle_manager-5] [INFO] [1785145717.189915265] [lifecycle_manager_localization]: [34m[1mManaged nodes are active[0m[0m
+[lifecycle_manager-5] [INFO] [1785145717.189925702] [lifecycle_manager_localization]: [34m[1mCreating bond timer...[0m[0m
+[amcl-9] [INFO] [1785145719.762845551] [amcl3]: Message Filter dropping message: frame 'robot3/laser_frame' at time 2427.257 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[ekf_node-8] Failed to meet update rate! Took 1.1999999999999999556seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.
+[amcl-9] [INFO] [1785145725.710485381] [amcl3]: Message Filter dropping message: frame 'robot3/laser_frame' at time 2431.862 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[ekf_node-8] Failed to meet update rate! Took 1.8999999999999999112seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.
+[ekf_node-8] Failed to meet update rate! Took 0.69999999999999995559seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.
+[ekf_node-8] Failed to meet update rate! Took 0.10000000000000000555seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.
+[amcl-9] [INFO] [1785145739.549279561] [amcl3]: Message Filter dropping message: frame 'robot3/laser_frame' at time 2445.909 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[ekf_node-8] Failed to meet update rate! Took 1.1000000000000000888seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.
+[ekf_node-8] Failed to meet update rate! Took 0.5seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.
+[ekf_node-8] Failed to meet update rate! Took 1.6000000000000000888seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.
+[ekf_node-8] Failed to meet update rate! Took 1.8999999999999999112seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.
+[amcl-9] [INFO] [1785145774.777977727] [amcl3]: Message Filter dropping message: frame 'robot3/laser_frame' at time 2477.213 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[amcl-9] [INFO] [1785145780.766647718] [amcl3]: Message Filter dropping message: frame 'robot3/laser_frame' at time 2484.013 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[ekf_node-8] Failed to meet update rate! Took 0.9000000000000000222seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.
+[amcl-9] [INFO] [1785145784.116767045] [amcl3]: Message Filter dropping message: frame 'robot3/laser_frame' at time 2486.913 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[ekf_node-8] Failed to meet update rate! Took 1.1999999999999999556seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.
+[amcl-9] [INFO] [1785145788.663456026] [amcl3]: Message Filter dropping message: frame 'robot3/laser_frame' at time 2491.813 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[ekf_node-8] Failed to meet update rate! Took 1seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.
+[ekf_node-8] Failed to meet update rate! Took 1seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.
+[ekf_node-8] Failed to meet update rate! Took 0.2999999999999999889seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.
+[ekf_node-8] Failed to meet update rate! Took 1.3999999999999999112seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.
+[ekf_node-8] Failed to meet update rate! Took 0.2999999999999999889seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.
+[ekf_node-8] Failed to meet update rate! Took 0.4000000000000000222seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.
+[ekf_node-8] Failed to meet update rate! Took 0.5999999999999999778seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.
+[ekf_node-8] Failed to meet update rate! Took 0.4000000000000000222seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.
+[ekf_node-8] Failed to meet update rate! Took 1.1999999999999999556seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.
+[ekf_node-8] Failed to meet update rate! Took 0.4000000000000000222seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.
+[ekf_node-8] Failed to meet update rate! Took 1.8999999999999999112seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.
+[ekf_node-8] Failed to meet update rate! Took 1.6000000000000000888seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.
+[ekf_node-8] Failed to meet update rate! Took 0.2999999999999999889seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.
+[ekf_node-8] Failed to meet update rate! Took 0.10000000000000000555seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.
+[ekf_node-8] Failed to meet update rate! Took 0.10000000000000000555seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.
+[ekf_node-8] Failed to meet update rate! Took 1.8999999999999999112seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.
+[ekf_node-8] Failed to meet update rate! Took 1.3000000000000000444seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.
+[ros2-11] [bt_navigator-5] [WARN] [1785145997.962202659] [robot3.bt_navigator.rclcpp]: failed to send response to /robot3/bt_navigator/get_state (timeout): client will not receive response, at ./src/rmw_response.cpp:154, at ./src/rcl/service.c:314
+[ekf_node-8] Failed to meet update rate! Took 1.6999999999999999556seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.
+[ekf_node-8] Failed to meet update rate! Took 0.10000000000000000555seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.
+[lifecycle_manager-5] [INFO] [1785146031.585701450] [lifecycle_manager_localization]: [34m[1mHave not received a heartbeat from map_server.[0m[0m
+[lifecycle_manager-5] [ERROR] [1785146031.585852850] [lifecycle_manager_localization]: CRITICAL FAILURE: SERVER map_server IS DOWN after not receiving a heartbeat for 4000 ms. Shutting down related nodes.
+[lifecycle_manager-5] [INFO] [1785146031.585974608] [lifecycle_manager_localization]: [34m[1mTerminating bond timer...[0m[0m
+[lifecycle_manager-5] [INFO] [1785146031.585990092] [lifecycle_manager_localization]: [34m[1mResetting managed nodes...[0m[0m
+[lifecycle_manager-5] [INFO] [1785146031.586009849] [lifecycle_manager_localization]: [34m[1mDeactivating amcl3[0m[0m
+[amcl-9] [INFO] [1785146033.531760839] [amcl3]: Deactivating
+[amcl-9] [INFO] [1785146033.532554372] [amcl3]: Destroying bond (amcl3) to lifecycle manager.
+[lifecycle_manager-5] [INFO] [1785146035.701812770] [lifecycle_manager_localization]: [34m[1mDeactivating map_server[0m[0m
+[map_server-4] [INFO] [1785146035.703034749] [map_server]: Deactivating
+[map_server-4] [INFO] [1785146035.703643709] [map_server]: Destroying bond (map_server) to lifecycle manager.
+[lifecycle_manager-5] [INFO] [1785146035.821059713] [lifecycle_manager_localization]: [34m[1mCleaning up amcl3[0m[0m
+[amcl-9] [INFO] [1785146035.821782559] [amcl3]: Cleaning up
+[lifecycle_manager-5] [INFO] [1785146035.882344554] [lifecycle_manager_localization]: [34m[1mCleaning up map_server[0m[0m
+[map_server-4] [INFO] [1785146035.882805435] [map_server]: Cleaning up
+[lifecycle_manager-5] [INFO] [1785146035.899383730] [lifecycle_manager_localization]: [34m[1mManaged nodes have been reset[0m[0m
+[lifecycle_manager-5] [INFO] [1785146036.900839753] [lifecycle_manager_localization]: [34m[1mSuccessfully re-established connections from server respawns, starting back up.[0m[0m
+[lifecycle_manager-5] [INFO] [1785146036.900909055] [lifecycle_manager_localization]: [34m[1mStarting managed nodes bringup...[0m[0m
+[lifecycle_manager-5] [INFO] [1785146036.900921146] [lifecycle_manager_localization]: [34m[1mConfiguring map_server[0m[0m
+[map_server-4] [INFO] [1785146036.901206666] [map_server]: Configuring
+[map_server-4] [INFO] [1785146036.901753416] [map_io]: Loading yaml file: /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/share/agv/maps/my_new_map.yaml
+[map_server-4] [INFO] [1785146036.904913743] [map_io]: resolution: 0.05
+[map_server-4] [INFO] [1785146036.904937717] [map_io]: origin[0]: -7.275
+[map_server-4] [INFO] [1785146036.904941473] [map_io]: origin[1]: -6.625
+[map_server-4] [INFO] [1785146036.904944921] [map_io]: origin[2]: 0
+[map_server-4] [INFO] [1785146036.904948386] [map_io]: free_thresh: 0.25
+[map_server-4] [INFO] [1785146036.904951652] [map_io]: occupied_thresh: 0.65
+[map_server-4] [INFO] [1785146036.904954725] [map_io]: mode: trinary
+[map_server-4] [INFO] [1785146036.904958295] [map_io]: negate: 0
+[map_server-4] [INFO] [1785146036.906676651] [map_io]: Loading image_file: /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/share/agv/maps/my_new_map.pgm
+[map_server-4] [INFO] [1785146036.916683990] [map_io]: Read map /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/share/agv/maps/my_new_map.pgm: 275 X 241 map @ 0.05 m/cell
+[lifecycle_manager-5] [INFO] [1785146036.931869481] [lifecycle_manager_localization]: [34m[1mConfiguring amcl3[0m[0m
+[amcl-9] [INFO] [1785146036.932096822] [amcl3]: Configuring
+[amcl-9] [INFO] [1785146036.932212002] [amcl3]: initTransforms
+[amcl-9] [INFO] [1785146036.962764922] [amcl3]: initPubSub
+[amcl-9] [INFO] [1785146036.974952998] [amcl3]: Subscribed to map topic.
+[lifecycle_manager-5] [INFO] [1785146036.987119956] [lifecycle_manager_localization]: [34m[1mActivating map_server[0m[0m
+[map_server-4] [INFO] [1785146036.987984354] [map_server]: Activating
+[map_server-4] [INFO] [1785146036.988905137] [map_server]: Creating bond (map_server) to lifecycle manager.
+[amcl-9] [INFO] [1785146036.989075061] [amcl3]: Received a 275 X 241 map @ 0.050 m/pix
+[lifecycle_manager-5] [INFO] [1785146037.100982020] [lifecycle_manager_localization]: Server map_server connected with bond.
+[lifecycle_manager-5] [INFO] [1785146037.101046342] [lifecycle_manager_localization]: [34m[1mActivating amcl3[0m[0m
+[amcl-9] [INFO] [1785146037.101634088] [amcl3]: Activating
+[amcl-9] [INFO] [1785146037.101691547] [amcl3]: initialPoseReceived
+[amcl-9] [INFO] [1785146037.101782197] [amcl3]: Setting pose (2500.700000): 0.000 3.000 0.000
+[amcl-9] [INFO] [1785146037.102267099] [amcl3]: Creating bond (amcl3) to lifecycle manager.
+[lifecycle_manager-5] [INFO] [1785146037.215716595] [lifecycle_manager_localization]: Server amcl3 connected with bond.
+[lifecycle_manager-5] [INFO] [1785146037.215839753] [lifecycle_manager_localization]: [34m[1mManaged nodes are active[0m[0m
+[lifecycle_manager-5] [INFO] [1785146037.215876338] [lifecycle_manager_localization]: [34m[1mCreating bond timer...[0m[0m
+[ekf_node-8] Failed to meet update rate! Took 0.2000000000000000111seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.
+[ekf_node-8] Failed to meet update rate! Took 0.10000000000000000555seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.
+[ekf_node-8] Failed to meet update rate! Took 0.2999999999999999889seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.
+[ekf_node-8] Failed to meet update rate! Took 0.10000000000000000555seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.
+[ekf_node-8] Failed to meet update rate! Took 0.10000000000000000555seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.
+[ekf_node-8] Failed to meet update rate! Took 0.80000000000000004441seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.
+[ekf_node-8] Failed to meet update rate! Took 1.6999999999999999556seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.
+[ekf_node-8] Failed to meet update rate! Took 0.5seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.
+[ekf_node-8] Failed to meet update rate! Took 0.2000000000000000111seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.
+[ekf_node-8] Failed to meet update rate! Took 0.10000000000000000555seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.
+[ekf_node-8] Failed to meet update rate! Took 0.2000000000000000111seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.
+[ekf_node-8] Failed to meet update rate! Took 1.8999999999999999112seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.
+[lifecycle_manager-5] [INFO] [1785146118.815798137] [lifecycle_manager_localization]: [34m[1mHave not received a heartbeat from map_server.[0m[0m
+[lifecycle_manager-5] [ERROR] [1785146118.815918382] [lifecycle_manager_localization]: CRITICAL FAILURE: SERVER map_server IS DOWN after not receiving a heartbeat for 4000 ms. Shutting down related nodes.
+[lifecycle_manager-5] [INFO] [1785146118.817494128] [lifecycle_manager_localization]: [34m[1mTerminating bond timer...[0m[0m
+[lifecycle_manager-5] [INFO] [1785146118.817553565] [lifecycle_manager_localization]: [34m[1mResetting managed nodes...[0m[0m
+[lifecycle_manager-5] [INFO] [1785146118.817576548] [lifecycle_manager_localization]: [34m[1mDeactivating amcl3[0m[0m
+[amcl-9] [INFO] [1785146118.830991185] [amcl3]: Deactivating
+[amcl-9] [INFO] [1785146118.831093012] [amcl3]: Destroying bond (amcl3) to lifecycle manager.
+[lifecycle_manager-5] [INFO] [1785146118.877573113] [lifecycle_manager_localization]: [34m[1mDeactivating map_server[0m[0m
+[map_server-4] [INFO] [1785146118.879069441] [map_server]: Deactivating
+[map_server-4] [INFO] [1785146118.879656050] [map_server]: Destroying bond (map_server) to lifecycle manager.
+[lifecycle_manager-5] [INFO] [1785146119.005267171] [lifecycle_manager_localization]: [34m[1mCleaning up amcl3[0m[0m
+[amcl-9] [INFO] [1785146119.006136970] [amcl3]: Cleaning up
+[lifecycle_manager-5] [INFO] [1785146119.198195338] [lifecycle_manager_localization]: [34m[1mCleaning up map_server[0m[0m
+[map_server-4] [INFO] [1785146119.199977386] [map_server]: Cleaning up
+[lifecycle_manager-5] [INFO] [1785146119.254019775] [lifecycle_manager_localization]: [34m[1mManaged nodes have been reset[0m[0m
+[lifecycle_manager-5] [INFO] [1785146120.258643734] [lifecycle_manager_localization]: [34m[1mSuccessfully re-established connections from server respawns, starting back up.[0m[0m
+[lifecycle_manager-5] [INFO] [1785146120.258711213] [lifecycle_manager_localization]: [34m[1mStarting managed nodes bringup...[0m[0m
+[lifecycle_manager-5] [INFO] [1785146120.258725719] [lifecycle_manager_localization]: [34m[1mConfiguring map_server[0m[0m
+[map_server-4] [INFO] [1785146120.259194523] [map_server]: Configuring
+[map_server-4] [INFO] [1785146120.259752546] [map_io]: Loading yaml file: /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/share/agv/maps/my_new_map.yaml
+[map_server-4] [INFO] [1785146120.262854455] [map_io]: resolution: 0.05
+[map_server-4] [INFO] [1785146120.262875992] [map_io]: origin[0]: -7.275
+[map_server-4] [INFO] [1785146120.262884050] [map_io]: origin[1]: -6.625
+[map_server-4] [INFO] [1785146120.262891534] [map_io]: origin[2]: 0
+[map_server-4] [INFO] [1785146120.262899477] [map_io]: free_thresh: 0.25
+[map_server-4] [INFO] [1785146120.262907179] [map_io]: occupied_thresh: 0.65
+[map_server-4] [INFO] [1785146120.262914018] [map_io]: mode: trinary
+[map_server-4] [INFO] [1785146120.262921096] [map_io]: negate: 0
+[map_server-4] [INFO] [1785146120.264419794] [map_io]: Loading image_file: /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/share/agv/maps/my_new_map.pgm
+[map_server-4] [INFO] [1785146120.275367552] [map_io]: Read map /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/share/agv/maps/my_new_map.pgm: 275 X 241 map @ 0.05 m/cell
+[lifecycle_manager-5] [INFO] [1785146120.302778190] [lifecycle_manager_localization]: [34m[1mConfiguring amcl3[0m[0m
+[amcl-9] [INFO] [1785146120.303285318] [amcl3]: Configuring
+[amcl-9] [INFO] [1785146120.303386126] [amcl3]: initTransforms
+[amcl-9] [INFO] [1785146120.358832003] [amcl3]: initPubSub
+[amcl-9] [INFO] [1785146120.376025224] [amcl3]: Subscribed to map topic.
+[lifecycle_manager-5] [INFO] [1785146120.390808508] [lifecycle_manager_localization]: [34m[1mActivating map_server[0m[0m
+[map_server-4] [INFO] [1785146120.391077362] [map_server]: Activating
+[map_server-4] [INFO] [1785146120.391806003] [map_server]: Creating bond (map_server) to lifecycle manager.
+[amcl-9] [INFO] [1785146120.391891586] [amcl3]: Received a 275 X 241 map @ 0.050 m/pix
+[lifecycle_manager-5] [INFO] [1785146120.510460746] [lifecycle_manager_localization]: Server map_server connected with bond.
+[lifecycle_manager-5] [INFO] [1785146120.510526416] [lifecycle_manager_localization]: [34m[1mActivating amcl3[0m[0m
+[amcl-9] [INFO] [1785146120.511188052] [amcl3]: Activating
+[amcl-9] [INFO] [1785146120.511237758] [amcl3]: initialPoseReceived
+[amcl-9] [INFO] [1785146120.511301055] [amcl3]: Setting pose (2500.700000): 0.000 3.000 0.000
+[amcl-9] [INFO] [1785146120.511981993] [amcl3]: Creating bond (amcl3) to lifecycle manager.
+[lifecycle_manager-5] [INFO] [1785146120.629369612] [lifecycle_manager_localization]: Server amcl3 connected with bond.
+[lifecycle_manager-5] [INFO] [1785146120.629426073] [lifecycle_manager_localization]: [34m[1mManaged nodes are active[0m[0m
+[lifecycle_manager-5] [INFO] [1785146120.629446981] [lifecycle_manager_localization]: [34m[1mCreating bond timer...[0m[0m
+[ekf_node-8] Failed to meet update rate! Took 0.2999999999999999889seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.
+[ekf_node-8] Failed to meet update rate! Took 0.10000000000000000555seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.
+[ekf_node-8] Failed to meet update rate! Took 1.1999999999999999556seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.
+[ekf_node-8] Failed to meet update rate! Took 0.10000000000000000555seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.
+[ekf_node-8] Failed to meet update rate! Took 0.2000000000000000111seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.
+[ros2-11] [bt_navigator-5] [WARN] [1785146162.934613134] [robot3.bt_navigator.rclcpp]: failed to send response to /robot3/bt_navigator/get_state (timeout): client will not receive response, at ./src/rmw_response.cpp:154, at ./src/rcl/service.c:314
+[ekf_node-8] Failed to meet update rate! Took 1.8999999999999999112seconds. Try decreasing the rate, limiting sensor output frequency, or limiting the number of sensors.

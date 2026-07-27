@@ -1,0 +1,118 @@
+[INFO] [launch]: All log files can be found below /home/sanket/.ros/log/2026-07-27-13-51-21-621673-sanket-Victus-by-HP-Laptop-16-d0xxx-16899
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [gzserver-1]: process started with pid [16901]
+[INFO] [gzclient-2]: process started with pid [16903]
+[INFO] [rviz2-3]: process started with pid [16905]
+[INFO] [robot_state_publisher-4]: process started with pid [16907]
+[INFO] [spawn_entity.py-5]: process started with pid [16909]
+[INFO] [ekf_node-6]: process started with pid [16911]
+[INFO] [goal_pid_controller-7]: process started with pid [16913]
+[INFO] [static_transform_publisher-8]: process started with pid [16915]
+[INFO] [robot_state_publisher-9]: process started with pid [16917]
+[INFO] [spawn_entity.py-10]: process started with pid [16919]
+[INFO] [ekf_node-11]: process started with pid [16921]
+[INFO] [tf_to_odom-12]: process started with pid [16923]
+[INFO] [goal_pid_controller-13]: process started with pid [16932]
+[INFO] [static_transform_publisher-14]: process started with pid [16949]
+[INFO] [robot_state_publisher-15]: process started with pid [16955]
+[INFO] [spawn_entity.py-16]: process started with pid [16961]
+[INFO] [ekf_node-17]: process started with pid [16967]
+[INFO] [async_slam_toolbox_node-18]: process started with pid [16977]
+[INFO] [tf_to_odom-19]: process started with pid [16980]
+[INFO] [goal_pid_controller-20]: process started with pid [16984]
+[static_transform_publisher-8] [WARN] [1785140481.819680382] []: Old-style arguments are deprecated; see --help for new-style arguments
+[static_transform_publisher-14] [WARN] [1785140481.892479699] []: Old-style arguments are deprecated; see --help for new-style arguments
+[static_transform_publisher-8] [INFO] [1785140482.272532641] [static_transform_publisher_0gQG8pGFXQLOlK9t]: Spinning until stopped - publishing transform
+[static_transform_publisher-8] translation: ('0.000000', '1.000000', '0.000000')
+[static_transform_publisher-8] rotation: ('0.000000', '0.000000', '0.000000', '1.000000')
+[static_transform_publisher-8] from 'map' to 'robot1/odom'
+[static_transform_publisher-14] [INFO] [1785140482.289170992] [static_transform_publisher_OIDY33KCqGIfndFG]: Spinning until stopped - publishing transform
+[static_transform_publisher-14] translation: ('0.000000', '-1.000000', '0.000000')
+[static_transform_publisher-14] rotation: ('0.000000', '0.000000', '0.000000', '1.000000')
+[static_transform_publisher-14] from 'map' to 'robot2/odom'
+[robot_state_publisher-9] [INFO] [1785140482.404175594] [robot2.robot_state_publisher]: got segment robot2/AGV_Body-v1
+[robot_state_publisher-9] [INFO] [1785140482.404347835] [robot2.robot_state_publisher]: got segment robot2/ZLtech_6.5inch-v3
+[robot_state_publisher-9] [INFO] [1785140482.404363744] [robot2.robot_state_publisher]: got segment robot2/ZLtech_6.5inch-v3-1
+[robot_state_publisher-9] [INFO] [1785140482.404371647] [robot2.robot_state_publisher]: got segment robot2/base_link
+[robot_state_publisher-9] [INFO] [1785140482.404379304] [robot2.robot_state_publisher]: got segment robot2/caster_back
+[robot_state_publisher-9] [INFO] [1785140482.404386680] [robot2.robot_state_publisher]: got segment robot2/caster_front
+[robot_state_publisher-9] [INFO] [1785140482.404393648] [robot2.robot_state_publisher]: got segment robot2/front_indicator
+[robot_state_publisher-9] [INFO] [1785140482.404401989] [robot2.robot_state_publisher]: got segment robot2/laser_frame
+[robot_state_publisher-9] [INFO] [1785140482.404410502] [robot2.robot_state_publisher]: got segment robot2/scanner-v2
+[robot_state_publisher-15] [INFO] [1785140482.780026437] [robot3.robot_state_publisher]: got segment robot3/AGV_Body-v1
+[robot_state_publisher-15] [INFO] [1785140482.780233974] [robot3.robot_state_publisher]: got segment robot3/ZLtech_6.5inch-v3
+[robot_state_publisher-15] [INFO] [1785140482.780249420] [robot3.robot_state_publisher]: got segment robot3/ZLtech_6.5inch-v3-1
+[robot_state_publisher-15] [INFO] [1785140482.780258102] [robot3.robot_state_publisher]: got segment robot3/base_link
+[robot_state_publisher-15] [INFO] [1785140482.780266255] [robot3.robot_state_publisher]: got segment robot3/caster_back
+[robot_state_publisher-15] [INFO] [1785140482.780274367] [robot3.robot_state_publisher]: got segment robot3/caster_front
+[robot_state_publisher-15] [INFO] [1785140482.780281532] [robot3.robot_state_publisher]: got segment robot3/front_indicator
+[robot_state_publisher-15] [INFO] [1785140482.780291863] [robot3.robot_state_publisher]: got segment robot3/laser_frame
+[robot_state_publisher-15] [INFO] [1785140482.780299919] [robot3.robot_state_publisher]: got segment robot3/scanner-v2
+[robot_state_publisher-4] [INFO] [1785140482.888474434] [robot1.robot_state_publisher]: got segment robot1/AGV_Body-v1
+[robot_state_publisher-4] [INFO] [1785140482.888630788] [robot1.robot_state_publisher]: got segment robot1/ZLtech_6.5inch-v3
+[robot_state_publisher-4] [INFO] [1785140482.888643881] [robot1.robot_state_publisher]: got segment robot1/ZLtech_6.5inch-v3-1
+[robot_state_publisher-4] [INFO] [1785140482.888652556] [robot1.robot_state_publisher]: got segment robot1/base_link
+[robot_state_publisher-4] [INFO] [1785140482.888660331] [robot1.robot_state_publisher]: got segment robot1/caster_back
+[robot_state_publisher-4] [INFO] [1785140482.888668992] [robot1.robot_state_publisher]: got segment robot1/caster_front
+[robot_state_publisher-4] [INFO] [1785140482.888676525] [robot1.robot_state_publisher]: got segment robot1/front_indicator
+[robot_state_publisher-4] [INFO] [1785140482.888683553] [robot1.robot_state_publisher]: got segment robot1/laser_frame
+[robot_state_publisher-4] [INFO] [1785140482.888690627] [robot1.robot_state_publisher]: got segment robot1/scanner-v2
+[tf_to_odom-19] [INFO] [1785140485.086017473] [robot3.tf_to_odom]: Publishing TF (map -> robot3/base_link) to odometry/filtered
+[goal_pid_controller-13] [INFO] [1785140486.119355181] [robot2.goal_pid_controller]: Obstacle Avoidance DISABLED
+[goal_pid_controller-13] [INFO] [1785140486.120171433] [robot2.goal_pid_controller]: Started PID Controller Node
+[goal_pid_controller-13] [INFO] [1785140486.172715091] [robot2.goal_pid_controller]: Awaiting goal...
+[tf_to_odom-12] [INFO] [1785140486.420138748] [robot2.tf_to_odom]: Publishing TF (robot2/odom -> robot2/base_link) to odometry/filtered
+[goal_pid_controller-20] [INFO] [1785140487.628233482] [robot3.goal_pid_controller]: Obstacle Avoidance DISABLED
+[goal_pid_controller-20] [INFO] [1785140487.629137127] [robot3.goal_pid_controller]: Started PID Controller Node
+[goal_pid_controller-20] [INFO] [1785140487.631162957] [robot3.goal_pid_controller]: Awaiting goal...
+[spawn_entity.py-10] [INFO] [1785140487.916552262] [spawn_entity]: Spawn Entity started
+[spawn_entity.py-10] [INFO] [1785140487.947348673] [spawn_entity]: Loading entity published on topic /robot2/robot_description
+[spawn_entity.py-10] [INFO] [1785140488.012984379] [spawn_entity]: Waiting for entity xml on /robot2/robot_description
+[goal_pid_controller-7] [INFO] [1785140489.236214468] [robot1.goal_pid_controller]: Obstacle Avoidance DISABLED
+[goal_pid_controller-7] [INFO] [1785140489.237082777] [robot1.goal_pid_controller]: Started PID Controller Node
+[goal_pid_controller-7] [INFO] [1785140489.237743749] [robot1.goal_pid_controller]: Awaiting goal...
+[spawn_entity.py-16] [INFO] [1785140489.466268346] [spawn_entity]: Spawn Entity started
+[spawn_entity.py-16] [INFO] [1785140489.466917662] [spawn_entity]: Loading entity published on topic /robot3/robot_description
+[spawn_entity.py-5] [INFO] [1785140489.467067426] [spawn_entity]: Spawn Entity started
+[spawn_entity.py-5] [INFO] [1785140489.467729756] [spawn_entity]: Loading entity published on topic /robot1/robot_description
+[spawn_entity.py-16] [INFO] [1785140489.544730681] [spawn_entity]: Waiting for entity xml on /robot3/robot_description
+[spawn_entity.py-5] [INFO] [1785140489.601165180] [spawn_entity]: Waiting for entity xml on /robot1/robot_description
+[spawn_entity.py-10] [INFO] [1785140489.662491528] [spawn_entity]: Waiting for service /spawn_entity, timeout = 30
+[spawn_entity.py-10] [INFO] [1785140489.663093737] [spawn_entity]: Waiting for service /spawn_entity
+[spawn_entity.py-5] [INFO] [1785140489.682968261] [spawn_entity]: Waiting for service /spawn_entity, timeout = 30
+[spawn_entity.py-5] [INFO] [1785140489.683557241] [spawn_entity]: Waiting for service /spawn_entity
+[spawn_entity.py-16] [INFO] [1785140490.646396303] [spawn_entity]: Waiting for service /spawn_entity, timeout = 30
+[spawn_entity.py-16] [INFO] [1785140490.646965484] [spawn_entity]: Waiting for service /spawn_entity
+[rviz2-3] [INFO] [1785140490.684125256] [rviz2]: Stereo is NOT SUPPORTED
+[rviz2-3] [INFO] [1785140490.684256369] [rviz2]: OpenGl version: 4.6 (GLSL 4.6)
+[rviz2-3] [INFO] [1785140491.086471898] [rviz2]: Stereo is NOT SUPPORTED
+[spawn_entity.py-16] [INFO] [1785140492.789241658] [spawn_entity]: Calling service /spawn_entity
+[spawn_entity.py-5] [INFO] [1785140492.823938504] [spawn_entity]: Calling service /spawn_entity
+[spawn_entity.py-10] [INFO] [1785140492.855137917] [spawn_entity]: Calling service /spawn_entity
+[spawn_entity.py-16] [INFO] [1785140493.115723694] [spawn_entity]: Spawn status: SpawnEntity: Successfully spawned entity [robot3]
+[gzserver-1] [INFO] [1785140493.315610238] [robot3.diff_drive]: Wheel pair 1 separation set to [0.560000m]
+[gzserver-1] [INFO] [1785140493.316360886] [robot3.diff_drive]: Wheel pair 1 diameter set to [0.165000m]
+[gzserver-1] [INFO] [1785140493.324028537] [robot3.diff_drive]: Subscribed to [/robot3/cmd_vel]
+[gzserver-1] [INFO] [1785140493.334108173] [robot3.diff_drive]: Advertise odometry on [/robot3/odom]
+[gzserver-1] [INFO] [1785140493.394240646] [robot3.joint_state]: Going to publish joint [robot3/AGV_Body-v1_Revolute-2]
+[gzserver-1] [INFO] [1785140493.394316690] [robot3.joint_state]: Going to publish joint [robot3/AGV_Body-v1_Revolute-3]
+[INFO] [spawn_entity.py-16]: process has finished cleanly [pid 16961]
+[rviz2-3] [INFO] [1785140493.618879363] [rviz2]: Trying to create a map of size 197 x 197 using 1 swatches
+[spawn_entity.py-5] [INFO] [1785140493.800042220] [spawn_entity]: Spawn status: SpawnEntity: Successfully spawned entity [robot1]
+[gzserver-1] [INFO] [1785140493.981552158] [robot1.diff_drive]: Wheel pair 1 separation set to [0.560000m]
+[gzserver-1] [INFO] [1785140493.981642649] [robot1.diff_drive]: Wheel pair 1 diameter set to [0.165000m]
+[gzserver-1] [INFO] [1785140493.999815523] [robot1.diff_drive]: Subscribed to [/robot1/cmd_vel]
+[gzserver-1] [INFO] [1785140494.021127737] [robot1.diff_drive]: Advertise odometry on [/robot1/odom]
+[gzserver-1] [INFO] [1785140494.102100161] [robot1.joint_state]: Going to publish joint [robot1/AGV_Body-v1_Revolute-2]
+[gzserver-1] [INFO] [1785140494.102187188] [robot1.joint_state]: Going to publish joint [robot1/AGV_Body-v1_Revolute-3]
+[INFO] [spawn_entity.py-5]: process has finished cleanly [pid 16909]
+[spawn_entity.py-10] [INFO] [1785140494.468471306] [spawn_entity]: Spawn status: SpawnEntity: Successfully spawned entity [robot2]
+[gzserver-1] [INFO] [1785140494.732678419] [robot2.diff_drive]: Wheel pair 1 separation set to [0.560000m]
+[gzserver-1] [INFO] [1785140494.732767767] [robot2.diff_drive]: Wheel pair 1 diameter set to [0.165000m]
+[gzserver-1] [INFO] [1785140494.739251291] [robot2.diff_drive]: Subscribed to [/robot2/cmd_vel]
+[gzserver-1] [INFO] [1785140494.748581625] [robot2.diff_drive]: Advertise odometry on [/robot2/odom]
+[INFO] [spawn_entity.py-10]: process has finished cleanly [pid 16919]
+[gzserver-1] [INFO] [1785140494.833738012] [robot2.joint_state]: Going to publish joint [robot2/AGV_Body-v1_Revolute-2]
+[gzserver-1] [INFO] [1785140494.833793827] [robot2.joint_state]: Going to publish joint [robot2/AGV_Body-v1_Revolute-3]
+[gzserver-1] [WARN] [1785140512.753082790] [gazebo.rclcpp]: failed to send response to /spawn_entity (timeout): client will not receive response, at ./src/rmw_response.cpp:154, at ./src/rcl/service.c:314
+[rviz2-3] [INFO] [1785140516.255461771] [rviz]: Message Filter dropping message: frame 'robot2/laser_frame' at time 0.586 for reason 'the timestamp on the message is earlier than all the data in the transform cache'

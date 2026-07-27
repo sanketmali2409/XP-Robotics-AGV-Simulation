@@ -1,0 +1,23 @@
+[INFO] [1785138924.458767252] [test_orchestrator]: --- Starting Nav2 test sequence for robot3 ---
+[INFO] [1785138924.513471281] [test_orchestrator]: Cleared CSV file: /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/robot3_lidar_test.csv
+[INFO] [1785138924.513936846] [test_orchestrator]: Waiting for Nav2 action server for robot3...
+[INFO] [1785138924.764911113] [test_orchestrator]: Commanding robot3 via Nav2 to Waypoint 1 at (-3.5, 3.5)
+[INFO] [1785138924.766664512] [test_orchestrator]: Nav2 rejected the goal!
+[INFO] [1785138924.767206482] [test_orchestrator]: Waiting for Nav2 action server for robot3...
+[INFO] [1785138924.767823997] [test_orchestrator]: Commanding robot3 via Nav2 to Waypoint 2 at (3.5, 3.5)
+[INFO] [1785138924.769789215] [test_orchestrator]: Nav2 rejected the goal!
+[INFO] [1785138924.770468877] [test_orchestrator]: Waiting for Nav2 action server for robot3...
+[INFO] [1785138924.771062139] [test_orchestrator]: Commanding robot3 via Nav2 to Waypoint 3 at (3.5, -3.5)
+[INFO] [1785138924.772293678] [test_orchestrator]: Nav2 rejected the goal!
+[INFO] [1785138924.772724342] [test_orchestrator]: Waiting for Nav2 action server for robot3...
+[INFO] [1785138924.773203786] [test_orchestrator]: Commanding robot3 via Nav2 to Waypoint 4 at (-3.5, -3.5)
+[INFO] [1785138924.774165575] [test_orchestrator]: Nav2 rejected the goal!
+[INFO] [1785138924.774622327] [test_orchestrator]: Waiting for Nav2 action server for robot3...
+[INFO] [1785138924.775115152] [test_orchestrator]: Commanding robot3 via Nav2 to Waypoint 5 at (-3.5, 0.0)
+[INFO] [1785138924.775914867] [test_orchestrator]: Nav2 rejected the goal!
+[INFO] [1785138924.776220879] [test_orchestrator]: Waiting for Nav2 action server for robot3...
+[INFO] [1785138924.776573690] [test_orchestrator]: Commanding robot3 via Nav2 to Waypoint 6 at (0.0, 0.0)
+[INFO] [1785138924.777228266] [test_orchestrator]: Nav2 rejected the goal!
+[INFO] [1785138924.777520952] [test_orchestrator]: --- NAV2 TEST SUMMARY FOR robot3 ---
+[INFO] [1785138924.777744988] [test_orchestrator]: Achieved Goals: 0 / 6
+[INFO] [1785138924.777959114] [test_orchestrator]: All tests completed successfully!

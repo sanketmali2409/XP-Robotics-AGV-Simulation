@@ -1,0 +1,70 @@
+[INFO] [launch]: All log files can be found below /home/sanket/.ros/log/2026-07-27-12-06-40-508353-sanket-Victus-by-HP-Laptop-16-d0xxx-9990
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [gzserver-1]: process started with pid [10025]
+[INFO] [gzclient-2]: process started with pid [10027]
+[INFO] [rviz2-3]: process started with pid [10029]
+[INFO] [map_server-4]: process started with pid [10031]
+[INFO] [lifecycle_manager-5]: process started with pid [10033]
+[INFO] [robot_state_publisher-6]: process started with pid [10035]
+[INFO] [spawn_entity.py-7]: process started with pid [10037]
+[INFO] [ekf_node-8]: process started with pid [10039]
+[INFO] [amcl-9]: process started with pid [10041]
+[INFO] [tf_to_odom-10]: process started with pid [10043]
+[rviz2-3] [37;1m2026-07-27 12:06:41.413 [31;1m[[37;1mRTPS_TRANSPORT_SHM[31;1m Error] [37mFailed init_port fastrtps_port7449: open_and_lock_file failed[34;1m -> Function [36mopen_port_internal[m
+[amcl-9] [INFO] [1785134201.449593292] [amcl3]: 
+[amcl-9] 	amcl3 lifecycle node launched. 
+[amcl-9] 	Waiting on external lifecycle transitions to activate
+[amcl-9] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[amcl-9] [INFO] [1785134201.450177561] [amcl3]: Creating
+[lifecycle_manager-5] [INFO] [1785134201.558022715] [lifecycle_manager_localization]: Creating
+[lifecycle_manager-5] [INFO] [1785134201.574733232] [lifecycle_manager_localization]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+[map_server-4] [INFO] [1785134201.632282861] [map_server]: 
+[map_server-4] 	map_server lifecycle node launched. 
+[map_server-4] 	Waiting on external lifecycle transitions to activate
+[map_server-4] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[map_server-4] [INFO] [1785134201.632461593] [map_server]: Creating
+[lifecycle_manager-5] [INFO] [1785134201.661435970] [lifecycle_manager_localization]: [34m[1mStarting managed nodes bringup...[0m[0m
+[lifecycle_manager-5] [INFO] [1785134201.661502721] [lifecycle_manager_localization]: [34m[1mConfiguring map_server[0m[0m
+[robot_state_publisher-6] [INFO] [1785134201.684234928] [robot3.robot_state_publisher]: got segment robot3/AGV_Body-v1
+[robot_state_publisher-6] [INFO] [1785134201.684408349] [robot3.robot_state_publisher]: got segment robot3/ZLtech_6.5inch-v3
+[robot_state_publisher-6] [INFO] [1785134201.684423955] [robot3.robot_state_publisher]: got segment robot3/ZLtech_6.5inch-v3-1
+[robot_state_publisher-6] [INFO] [1785134201.684433220] [robot3.robot_state_publisher]: got segment robot3/base_link
+[robot_state_publisher-6] [INFO] [1785134201.684441817] [robot3.robot_state_publisher]: got segment robot3/caster_back
+[robot_state_publisher-6] [INFO] [1785134201.684449171] [robot3.robot_state_publisher]: got segment robot3/caster_front
+[robot_state_publisher-6] [INFO] [1785134201.684459153] [robot3.robot_state_publisher]: got segment robot3/front_indicator
+[robot_state_publisher-6] [INFO] [1785134201.684468048] [robot3.robot_state_publisher]: got segment robot3/laser_frame
+[robot_state_publisher-6] [INFO] [1785134201.684476520] [robot3.robot_state_publisher]: got segment robot3/scanner-v2
+[lifecycle_manager-5] [ERROR] [1785134201.848375359] [lifecycle_manager_localization]: Failed to change state for node: map_server
+[lifecycle_manager-5] [ERROR] [1785134201.848462902] [lifecycle_manager_localization]: Failed to bring up all requested nodes. Aborting bringup.
+[map_server-4] [INFO] [1785134201.857819315] [map_server]: Configuring
+[map_server-4] [INFO] [1785134201.857994418] [map_io]: Loading yaml file: /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/share/agv/maps/my_new_map.yaml
+[map_server-4] [INFO] [1785134201.858395255] [map_io]: resolution: 0.05
+[map_server-4] [INFO] [1785134201.858411645] [map_io]: origin[0]: -7.275
+[map_server-4] [INFO] [1785134201.858419080] [map_io]: origin[1]: -6.625
+[map_server-4] [INFO] [1785134201.858425984] [map_io]: origin[2]: 0
+[map_server-4] [INFO] [1785134201.858433498] [map_io]: free_thresh: 0.25
+[map_server-4] [INFO] [1785134201.858440840] [map_io]: occupied_thresh: 0.65
+[map_server-4] [INFO] [1785134201.858448923] [map_io]: mode: trinary
+[map_server-4] [INFO] [1785134201.858456985] [map_io]: negate: 0
+[map_server-4] [INFO] [1785134201.858736227] [map_io]: Loading image_file: /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/share/agv/maps/my_new_map.pgm
+[map_server-4] [INFO] [1785134201.871815478] [map_io]: Read map /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/share/agv/maps/my_new_map.pgm: 275 X 241 map @ 0.05 m/cell
+[gzserver-1] [37;1m2026-07-27 12:06:41.885 [31;1m[[37;1mRTPS_TRANSPORT_SHM[31;1m Error] [37mFailed init_port fastrtps_port7449: open_and_lock_file failed[34;1m -> Function [36mopen_port_internal[m
+[tf_to_odom-10] [INFO] [1785134202.210267660] [robot3.tf_to_odom]: Publishing TF (map -> robot3/base_link) to odometry/filtered
+[spawn_entity.py-7] [INFO] [1785134202.241945090] [spawn_entity]: Spawn Entity started
+[spawn_entity.py-7] [INFO] [1785134202.242566050] [spawn_entity]: Loading entity published on topic /robot3/robot_description
+[spawn_entity.py-7] [INFO] [1785134202.247090226] [spawn_entity]: Waiting for entity xml on /robot3/robot_description
+[spawn_entity.py-7] [INFO] [1785134202.258402440] [spawn_entity]: Waiting for service /spawn_entity, timeout = 30
+[spawn_entity.py-7] [INFO] [1785134202.258891029] [spawn_entity]: Waiting for service /spawn_entity
+[rviz2-3] [INFO] [1785134202.310684541] [rviz2]: Stereo is NOT SUPPORTED
+[rviz2-3] [INFO] [1785134202.310783187] [rviz2]: OpenGl version: 4.6 (GLSL 4.6)
+[rviz2-3] [INFO] [1785134202.326456662] [rviz2]: Stereo is NOT SUPPORTED
+[spawn_entity.py-7] [INFO] [1785134203.265919169] [spawn_entity]: Calling service /spawn_entity
+[rviz2-3] [INFO] [1785134203.429940985] [rviz2]: Trying to create a map of size 275 x 241 using 1 swatches
+[spawn_entity.py-7] [INFO] [1785134203.528035191] [spawn_entity]: Spawn status: SpawnEntity: Successfully spawned entity [robot3]
+[gzserver-1] [INFO] [1785134203.655221271] [robot3.diff_drive]: Wheel pair 1 separation set to [0.560000m]
+[gzserver-1] [INFO] [1785134203.655918407] [robot3.diff_drive]: Wheel pair 1 diameter set to [0.165000m]
+[gzserver-1] [INFO] [1785134203.658287711] [robot3.diff_drive]: Subscribed to [/robot3/cmd_vel]
+[gzserver-1] [INFO] [1785134203.661314840] [robot3.diff_drive]: Advertise odometry on [/robot3/odom]
+[gzserver-1] [INFO] [1785134203.681031441] [robot3.joint_state]: Going to publish joint [robot3/AGV_Body-v1_Revolute-2]
+[gzserver-1] [INFO] [1785134203.681100246] [robot3.joint_state]: Going to publish joint [robot3/AGV_Body-v1_Revolute-3]
+[INFO] [spawn_entity.py-7]: process has finished cleanly [pid 10037]

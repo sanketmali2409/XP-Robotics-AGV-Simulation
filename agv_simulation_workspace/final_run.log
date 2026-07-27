@@ -1,0 +1,370 @@
+[INFO] [launch]: All log files can be found below /home/sanket/.ros/log/2026-07-27-13-47-21-480432-sanket-Victus-by-HP-Laptop-16-d0xxx-14399
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [gzserver-1]: process started with pid [14401]
+[INFO] [gzclient-2]: process started with pid [14403]
+[INFO] [rviz2-3]: process started with pid [14405]
+[INFO] [map_server-4]: process started with pid [14407]
+[INFO] [lifecycle_manager-5]: process started with pid [14409]
+[INFO] [robot_state_publisher-6]: process started with pid [14411]
+[INFO] [spawn_entity.py-7]: process started with pid [14413]
+[INFO] [ekf_node-8]: process started with pid [14415]
+[INFO] [amcl-9]: process started with pid [14417]
+[INFO] [tf_to_odom-10]: process started with pid [14419]
+[INFO] [ros2-11]: process started with pid [14421]
+[lifecycle_manager-5] [INFO] [1785140241.646300902] [lifecycle_manager_localization]: Creating
+[lifecycle_manager-5] [INFO] [1785140241.655317259] [lifecycle_manager_localization]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+[robot_state_publisher-6] [INFO] [1785140241.857557500] [robot3.robot_state_publisher]: got segment robot3/AGV_Body-v1
+[robot_state_publisher-6] [INFO] [1785140241.858580559] [robot3.robot_state_publisher]: got segment robot3/ZLtech_6.5inch-v3
+[robot_state_publisher-6] [INFO] [1785140241.858604167] [robot3.robot_state_publisher]: got segment robot3/ZLtech_6.5inch-v3-1
+[robot_state_publisher-6] [INFO] [1785140241.858610048] [robot3.robot_state_publisher]: got segment robot3/base_link
+[robot_state_publisher-6] [INFO] [1785140241.858614906] [robot3.robot_state_publisher]: got segment robot3/caster_back
+[robot_state_publisher-6] [INFO] [1785140241.858619970] [robot3.robot_state_publisher]: got segment robot3/caster_front
+[robot_state_publisher-6] [INFO] [1785140241.858626573] [robot3.robot_state_publisher]: got segment robot3/front_indicator
+[robot_state_publisher-6] [INFO] [1785140241.858635480] [robot3.robot_state_publisher]: got segment robot3/laser_frame
+[robot_state_publisher-6] [INFO] [1785140241.858640127] [robot3.robot_state_publisher]: got segment robot3/scanner-v2
+[map_server-4] [INFO] [1785140242.200025081] [map_server]: 
+[map_server-4] 	map_server lifecycle node launched. 
+[map_server-4] 	Waiting on external lifecycle transitions to activate
+[map_server-4] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[map_server-4] [INFO] [1785140242.200181917] [map_server]: Creating
+[amcl-9] [INFO] [1785140242.217751551] [amcl3]: 
+[amcl-9] 	amcl3 lifecycle node launched. 
+[amcl-9] 	Waiting on external lifecycle transitions to activate
+[amcl-9] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[amcl-9] [INFO] [1785140242.218342886] [amcl3]: Creating
+[ros2-11] [INFO] [launch]: All log files can be found below /home/sanket/.ros/log/2026-07-27-13-47-22-523752-sanket-Victus-by-HP-Laptop-16-d0xxx-14421
+[ros2-11] [INFO] [launch]: Default logging verbosity is set to INFO
+[lifecycle_manager-5] [INFO] [1785140243.197250045] [lifecycle_manager_localization]: [34m[1mStarting managed nodes bringup...[0m[0m
+[lifecycle_manager-5] [INFO] [1785140243.197360386] [lifecycle_manager_localization]: [34m[1mConfiguring map_server[0m[0m
+[spawn_entity.py-7] [INFO] [1785140243.332783007] [spawn_entity]: Spawn Entity started
+[spawn_entity.py-7] [INFO] [1785140243.333292564] [spawn_entity]: Loading entity published on topic /robot3/robot_description
+[spawn_entity.py-7] [INFO] [1785140243.356081577] [spawn_entity]: Waiting for entity xml on /robot3/robot_description
+[spawn_entity.py-7] [INFO] [1785140243.370608558] [spawn_entity]: Waiting for service /spawn_entity, timeout = 30
+[spawn_entity.py-7] [INFO] [1785140243.371024870] [spawn_entity]: Waiting for service /spawn_entity
+[ros2-11] [INFO] [controller_server-1]: process started with pid [14578]
+[ros2-11] [INFO] [smoother_server-2]: process started with pid [14580]
+[ros2-11] [INFO] [planner_server-3]: process started with pid [14582]
+[ros2-11] [INFO] [behavior_server-4]: process started with pid [14584]
+[ros2-11] [INFO] [bt_navigator-5]: process started with pid [14586]
+[ros2-11] [INFO] [waypoint_follower-6]: process started with pid [14588]
+[ros2-11] [INFO] [velocity_smoother-7]: process started with pid [14590]
+[ros2-11] [INFO] [lifecycle_manager-8]: process started with pid [14592]
+[ros2-11] [behavior_server-4] [INFO] [1785140243.771434600] [robot3.behavior_server]: 
+[ros2-11] [behavior_server-4] 	behavior_server lifecycle node launched. 
+[ros2-11] [behavior_server-4] 	Waiting on external lifecycle transitions to activate
+[ros2-11] [behavior_server-4] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[ros2-11] [smoother_server-2] [INFO] [1785140243.878241438] [robot3.smoother_server]: 
+[ros2-11] [smoother_server-2] 	smoother_server lifecycle node launched. 
+[ros2-11] [smoother_server-2] 	Waiting on external lifecycle transitions to activate
+[ros2-11] [smoother_server-2] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[ros2-11] [smoother_server-2] [INFO] [1785140243.914156586] [robot3.smoother_server]: Creating smoother server
+[ros2-11] [controller_server-1] [INFO] [1785140243.972197952] [robot3.controller_server]: 
+[ros2-11] [controller_server-1] 	controller_server lifecycle node launched. 
+[ros2-11] [controller_server-1] 	Waiting on external lifecycle transitions to activate
+[ros2-11] [controller_server-1] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[ros2-11] [planner_server-3] [INFO] [1785140243.996484654] [robot3.planner_server]: 
+[ros2-11] [planner_server-3] 	planner_server lifecycle node launched. 
+[ros2-11] [planner_server-3] 	Waiting on external lifecycle transitions to activate
+[ros2-11] [planner_server-3] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[ros2-11] [planner_server-3] [INFO] [1785140243.997999955] [robot3.planner_server]: Creating
+[ros2-11] [controller_server-1] [INFO] [1785140243.999768811] [robot3.controller_server]: Creating controller server
+[ros2-11] [bt_navigator-5] [INFO] [1785140244.079208507] [robot3.bt_navigator]: 
+[ros2-11] [bt_navigator-5] 	bt_navigator lifecycle node launched. 
+[ros2-11] [bt_navigator-5] 	Waiting on external lifecycle transitions to activate
+[ros2-11] [bt_navigator-5] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[ros2-11] [bt_navigator-5] [INFO] [1785140244.079575869] [robot3.bt_navigator]: Creating
+[ros2-11] [waypoint_follower-6] [INFO] [1785140244.089949898] [robot3.waypoint_follower]: 
+[ros2-11] [waypoint_follower-6] 	waypoint_follower lifecycle node launched. 
+[ros2-11] [waypoint_follower-6] 	Waiting on external lifecycle transitions to activate
+[ros2-11] [waypoint_follower-6] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[ros2-11] [waypoint_follower-6] [INFO] [1785140244.090989396] [robot3.waypoint_follower]: Creating
+[ros2-11] [velocity_smoother-7] [INFO] [1785140244.143010128] [robot3.velocity_smoother]: 
+[ros2-11] [velocity_smoother-7] 	velocity_smoother lifecycle node launched. 
+[ros2-11] [velocity_smoother-7] 	Waiting on external lifecycle transitions to activate
+[ros2-11] [velocity_smoother-7] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[ros2-11] [lifecycle_manager-8] [INFO] [1785140244.172015879] [robot3.lifecycle_manager_navigation]: Creating
+[ros2-11] [lifecycle_manager-8] [INFO] [1785140244.174689430] [robot3.lifecycle_manager_navigation]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+[ros2-11] [controller_server-1] [INFO] [1785140244.188730678] [robot3.local_costmap.local_costmap]: 
+[ros2-11] [controller_server-1] 	local_costmap lifecycle node launched. 
+[ros2-11] [controller_server-1] 	Waiting on external lifecycle transitions to activate
+[ros2-11] [controller_server-1] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[ros2-11] [controller_server-1] [INFO] [1785140244.189264794] [robot3.local_costmap.local_costmap]: Creating Costmap
+[tf_to_odom-10] [INFO] [1785140244.279317871] [robot3.tf_to_odom]: Publishing TF (map -> robot3/base_link) to odometry/filtered
+[rviz2-3] [INFO] [1785140244.433923877] [rviz2]: Stereo is NOT SUPPORTED
+[rviz2-3] [INFO] [1785140244.434038486] [rviz2]: OpenGl version: 4.6 (GLSL 4.6)
+[ros2-11] [planner_server-3] [INFO] [1785140244.484960296] [robot3.global_costmap.global_costmap]: 
+[ros2-11] [planner_server-3] 	global_costmap lifecycle node launched. 
+[ros2-11] [planner_server-3] 	Waiting on external lifecycle transitions to activate
+[ros2-11] [planner_server-3] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[ros2-11] [planner_server-3] [INFO] [1785140244.485779643] [robot3.global_costmap.global_costmap]: Creating Costmap
+[rviz2-3] [INFO] [1785140244.647423236] [rviz2]: Stereo is NOT SUPPORTED
+[ros2-11] [lifecycle_manager-8] [INFO] [1785140246.146926305] [robot3.lifecycle_manager_navigation]: [34m[1mStarting managed nodes bringup...[0m[0m
+[ros2-11] [lifecycle_manager-8] [INFO] [1785140246.147024392] [robot3.lifecycle_manager_navigation]: [34m[1mConfiguring controller_server[0m[0m
+[ros2-11] [controller_server-1] [INFO] [1785140246.154047415] [robot3.controller_server]: Configuring controller interface
+[ros2-11] [controller_server-1] [INFO] [1785140246.154828889] [robot3.controller_server]: getting goal checker plugins..
+[ros2-11] [controller_server-1] [INFO] [1785140246.154989848] [robot3.controller_server]: Controller frequency set to 20.0000Hz
+[ros2-11] [controller_server-1] [INFO] [1785140246.155054289] [robot3.local_costmap.local_costmap]: Configuring
+[ros2-11] [controller_server-1] [INFO] [1785140246.180859571] [robot3.local_costmap.local_costmap]: Using plugin "voxel_layer"
+[ros2-11] [controller_server-1] [INFO] [1785140246.185367088] [robot3.local_costmap.local_costmap]: Subscribed to Topics: robot3/scan
+[ros2-11] [controller_server-1] [INFO] [1785140246.201806150] [robot3.local_costmap.local_costmap]: Initialized plugin "voxel_layer"
+[ros2-11] [controller_server-1] [INFO] [1785140246.203036155] [robot3.local_costmap.local_costmap]: Using plugin "inflation_layer"
+[ros2-11] [controller_server-1] [INFO] [1785140246.204214149] [robot3.local_costmap.local_costmap]: Initialized plugin "inflation_layer"
+[ros2-11] [controller_server-1] [INFO] [1785140246.281663439] [robot3.controller_server]: Created progress_checker : progress_checker of type nav2_controller::SimpleProgressChecker
+[ros2-11] [controller_server-1] [INFO] [1785140246.292967303] [robot3.controller_server]: Created goal checker : general_goal_checker of type nav2_controller::SimpleGoalChecker
+[ros2-11] [controller_server-1] [INFO] [1785140246.302095873] [robot3.controller_server]: Controller Server has general_goal_checker  goal checkers available.
+[ros2-11] [controller_server-1] [INFO] [1785140246.302981522] [robot3.controller_server]: Created controller : FollowPath of type nav2_regulated_pure_pursuit_controller::RegulatedPurePursuitController
+[ros2-11] [controller_server-1] [INFO] [1785140246.352090036] [robot3.controller_server]: Controller Server has FollowPath  controllers available.
+[ros2-11] [lifecycle_manager-8] [INFO] [1785140246.386482058] [robot3.lifecycle_manager_navigation]: [34m[1mConfiguring smoother_server[0m[0m
+[ros2-11] [smoother_server-2] [INFO] [1785140246.387349758] [robot3.smoother_server]: Configuring smoother server
+[ros2-11] [smoother_server-2] [INFO] [1785140246.424622925] [robot3.smoother_server]: Created smoother : simple_smoother of type nav2_smoother::SimpleSmoother
+[ros2-11] [smoother_server-2] [INFO] [1785140246.425990975] [robot3.smoother_server]: Smoother Server has simple_smoother  smoothers available.
+[ros2-11] [lifecycle_manager-8] [INFO] [1785140246.458584074] [robot3.lifecycle_manager_navigation]: [34m[1mConfiguring planner_server[0m[0m
+[ros2-11] [planner_server-3] [INFO] [1785140246.459054108] [robot3.planner_server]: Configuring
+[ros2-11] [planner_server-3] [INFO] [1785140246.459136108] [robot3.global_costmap.global_costmap]: Configuring
+[ros2-11] [planner_server-3] [INFO] [1785140246.479695039] [robot3.global_costmap.global_costmap]: Using plugin "static_layer"
+[ros2-11] [planner_server-3] [INFO] [1785140246.486635270] [robot3.global_costmap.global_costmap]: Subscribing to the map topic (/robot3/map) with transient local durability
+[ros2-11] [planner_server-3] [INFO] [1785140246.490491576] [robot3.global_costmap.global_costmap]: Initialized plugin "static_layer"
+[ros2-11] [planner_server-3] [INFO] [1785140246.490587586] [robot3.global_costmap.global_costmap]: Using plugin "obstacle_layer"
+[ros2-11] [planner_server-3] [INFO] [1785140246.491098289] [robot3.global_costmap.global_costmap]: Subscribed to Topics: robot3/scan
+[ros2-11] [planner_server-3] [INFO] [1785140246.502007526] [robot3.global_costmap.global_costmap]: Initialized plugin "obstacle_layer"
+[ros2-11] [planner_server-3] [INFO] [1785140246.502170441] [robot3.global_costmap.global_costmap]: Using plugin "inflation_layer"
+[ros2-11] [planner_server-3] [INFO] [1785140246.505479148] [robot3.global_costmap.global_costmap]: Initialized plugin "inflation_layer"
+[ros2-11] [planner_server-3] [INFO] [1785140246.548977034] [robot3.planner_server]: Created global planner plugin GridBased of type nav2_navfn_planner/NavfnPlanner
+[ros2-11] [planner_server-3] [INFO] [1785140246.549090649] [robot3.planner_server]: Configuring plugin GridBased of type NavfnPlanner
+[ros2-11] [planner_server-3] [INFO] [1785140246.550479851] [robot3.planner_server]: Planner Server has GridBased  planners available.
+[ros2-11] [lifecycle_manager-8] [INFO] [1785140246.627447913] [robot3.lifecycle_manager_navigation]: [34m[1mConfiguring behavior_server[0m[0m
+[ros2-11] [behavior_server-4] [INFO] [1785140246.628541841] [robot3.behavior_server]: Configuring
+[spawn_entity.py-7] [INFO] [1785140246.721400752] [spawn_entity]: Calling service /spawn_entity
+[ros2-11] [behavior_server-4] [INFO] [1785140246.729207421] [robot3.behavior_server]: Creating behavior plugin spin of type nav2_behaviors/Spin
+[ros2-11] [behavior_server-4] [INFO] [1785140246.731724439] [robot3.behavior_server]: Configuring spin
+[ros2-11] [behavior_server-4] [INFO] [1785140246.810955450] [robot3.behavior_server]: Creating behavior plugin backup of type nav2_behaviors/BackUp
+[ros2-11] [behavior_server-4] [INFO] [1785140246.812749374] [robot3.behavior_server]: Configuring backup
+[ros2-11] [behavior_server-4] [INFO] [1785140246.876593840] [robot3.behavior_server]: Creating behavior plugin drive_on_heading of type nav2_behaviors/DriveOnHeading
+[ros2-11] [behavior_server-4] [INFO] [1785140246.885063895] [robot3.behavior_server]: Configuring drive_on_heading
+[ros2-11] [behavior_server-4] [INFO] [1785140246.986115850] [robot3.behavior_server]: Creating behavior plugin assisted_teleop of type nav2_behaviors/AssistedTeleop
+[ros2-11] [behavior_server-4] [INFO] [1785140246.997006385] [robot3.behavior_server]: Configuring assisted_teleop
+[ros2-11] [behavior_server-4] [INFO] [1785140247.120556178] [robot3.behavior_server]: Creating behavior plugin wait of type nav2_behaviors/Wait
+[ros2-11] [behavior_server-4] [INFO] [1785140247.124278423] [robot3.behavior_server]: Configuring wait
+[ros2-11] [lifecycle_manager-8] [INFO] [1785140247.174197674] [robot3.lifecycle_manager_navigation]: [34m[1mConfiguring bt_navigator[0m[0m
+[ros2-11] [bt_navigator-5] [INFO] [1785140247.178048045] [robot3.bt_navigator]: Configuring
+[spawn_entity.py-7] [INFO] [1785140247.208608339] [spawn_entity]: Spawn status: SpawnEntity: Successfully spawned entity [robot3]
+[gzserver-1] [INFO] [1785140247.508016676] [robot3.diff_drive]: Wheel pair 1 separation set to [0.560000m]
+[gzserver-1] [INFO] [1785140247.508658497] [robot3.diff_drive]: Wheel pair 1 diameter set to [0.165000m]
+[ros2-11] [lifecycle_manager-8] [INFO] [1785140247.512919035] [robot3.lifecycle_manager_navigation]: [34m[1mConfiguring waypoint_follower[0m[0m
+[gzserver-1] [INFO] [1785140247.515469573] [robot3.diff_drive]: Subscribed to [/robot3/cmd_vel]
+[ros2-11] [waypoint_follower-6] [INFO] [1785140247.517180794] [robot3.waypoint_follower]: Configuring
+[gzserver-1] [INFO] [1785140247.524639650] [robot3.diff_drive]: Advertise odometry on [/robot3/odom]
+[INFO] [spawn_entity.py-7]: process has finished cleanly [pid 14413]
+[gzserver-1] [INFO] [1785140247.610902018] [robot3.joint_state]: Going to publish joint [robot3/AGV_Body-v1_Revolute-2]
+[gzserver-1] [INFO] [1785140247.610964405] [robot3.joint_state]: Going to publish joint [robot3/AGV_Body-v1_Revolute-3]
+[ros2-11] [waypoint_follower-6] [INFO] [1785140247.616351507] [robot3.waypoint_follower]: Created waypoint_task_executor : wait_at_waypoint of type nav2_waypoint_follower::WaitAtWaypoint
+[ros2-11] [lifecycle_manager-8] [INFO] [1785140247.619981411] [robot3.lifecycle_manager_navigation]: [34m[1mConfiguring velocity_smoother[0m[0m
+[ros2-11] [velocity_smoother-7] [INFO] [1785140247.622552426] [robot3.velocity_smoother]: Configuring velocity smoother
+[ros2-11] [lifecycle_manager-8] [INFO] [1785140247.655786366] [robot3.lifecycle_manager_navigation]: [34m[1mActivating controller_server[0m[0m
+[ros2-11] [controller_server-1] [INFO] [1785140247.660468535] [robot3.controller_server]: Activating
+[ros2-11] [controller_server-1] [INFO] [1785140247.660649041] [robot3.local_costmap.local_costmap]: Activating
+[ros2-11] [controller_server-1] [INFO] [1785140247.660671498] [robot3.local_costmap.local_costmap]: Checking transform
+[ros2-11] [controller_server-1] [INFO] [1785140247.660710147] [robot3.local_costmap.local_costmap]: Timed out waiting for transform from robot3/base_link to robot3/odom to become available, tf error: Invalid frame ID "robot3/odom" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [controller_server-1] [INFO] [1785140248.160834464] [robot3.local_costmap.local_costmap]: start
+[ros2-11] [controller_server-1] [INFO] [1785140248.364021446] [robot3.controller_server]: Activating controller: FollowPath of type regulated_pure_pursuit_controller::RegulatedPurePursuitController
+[ros2-11] [controller_server-1] [INFO] [1785140248.364063420] [robot3.controller_server]: Creating bond (controller_server) to lifecycle manager.
+[ros2-11] [lifecycle_manager-8] [INFO] [1785140248.398104377] [robot3.lifecycle_manager_navigation]: Server controller_server connected with bond.
+[ros2-11] [lifecycle_manager-8] [INFO] [1785140248.398165952] [robot3.lifecycle_manager_navigation]: [34m[1mActivating smoother_server[0m[0m
+[ros2-11] [smoother_server-2] [INFO] [1785140248.398916626] [robot3.smoother_server]: Activating
+[ros2-11] [smoother_server-2] [INFO] [1785140248.398956854] [robot3.smoother_server]: Creating bond (smoother_server) to lifecycle manager.
+[ros2-11] [lifecycle_manager-8] [INFO] [1785140248.433955221] [robot3.lifecycle_manager_navigation]: Server smoother_server connected with bond.
+[ros2-11] [lifecycle_manager-8] [INFO] [1785140248.433999734] [robot3.lifecycle_manager_navigation]: [34m[1mActivating planner_server[0m[0m
+[ros2-11] [planner_server-3] [INFO] [1785140248.434610209] [robot3.planner_server]: Activating
+[ros2-11] [planner_server-3] [INFO] [1785140248.434708447] [robot3.global_costmap.global_costmap]: Activating
+[ros2-11] [planner_server-3] [INFO] [1785140248.434731844] [robot3.global_costmap.global_costmap]: Checking transform
+[ros2-11] [planner_server-3] [INFO] [1785140248.434777347] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140248.934825607] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140249.434820710] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140249.934836926] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140250.434830457] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140250.934821786] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140251.434814627] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140251.934845450] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140252.434828901] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140252.934838397] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140253.434810605] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140253.934813026] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140254.434829286] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140254.934818944] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140255.434833472] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140255.934848274] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140256.434830169] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140256.934816557] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140257.434827323] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140257.934815342] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140258.434806875] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140258.934825519] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140259.434833129] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140259.934837547] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140260.434819044] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140260.934830881] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140261.434825784] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140261.934822393] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140262.434829677] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140262.934830129] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140263.434814321] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140263.934772524] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140264.434811460] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140264.934819176] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140265.434818991] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140265.934814416] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140266.434810456] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140266.934825386] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140267.434808373] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140267.934808639] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140268.434807934] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140268.934834376] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140269.434814492] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140269.934823208] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140270.434808086] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140270.934820258] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140271.434811976] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140271.934826950] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140272.434840365] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140272.934826234] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140273.434817668] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140273.934809680] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140274.434819617] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140274.934881343] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140275.434811252] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140275.934810843] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140276.435906024] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140276.934813412] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140277.434811016] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140277.934807340] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140278.434823316] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140278.934825825] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140279.434857554] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140279.934811945] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140280.434812250] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140280.934818039] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140281.434816709] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140281.934828816] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140282.434808827] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140282.934811035] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140283.434808365] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140283.934835543] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140284.434827260] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140284.934817978] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140285.434823440] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140285.934817373] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140286.434817473] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140286.935400841] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140287.434809436] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140287.934770828] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140288.434809094] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140288.934808966] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140289.434829331] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140289.934815544] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140290.434762438] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140290.934826770] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140291.434810167] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140291.934826780] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140292.434822206] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140292.934807846] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140293.434808413] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140293.934825902] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140294.434807172] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140294.934825646] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140295.434825766] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140295.934807692] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140296.434814911] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140296.934828914] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140297.434793938] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140297.934856875] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140298.434809320] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140298.934807522] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140299.434831628] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140299.934824048] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140300.434824805] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140300.934824796] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140301.434808909] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140301.934825383] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140302.434810922] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140302.934832085] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140303.434826374] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140303.934812566] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140304.434868531] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140304.934812188] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140305.434808411] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140305.934817103] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140306.434809331] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140306.934822453] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140307.434832110] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140307.934823993] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140308.434807459] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140308.934808088] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140309.434808470] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140309.934808785] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140310.434838204] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140310.934832210] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140311.434832643] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140311.934808024] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140312.434807784] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140312.934822932] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140313.434814531] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140313.934812030] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140314.435828595] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140314.935451972] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140315.434822275] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140315.934807813] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140316.434824604] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140316.934808798] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140317.434806896] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140317.934826331] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140318.434809568] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140318.934809427] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140319.434869441] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140319.934827233] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140320.434844514] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140320.934813003] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140321.434838856] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140321.934809310] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140322.434829055] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140322.934809827] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140323.434833586] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140323.934814391] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140324.434827495] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140324.934810916] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140325.434813559] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140325.934827749] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140326.434808166] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140326.934828992] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140327.434812492] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140327.934826184] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140328.434782327] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140328.934838111] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140329.434827191] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140329.934833171] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140330.434813827] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140330.934825536] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140331.434815407] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140331.934824924] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140332.434835555] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140332.934776939] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140333.434810188] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140333.934827286] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140334.434826550] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140334.934826402] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140335.434830805] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140335.934830278] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140336.434821529] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140336.934812092] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140337.434823649] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140337.934823118] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140338.434806785] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140338.934834930] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140339.434794980] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140339.938360071] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140340.434809491] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140340.934806389] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140341.434826017] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140341.934823337] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140342.434811177] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140342.936039868] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[ros2-11] [planner_server-3] [INFO] [1785140343.434810738] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist

@@ -8,7 +8,9 @@ import threading
 
 class RandomOrchestrator(Node):
     def __init__(self):
-        super().__init__('random_orchestrator')
+        super().__init__('random_orchestrator', parameter_overrides=[
+            rclpy.parameter.Parameter('use_sim_time', rclpy.Parameter.Type.BOOL, True)
+        ])
         
         # Publishers for all 3 robots
         self.pub1 = self.create_publisher(PoseStamped, '/robot1/goal_pose', 10)

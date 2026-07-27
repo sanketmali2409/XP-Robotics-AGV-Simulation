@@ -1,0 +1,138 @@
+[INFO] [launch]: All log files can be found below /home/sanket/.ros/log/2026-07-27-12-53-46-330216-sanket-Victus-by-HP-Laptop-16-d0xxx-21093
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [gzserver-1]: process started with pid [21095]
+[INFO] [gzclient-2]: process started with pid [21097]
+[INFO] [rviz2-3]: process started with pid [21099]
+[INFO] [map_server-4]: process started with pid [21101]
+[INFO] [lifecycle_manager-5]: process started with pid [21103]
+[INFO] [robot_state_publisher-6]: process started with pid [21105]
+[INFO] [spawn_entity.py-7]: process started with pid [21107]
+[INFO] [ekf_node-8]: process started with pid [21109]
+[INFO] [amcl-9]: process started with pid [21111]
+[INFO] [tf_to_odom-10]: process started with pid [21113]
+[INFO] [ros2-11]: process started with pid [21115]
+[amcl-9] [INFO] [1785137026.692207546] [amcl3]: 
+[amcl-9] 	amcl3 lifecycle node launched. 
+[amcl-9] 	Waiting on external lifecycle transitions to activate
+[amcl-9] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[amcl-9] [INFO] [1785137026.707141851] [amcl3]: Creating
+[robot_state_publisher-6] [INFO] [1785137026.875177173] [robot3.robot_state_publisher]: got segment robot3/AGV_Body-v1
+[robot_state_publisher-6] [INFO] [1785137026.875394041] [robot3.robot_state_publisher]: got segment robot3/ZLtech_6.5inch-v3
+[robot_state_publisher-6] [INFO] [1785137026.875433286] [robot3.robot_state_publisher]: got segment robot3/ZLtech_6.5inch-v3-1
+[robot_state_publisher-6] [INFO] [1785137026.875440582] [robot3.robot_state_publisher]: got segment robot3/base_link
+[robot_state_publisher-6] [INFO] [1785137026.875446609] [robot3.robot_state_publisher]: got segment robot3/caster_back
+[robot_state_publisher-6] [INFO] [1785137026.875452035] [robot3.robot_state_publisher]: got segment robot3/caster_front
+[robot_state_publisher-6] [INFO] [1785137026.875457040] [robot3.robot_state_publisher]: got segment robot3/front_indicator
+[robot_state_publisher-6] [INFO] [1785137026.875462072] [robot3.robot_state_publisher]: got segment robot3/laser_frame
+[robot_state_publisher-6] [INFO] [1785137026.875467654] [robot3.robot_state_publisher]: got segment robot3/scanner-v2
+[lifecycle_manager-5] [INFO] [1785137027.020392019] [lifecycle_manager_localization]: Creating
+[map_server-4] [INFO] [1785137027.078936219] [map_server]: 
+[map_server-4] 	map_server lifecycle node launched. 
+[map_server-4] 	Waiting on external lifecycle transitions to activate
+[map_server-4] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[map_server-4] [INFO] [1785137027.079071919] [map_server]: Creating
+[ros2-11] [INFO] [launch]: All log files can be found below /home/sanket/.ros/log/2026-07-27-12-53-47-306590-sanket-Victus-by-HP-Laptop-16-d0xxx-21115
+[ros2-11] [INFO] [launch]: Default logging verbosity is set to INFO
+[ros2-11] [INFO] [controller_server-1]: process started with pid [21235]
+[ros2-11] [INFO] [smoother_server-2]: process started with pid [21237]
+[ros2-11] [INFO] [planner_server-3]: process started with pid [21239]
+[ros2-11] [INFO] [behavior_server-4]: process started with pid [21241]
+[ros2-11] [INFO] [bt_navigator-5]: process started with pid [21243]
+[ros2-11] [INFO] [waypoint_follower-6]: process started with pid [21245]
+[ros2-11] [INFO] [velocity_smoother-7]: process started with pid [21247]
+[ros2-11] [INFO] [lifecycle_manager-8]: process started with pid [21249]
+[lifecycle_manager-5] [INFO] [1785137027.799313380] [lifecycle_manager_localization]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+[ros2-11] [smoother_server-2] [INFO] [1785137028.136416956] [smoother_server]: 
+[ros2-11] [smoother_server-2] 	smoother_server lifecycle node launched. 
+[ros2-11] [smoother_server-2] 	Waiting on external lifecycle transitions to activate
+[ros2-11] [smoother_server-2] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[ros2-11] [smoother_server-2] [INFO] [1785137028.193602208] [smoother_server]: Creating smoother server
+[ros2-11] [bt_navigator-5] [INFO] [1785137028.259327921] [bt_navigator]: 
+[ros2-11] [bt_navigator-5] 	bt_navigator lifecycle node launched. 
+[ros2-11] [bt_navigator-5] 	Waiting on external lifecycle transitions to activate
+[ros2-11] [bt_navigator-5] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[ros2-11] [bt_navigator-5] [INFO] [1785137028.261626973] [bt_navigator]: Creating
+[ros2-11] [controller_server-1] [INFO] [1785137028.271631495] [controller_server]: 
+[ros2-11] [controller_server-1] 	controller_server lifecycle node launched. 
+[ros2-11] [controller_server-1] 	Waiting on external lifecycle transitions to activate
+[ros2-11] [controller_server-1] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[ros2-11] [controller_server-1] [INFO] [1785137028.327373760] [controller_server]: Creating controller server
+[ros2-11] [velocity_smoother-7] [INFO] [1785137028.350008599] [velocity_smoother]: 
+[ros2-11] [velocity_smoother-7] 	velocity_smoother lifecycle node launched. 
+[ros2-11] [velocity_smoother-7] 	Waiting on external lifecycle transitions to activate
+[ros2-11] [velocity_smoother-7] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[ros2-11] [lifecycle_manager-8] [INFO] [1785137028.359783321] [lifecycle_manager_navigation]: Creating
+[ros2-11] [waypoint_follower-6] [INFO] [1785137028.387561278] [waypoint_follower]: 
+[ros2-11] [waypoint_follower-6] 	waypoint_follower lifecycle node launched. 
+[ros2-11] [waypoint_follower-6] 	Waiting on external lifecycle transitions to activate
+[ros2-11] [waypoint_follower-6] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[ros2-11] [planner_server-3] [INFO] [1785137028.391688482] [planner_server]: 
+[ros2-11] [planner_server-3] 	planner_server lifecycle node launched. 
+[ros2-11] [planner_server-3] 	Waiting on external lifecycle transitions to activate
+[ros2-11] [planner_server-3] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[ros2-11] [lifecycle_manager-8] [INFO] [1785137028.412783184] [lifecycle_manager_navigation]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+[ros2-11] [waypoint_follower-6] [INFO] [1785137028.417424020] [waypoint_follower]: Creating
+[ros2-11] [planner_server-3] [INFO] [1785137028.424881424] [planner_server]: Creating
+[ros2-11] [behavior_server-4] [INFO] [1785137028.481722056] [behavior_server]: 
+[ros2-11] [behavior_server-4] 	behavior_server lifecycle node launched. 
+[ros2-11] [behavior_server-4] 	Waiting on external lifecycle transitions to activate
+[ros2-11] [behavior_server-4] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[ros2-11] [planner_server-3] [INFO] [1785137028.552049044] [global_costmap.global_costmap]: 
+[ros2-11] [planner_server-3] 	global_costmap lifecycle node launched. 
+[ros2-11] [planner_server-3] 	Waiting on external lifecycle transitions to activate
+[ros2-11] [planner_server-3] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[ros2-11] [planner_server-3] [INFO] [1785137028.562435000] [global_costmap.global_costmap]: Creating Costmap
+[ros2-11] [controller_server-1] [INFO] [1785137028.696149398] [local_costmap.local_costmap]: 
+[ros2-11] [controller_server-1] 	local_costmap lifecycle node launched. 
+[ros2-11] [controller_server-1] 	Waiting on external lifecycle transitions to activate
+[ros2-11] [controller_server-1] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[ros2-11] [controller_server-1] [INFO] [1785137028.700493938] [local_costmap.local_costmap]: Creating Costmap
+[spawn_entity.py-7] [INFO] [1785137028.714163437] [spawn_entity]: Spawn Entity started
+[spawn_entity.py-7] [INFO] [1785137028.714664636] [spawn_entity]: Loading entity published on topic /robot3/robot_description
+[spawn_entity.py-7] [INFO] [1785137028.860573758] [spawn_entity]: Waiting for entity xml on /robot3/robot_description
+[rviz2-3] [INFO] [1785137028.901936129] [rviz2]: Stereo is NOT SUPPORTED
+[rviz2-3] [INFO] [1785137028.902049336] [rviz2]: OpenGl version: 4.6 (GLSL 4.6)
+[rviz2-3] [INFO] [1785137029.113667348] [rviz2]: Stereo is NOT SUPPORTED
+[tf_to_odom-10] [INFO] [1785137029.320948522] [robot3.tf_to_odom]: Publishing TF (map -> robot3/base_link) to odometry/filtered
+[spawn_entity.py-7] [INFO] [1785137029.389420720] [spawn_entity]: Waiting for service /spawn_entity, timeout = 30
+[spawn_entity.py-7] [INFO] [1785137029.389838130] [spawn_entity]: Waiting for service /spawn_entity
+[lifecycle_manager-5] [INFO] [1785137029.819392952] [lifecycle_manager_localization]: Waiting for service map_server/get_state...
+[ros2-11] [lifecycle_manager-8] [INFO] [1785137030.414841517] [lifecycle_manager_navigation]: Waiting for service controller_server/get_state...
+[lifecycle_manager-5] [INFO] [1785137031.869014395] [lifecycle_manager_localization]: [34m[1mStarting managed nodes bringup...[0m[0m
+[lifecycle_manager-5] [INFO] [1785137031.869088368] [lifecycle_manager_localization]: [34m[1mConfiguring map_server[0m[0m
+[ros2-11] [lifecycle_manager-8] [INFO] [1785137032.420599045] [lifecycle_manager_navigation]: Waiting for service controller_server/get_state...
+[spawn_entity.py-7] [INFO] [1785137033.404646163] [spawn_entity]: Calling service /spawn_entity
+[ros2-11] [lifecycle_manager-8] [INFO] [1785137033.502938276] [lifecycle_manager_navigation]: [34m[1mStarting managed nodes bringup...[0m[0m
+[ros2-11] [lifecycle_manager-8] [INFO] [1785137033.502993646] [lifecycle_manager_navigation]: [34m[1mConfiguring controller_server[0m[0m
+[ros2-11] [controller_server-1] [INFO] [1785137033.503639398] [controller_server]: Configuring controller interface
+[ros2-11] [controller_server-1] [INFO] [1785137033.505299920] [controller_server]: getting goal checker plugins..
+[ros2-11] [controller_server-1] [INFO] [1785137033.511918267] [controller_server]: Controller frequency set to 20.0000Hz
+[ros2-11] [controller_server-1] [INFO] [1785137033.512123636] [local_costmap.local_costmap]: Configuring
+[ros2-11] [controller_server-1] [INFO] [1785137033.643388659] [local_costmap.local_costmap]: Using plugin "static_layer"
+[ros2-11] [controller_server-1] [INFO] [1785137033.688887300] [local_costmap.local_costmap]: Subscribing to the map topic (/map) with transient local durability
+[ros2-11] [controller_server-1] [INFO] [1785137033.703860409] [local_costmap.local_costmap]: Initialized plugin "static_layer"
+[ros2-11] [controller_server-1] [INFO] [1785137033.703983319] [local_costmap.local_costmap]: Using plugin "obstacle_layer"
+[ros2-11] [controller_server-1] [INFO] [1785137033.720280525] [local_costmap.local_costmap]: Subscribed to Topics: 
+[ros2-11] [controller_server-1] [INFO] [1785137033.720517277] [local_costmap.local_costmap]: Initialized plugin "obstacle_layer"
+[ros2-11] [controller_server-1] [INFO] [1785137033.720532114] [local_costmap.local_costmap]: Using plugin "inflation_layer"
+[ros2-11] [controller_server-1] [INFO] [1785137033.725962593] [local_costmap.local_costmap]: Initialized plugin "inflation_layer"
+[ros2-11] [controller_server-1] [INFO] [1785137033.885597325] [controller_server]: Created progress_checker : progress_checker of type nav2_controller::SimpleProgressChecker
+[ros2-11] [controller_server-1] [INFO] [1785137033.891246928] [controller_server]: Created goal checker : goal_checker of type nav2_controller::SimpleGoalChecker
+[ros2-11] [controller_server-1] [INFO] [1785137033.895714503] [controller_server]: Controller Server has goal_checker  goal checkers available.
+[ros2-11] [controller_server-1] [INFO] [1785137033.900960667] [controller_server]: Created controller : FollowPath of type dwb_core::DWBLocalPlanner
+[ros2-11] [controller_server-1] [INFO] [1785137033.912098709] [controller_server]: Setting transform_tolerance to 0.100000
+[spawn_entity.py-7] [INFO] [1785137033.917764889] [spawn_entity]: Spawn status: SpawnEntity: Successfully spawned entity [robot3]
+[ros2-11] [controller_server-1] [ERROR] [1785137034.066895845] [controller_server]: Couldn't load critics! Caught exception: No critics defined for FollowPath
+[ros2-11] [controller_server-1] [ERROR] [1785137034.107267761] [controller_server]: Caught exception in callback for transition 10
+[ros2-11] [controller_server-1] [ERROR] [1785137034.107438881] [controller_server]: Original error: No critics defined for FollowPath
+[ros2-11] [controller_server-1] [WARN] [1785137034.107475059] [controller_server]: Callback returned ERROR during the transition: configure
+[ros2-11] [controller_server-1] [FATAL] [1785137034.107497721] [controller_server]: Lifecycle node controller_server does not have error state implemented
+[ros2-11] [lifecycle_manager-8] [ERROR] [1785137034.111595784] [lifecycle_manager_navigation]: Failed to change state for node: controller_server
+[ros2-11] [lifecycle_manager-8] [ERROR] [1785137034.111861506] [lifecycle_manager_navigation]: Failed to bring up all requested nodes. Aborting bringup.
+[gzserver-1] [INFO] [1785137034.342564085] [robot3.diff_drive]: Wheel pair 1 separation set to [0.560000m]
+[gzserver-1] [INFO] [1785137034.343295869] [robot3.diff_drive]: Wheel pair 1 diameter set to [0.165000m]
+[gzserver-1] [INFO] [1785137034.357035536] [robot3.diff_drive]: Subscribed to [/robot3/cmd_vel]
+[gzserver-1] [INFO] [1785137034.367234064] [robot3.diff_drive]: Advertise odometry on [/robot3/odom]
+[INFO] [spawn_entity.py-7]: process has finished cleanly [pid 21107]
+[gzserver-1] [INFO] [1785137034.436567206] [robot3.joint_state]: Going to publish joint [robot3/AGV_Body-v1_Revolute-2]
+[gzserver-1] [INFO] [1785137034.436670524] [robot3.joint_state]: Going to publish joint [robot3/AGV_Body-v1_Revolute-3]

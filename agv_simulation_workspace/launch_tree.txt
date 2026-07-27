@@ -1,0 +1,12 @@
+<launch.launch_description.LaunchDescription object at 0x7ca149f7e860>
+├── ExecuteProcess(cmd=['gzserver', '-s', 'libgazebo_ros_init.so', '-s', 'libgazebo_ros_factory.so', '/home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/share/agv/AGV.world'], cwd=None, env=None, shell=False)
+├── ExecuteProcess(cmd=['gzclient'], cwd=None, env=None, shell=False)
+├── ExecuteProcess(cmd=[ExecInPkg(pkg='rviz2', exec='rviz2'), '-d', '/home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/share/agv/config/agv.rviz', '--ros-args'], cwd=None, env=None, shell=False)
+├── ExecuteProcess(cmd=[ExecInPkg(pkg='nav2_map_server', exec='map_server'), '--ros-args', '-r', LocalVar('node name')], cwd=None, env=None, shell=False)
+├── ExecuteProcess(cmd=[ExecInPkg(pkg='nav2_lifecycle_manager', exec='lifecycle_manager'), '--ros-args', '-r', LocalVar('node name')], cwd=None, env=None, shell=False)
+├── ExecuteProcess(cmd=[ExecInPkg(pkg='robot_state_publisher', exec='robot_state_publisher'), '--ros-args'], cwd=None, env=None, shell=False)
+├── ExecuteProcess(cmd=[ExecInPkg(pkg='gazebo_ros', exec='spawn_entity.py'), '-entity', 'robot3', '-topic', '/robot3/robot_description', '-robot_namespace', 'robot3', '-y', '3.0', '--ros-args'], cwd=None, env=None, shell=False)
+├── ExecuteProcess(cmd=[ExecInPkg(pkg='robot_localization', exec='ekf_node'), '--ros-args'], cwd=None, env=None, shell=False)
+├── ExecuteProcess(cmd=[ExecInPkg(pkg='nav2_amcl', exec='amcl'), '--ros-args', '-r', LocalVar('node name')], cwd=None, env=None, shell=False)
+├── ExecuteProcess(cmd=[ExecInPkg(pkg='agv', exec='tf_to_odom'), '--ros-args'], cwd=None, env=None, shell=False)
+└── Action('<launch.actions.group_action.GroupAction object at 0x7ca149f7f520>')

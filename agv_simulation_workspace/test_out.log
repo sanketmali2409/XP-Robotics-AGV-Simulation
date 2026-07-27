@@ -1,0 +1,174 @@
+[INFO] [launch]: All log files can be found below /home/sanket/.ros/log/2026-07-27-12-15-00-408000-sanket-Victus-by-HP-Laptop-16-d0xxx-11748
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [controller_server-1]: process started with pid [11749]
+[INFO] [smoother_server-2]: process started with pid [11751]
+[INFO] [planner_server-3]: process started with pid [11753]
+[INFO] [behavior_server-4]: process started with pid [11755]
+[INFO] [bt_navigator-5]: process started with pid [11757]
+[INFO] [waypoint_follower-6]: process started with pid [11759]
+[INFO] [velocity_smoother-7]: process started with pid [11761]
+[INFO] [lifecycle_manager-8]: process started with pid [11763]
+[waypoint_follower-6] [INFO] [1785134700.671546529] [robot3.waypoint_follower]: 
+[waypoint_follower-6] 	waypoint_follower lifecycle node launched. 
+[waypoint_follower-6] 	Waiting on external lifecycle transitions to activate
+[waypoint_follower-6] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[waypoint_follower-6] [INFO] [1785134700.675084914] [robot3.waypoint_follower]: Creating
+[lifecycle_manager-8] [INFO] [1785134700.686281188] [robot3.lifecycle_manager_navigation]: Creating
+[lifecycle_manager-8] [INFO] [1785134700.690185472] [robot3.lifecycle_manager_navigation]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+[bt_navigator-5] [INFO] [1785134700.690443883] [robot3.bt_navigator]: 
+[bt_navigator-5] 	bt_navigator lifecycle node launched. 
+[bt_navigator-5] 	Waiting on external lifecycle transitions to activate
+[bt_navigator-5] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[bt_navigator-5] [INFO] [1785134700.690553583] [robot3.bt_navigator]: Creating
+[smoother_server-2] [INFO] [1785134700.696526448] [robot3.smoother_server]: 
+[smoother_server-2] 	smoother_server lifecycle node launched. 
+[smoother_server-2] 	Waiting on external lifecycle transitions to activate
+[smoother_server-2] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[behavior_server-4] [INFO] [1785134700.697715765] [robot3.behavior_server]: 
+[behavior_server-4] 	behavior_server lifecycle node launched. 
+[behavior_server-4] 	Waiting on external lifecycle transitions to activate
+[behavior_server-4] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[controller_server-1] [INFO] [1785134700.698324118] [robot3.controller_server]: 
+[controller_server-1] 	controller_server lifecycle node launched. 
+[controller_server-1] 	Waiting on external lifecycle transitions to activate
+[controller_server-1] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[planner_server-3] [INFO] [1785134700.701406133] [robot3.planner_server]: 
+[planner_server-3] 	planner_server lifecycle node launched. 
+[planner_server-3] 	Waiting on external lifecycle transitions to activate
+[planner_server-3] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[smoother_server-2] [INFO] [1785134700.705445484] [robot3.smoother_server]: Creating smoother server
+[planner_server-3] [INFO] [1785134700.705489194] [robot3.planner_server]: Creating
+[lifecycle_manager-8] [INFO] [1785134700.706889872] [robot3.lifecycle_manager_navigation]: [34m[1mStarting managed nodes bringup...[0m[0m
+[lifecycle_manager-8] [INFO] [1785134700.706947262] [robot3.lifecycle_manager_navigation]: [34m[1mConfiguring controller_server[0m[0m
+[velocity_smoother-7] [INFO] [1785134700.707602734] [robot3.velocity_smoother]: 
+[velocity_smoother-7] 	velocity_smoother lifecycle node launched. 
+[velocity_smoother-7] 	Waiting on external lifecycle transitions to activate
+[velocity_smoother-7] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[controller_server-1] [INFO] [1785134700.708682224] [robot3.controller_server]: Creating controller server
+[planner_server-3] [INFO] [1785134700.717454835] [robot3.global_costmap.global_costmap]: 
+[planner_server-3] 	global_costmap lifecycle node launched. 
+[planner_server-3] 	Waiting on external lifecycle transitions to activate
+[planner_server-3] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[planner_server-3] [INFO] [1785134700.719927814] [robot3.global_costmap.global_costmap]: Creating Costmap
+[controller_server-1] [INFO] [1785134700.721471655] [robot3.local_costmap.local_costmap]: 
+[controller_server-1] 	local_costmap lifecycle node launched. 
+[controller_server-1] 	Waiting on external lifecycle transitions to activate
+[controller_server-1] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[controller_server-1] [INFO] [1785134700.722029732] [robot3.local_costmap.local_costmap]: Creating Costmap
+[controller_server-1] [INFO] [1785134700.723064196] [robot3.controller_server]: Configuring controller interface
+[controller_server-1] [INFO] [1785134700.723149677] [robot3.controller_server]: getting goal checker plugins..
+[controller_server-1] [INFO] [1785134700.723232226] [robot3.controller_server]: Controller frequency set to 20.0000Hz
+[controller_server-1] [INFO] [1785134700.723259802] [robot3.local_costmap.local_costmap]: Configuring
+[controller_server-1] [INFO] [1785134700.727019329] [robot3.local_costmap.local_costmap]: Using plugin "voxel_layer"
+[controller_server-1] [INFO] [1785134700.733993050] [robot3.local_costmap.local_costmap]: Subscribed to Topics: scan
+[controller_server-1] [INFO] [1785134700.739552207] [robot3.local_costmap.local_costmap]: Initialized plugin "voxel_layer"
+[controller_server-1] [INFO] [1785134700.739585866] [robot3.local_costmap.local_costmap]: Using plugin "inflation_layer"
+[controller_server-1] [INFO] [1785134700.740075158] [robot3.local_costmap.local_costmap]: Initialized plugin "inflation_layer"
+[controller_server-1] [INFO] [1785134700.746261999] [robot3.controller_server]: Created progress_checker : progress_checker of type nav2_controller::SimpleProgressChecker
+[controller_server-1] [INFO] [1785134700.747253590] [robot3.controller_server]: Created goal checker : general_goal_checker of type nav2_controller::SimpleGoalChecker
+[controller_server-1] [INFO] [1785134700.747450794] [robot3.controller_server]: Controller Server has general_goal_checker  goal checkers available.
+[controller_server-1] [INFO] [1785134700.751369916] [robot3.controller_server]: Created controller : FollowPath of type dwb_core::DWBLocalPlanner
+[controller_server-1] [INFO] [1785134700.751983491] [robot3.controller_server]: Setting transform_tolerance to 0.200000
+[controller_server-1] [INFO] [1785134700.763643101] [robot3.controller_server]: Using critic "RotateToGoal" (dwb_critics::RotateToGoalCritic)
+[controller_server-1] [INFO] [1785134700.764032115] [robot3.controller_server]: Critic plugin initialized
+[controller_server-1] [INFO] [1785134700.764131457] [robot3.controller_server]: Using critic "Oscillation" (dwb_critics::OscillationCritic)
+[controller_server-1] [INFO] [1785134700.764387516] [robot3.controller_server]: Critic plugin initialized
+[controller_server-1] [INFO] [1785134700.764474628] [robot3.controller_server]: Using critic "BaseObstacle" (dwb_critics::BaseObstacleCritic)
+[controller_server-1] [INFO] [1785134700.764584174] [robot3.controller_server]: Critic plugin initialized
+[controller_server-1] [INFO] [1785134700.764660820] [robot3.controller_server]: Using critic "GoalAlign" (dwb_critics::GoalAlignCritic)
+[controller_server-1] [INFO] [1785134700.764900595] [robot3.controller_server]: Critic plugin initialized
+[controller_server-1] [INFO] [1785134700.764996414] [robot3.controller_server]: Using critic "PathAlign" (dwb_critics::PathAlignCritic)
+[controller_server-1] [INFO] [1785134700.765231998] [robot3.controller_server]: Critic plugin initialized
+[controller_server-1] [INFO] [1785134700.765331307] [robot3.controller_server]: Using critic "PathDist" (dwb_critics::PathDistCritic)
+[controller_server-1] [INFO] [1785134700.765483273] [robot3.controller_server]: Critic plugin initialized
+[controller_server-1] [INFO] [1785134700.765558435] [robot3.controller_server]: Using critic "GoalDist" (dwb_critics::GoalDistCritic)
+[controller_server-1] [INFO] [1785134700.765697857] [robot3.controller_server]: Critic plugin initialized
+[controller_server-1] [INFO] [1785134700.765721369] [robot3.controller_server]: Controller Server has FollowPath  controllers available.
+[lifecycle_manager-8] [INFO] [1785134700.772049726] [robot3.lifecycle_manager_navigation]: [34m[1mConfiguring smoother_server[0m[0m
+[smoother_server-2] [INFO] [1785134701.746967667] [robot3.smoother_server]: Configuring smoother server
+[smoother_server-2] [INFO] [1785134701.759084011] [robot3.smoother_server]: Created smoother : simple_smoother of type nav2_smoother::SimpleSmoother
+[smoother_server-2] [INFO] [1785134701.759391094] [robot3.smoother_server]: Smoother Server has simple_smoother  smoothers available.
+[lifecycle_manager-8] [INFO] [1785134701.763048251] [robot3.lifecycle_manager_navigation]: [34m[1mConfiguring planner_server[0m[0m
+[planner_server-3] [INFO] [1785134701.763300256] [robot3.planner_server]: Configuring
+[planner_server-3] [INFO] [1785134701.763339445] [robot3.global_costmap.global_costmap]: Configuring
+[planner_server-3] [INFO] [1785134701.767781369] [robot3.global_costmap.global_costmap]: Using plugin "static_layer"
+[planner_server-3] [INFO] [1785134701.770458014] [robot3.global_costmap.global_costmap]: Subscribing to the map topic (/robot3/map) with transient local durability
+[planner_server-3] [INFO] [1785134701.771522624] [robot3.global_costmap.global_costmap]: Initialized plugin "static_layer"
+[planner_server-3] [INFO] [1785134701.771553682] [robot3.global_costmap.global_costmap]: Using plugin "obstacle_layer"
+[planner_server-3] [INFO] [1785134701.771945998] [robot3.global_costmap.global_costmap]: Subscribed to Topics: scan
+[planner_server-3] [INFO] [1785134701.774144838] [robot3.global_costmap.global_costmap]: Initialized plugin "obstacle_layer"
+[planner_server-3] [INFO] [1785134701.774167710] [robot3.global_costmap.global_costmap]: Using plugin "inflation_layer"
+[planner_server-3] [INFO] [1785134701.774575642] [robot3.global_costmap.global_costmap]: Initialized plugin "inflation_layer"
+[planner_server-3] [INFO] [1785134701.780926725] [robot3.planner_server]: Created global planner plugin GridBased of type nav2_navfn_planner/NavfnPlanner
+[planner_server-3] [INFO] [1785134701.780964630] [robot3.planner_server]: Configuring plugin GridBased of type NavfnPlanner
+[planner_server-3] [INFO] [1785134701.781284465] [robot3.planner_server]: Planner Server has GridBased  planners available.
+[lifecycle_manager-8] [INFO] [1785134701.787773593] [robot3.lifecycle_manager_navigation]: [34m[1mConfiguring behavior_server[0m[0m
+[behavior_server-4] [INFO] [1785134701.788035116] [robot3.behavior_server]: Configuring
+[behavior_server-4] [INFO] [1785134701.796549653] [robot3.behavior_server]: Creating behavior plugin spin of type nav2_behaviors/Spin
+[behavior_server-4] [INFO] [1785134701.798440662] [robot3.behavior_server]: Configuring spin
+[behavior_server-4] [INFO] [1785134701.803485710] [robot3.behavior_server]: Creating behavior plugin backup of type nav2_behaviors/BackUp
+[behavior_server-4] [INFO] [1785134701.805177743] [robot3.behavior_server]: Configuring backup
+[behavior_server-4] [INFO] [1785134701.808744259] [robot3.behavior_server]: Creating behavior plugin drive_on_heading of type nav2_behaviors/DriveOnHeading
+[behavior_server-4] [INFO] [1785134701.810595282] [robot3.behavior_server]: Configuring drive_on_heading
+[behavior_server-4] [INFO] [1785134701.814245774] [robot3.behavior_server]: Creating behavior plugin assisted_teleop of type nav2_behaviors/AssistedTeleop
+[behavior_server-4] [INFO] [1785134701.817892876] [robot3.behavior_server]: Configuring assisted_teleop
+[behavior_server-4] [INFO] [1785134701.822479788] [robot3.behavior_server]: Creating behavior plugin wait of type nav2_behaviors/Wait
+[behavior_server-4] [INFO] [1785134701.824323205] [robot3.behavior_server]: Configuring wait
+[lifecycle_manager-8] [INFO] [1785134701.829555784] [robot3.lifecycle_manager_navigation]: [34m[1mConfiguring bt_navigator[0m[0m
+[bt_navigator-5] [INFO] [1785134701.829872381] [robot3.bt_navigator]: Configuring
+[lifecycle_manager-8] [INFO] [1785134701.926281078] [robot3.lifecycle_manager_navigation]: [34m[1mConfiguring waypoint_follower[0m[0m
+[waypoint_follower-6] [INFO] [1785134701.926494409] [robot3.waypoint_follower]: Configuring
+[waypoint_follower-6] [INFO] [1785134701.938484537] [robot3.waypoint_follower]: Created waypoint_task_executor : wait_at_waypoint of type nav2_waypoint_follower::WaitAtWaypoint
+[lifecycle_manager-8] [INFO] [1785134701.939723419] [robot3.lifecycle_manager_navigation]: [34m[1mConfiguring velocity_smoother[0m[0m
+[velocity_smoother-7] [INFO] [1785134701.939990486] [robot3.velocity_smoother]: Configuring velocity smoother
+[lifecycle_manager-8] [INFO] [1785134701.942657411] [robot3.lifecycle_manager_navigation]: [34m[1mActivating controller_server[0m[0m
+[controller_server-1] [INFO] [1785134701.942842584] [robot3.controller_server]: Activating
+[controller_server-1] [INFO] [1785134701.942887070] [robot3.local_costmap.local_costmap]: Activating
+[controller_server-1] [INFO] [1785134701.942899390] [robot3.local_costmap.local_costmap]: Checking transform
+[controller_server-1] [INFO] [1785134701.942928482] [robot3.local_costmap.local_costmap]: Timed out waiting for transform from base_link to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[controller_server-1] [INFO] [1785134702.442996599] [robot3.local_costmap.local_costmap]: Timed out waiting for transform from base_link to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[controller_server-1] [INFO] [1785134702.942982605] [robot3.local_costmap.local_costmap]: Timed out waiting for transform from base_link to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[controller_server-1] [INFO] [1785134703.442981319] [robot3.local_costmap.local_costmap]: Timed out waiting for transform from base_link to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[controller_server-1] [INFO] [1785134703.942984193] [robot3.local_costmap.local_costmap]: Timed out waiting for transform from base_link to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[controller_server-1] [INFO] [1785134704.443035209] [robot3.local_costmap.local_costmap]: Timed out waiting for transform from base_link to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[controller_server-1] [INFO] [1785134704.942996810] [robot3.local_costmap.local_costmap]: Timed out waiting for transform from base_link to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[controller_server-1] [INFO] [1785134705.442991225] [robot3.local_costmap.local_costmap]: Timed out waiting for transform from base_link to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[controller_server-1] [INFO] [1785134705.942993361] [robot3.local_costmap.local_costmap]: Timed out waiting for transform from base_link to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[controller_server-1] [INFO] [1785134706.442983983] [robot3.local_costmap.local_costmap]: Timed out waiting for transform from base_link to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[controller_server-1] [INFO] [1785134706.942997670] [robot3.local_costmap.local_costmap]: Timed out waiting for transform from base_link to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[controller_server-1] [INFO] [1785134707.442988092] [robot3.local_costmap.local_costmap]: Timed out waiting for transform from base_link to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[controller_server-1] [INFO] [1785134707.942986564] [robot3.local_costmap.local_costmap]: Timed out waiting for transform from base_link to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[controller_server-1] [INFO] [1785134708.443065644] [robot3.local_costmap.local_costmap]: Timed out waiting for transform from base_link to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[controller_server-1] [INFO] [1785134708.942987580] [robot3.local_costmap.local_costmap]: Timed out waiting for transform from base_link to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[controller_server-1] [INFO] [1785134709.443037928] [robot3.local_costmap.local_costmap]: Timed out waiting for transform from base_link to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[controller_server-1] [INFO] [1785134709.942980675] [robot3.local_costmap.local_costmap]: Timed out waiting for transform from base_link to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[controller_server-1] [INFO] [1785134710.443086798] [robot3.local_costmap.local_costmap]: Timed out waiting for transform from base_link to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[controller_server-1] [INFO] [1785134710.942985302] [robot3.local_costmap.local_costmap]: Timed out waiting for transform from base_link to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[controller_server-1] [INFO] [1785134711.442996945] [robot3.local_costmap.local_costmap]: Timed out waiting for transform from base_link to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[controller_server-1] [INFO] [1785134711.942983844] [robot3.local_costmap.local_costmap]: Timed out waiting for transform from base_link to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[controller_server-1] [INFO] [1785134712.442989503] [robot3.local_costmap.local_costmap]: Timed out waiting for transform from base_link to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[controller_server-1] [INFO] [1785134712.943028124] [robot3.local_costmap.local_costmap]: Timed out waiting for transform from base_link to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[controller_server-1] [INFO] [1785134713.442977463] [robot3.local_costmap.local_costmap]: Timed out waiting for transform from base_link to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[controller_server-1] [INFO] [1785134713.943013441] [robot3.local_costmap.local_costmap]: Timed out waiting for transform from base_link to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[controller_server-1] [INFO] [1785134714.442981277] [robot3.local_costmap.local_costmap]: Timed out waiting for transform from base_link to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[controller_server-1] [INFO] [1785134714.942999100] [robot3.local_costmap.local_costmap]: Timed out waiting for transform from base_link to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[controller_server-1] [INFO] [1785134715.442978003] [robot3.local_costmap.local_costmap]: Timed out waiting for transform from base_link to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[controller_server-1] [INFO] [1785134715.942983711] [robot3.local_costmap.local_costmap]: Timed out waiting for transform from base_link to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[controller_server-1] [INFO] [1785134716.442987373] [robot3.local_costmap.local_costmap]: Timed out waiting for transform from base_link to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[controller_server-1] [INFO] [1785134716.942995153] [robot3.local_costmap.local_costmap]: Timed out waiting for transform from base_link to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[controller_server-1] [INFO] [1785134717.442981661] [robot3.local_costmap.local_costmap]: Timed out waiting for transform from base_link to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[controller_server-1] [INFO] [1785134717.942986126] [robot3.local_costmap.local_costmap]: Timed out waiting for transform from base_link to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[controller_server-1] [INFO] [1785134718.442981444] [robot3.local_costmap.local_costmap]: Timed out waiting for transform from base_link to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[controller_server-1] [INFO] [1785134718.942982911] [robot3.local_costmap.local_costmap]: Timed out waiting for transform from base_link to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[controller_server-1] [INFO] [1785134719.443001870] [robot3.local_costmap.local_costmap]: Timed out waiting for transform from base_link to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[controller_server-1] [INFO] [1785134719.942982376] [robot3.local_costmap.local_costmap]: Timed out waiting for transform from base_link to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[controller_server-1] [INFO] [1785134720.442984318] [robot3.local_costmap.local_costmap]: Timed out waiting for transform from base_link to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[controller_server-1] [INFO] [1785134720.942984530] [robot3.local_costmap.local_costmap]: Timed out waiting for transform from base_link to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[controller_server-1] [INFO] [1785134721.442982052] [robot3.local_costmap.local_costmap]: Timed out waiting for transform from base_link to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[controller_server-1] [INFO] [1785134721.942980038] [robot3.local_costmap.local_costmap]: Timed out waiting for transform from base_link to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[controller_server-1] [INFO] [1785134722.442994313] [robot3.local_costmap.local_costmap]: Timed out waiting for transform from base_link to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[controller_server-1] [INFO] [1785134722.942995515] [robot3.local_costmap.local_costmap]: Timed out waiting for transform from base_link to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[controller_server-1] [INFO] [1785134723.442984294] [robot3.local_costmap.local_costmap]: Timed out waiting for transform from base_link to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[controller_server-1] [INFO] [1785134723.942984398] [robot3.local_costmap.local_costmap]: Timed out waiting for transform from base_link to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[controller_server-1] [INFO] [1785134724.442971574] [robot3.local_costmap.local_costmap]: Timed out waiting for transform from base_link to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[controller_server-1] [INFO] [1785134724.942985743] [robot3.local_costmap.local_costmap]: Timed out waiting for transform from base_link to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist

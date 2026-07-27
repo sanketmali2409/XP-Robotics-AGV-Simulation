@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinusoidal Motor Test - XP Robotics</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+    <style>
+        :root {
+            --bg-main: #172130;
+            --bg-sidebar: #1e2a3b;
+            --bg-nav: #263653;
+            --text-light: #e0e6ed;
+            --text-dim: #8ba2c4;
+            --border-color: #3b4b66;
+            --input-bg: #111824;
+            --accent-blue: #2389d7;
+            --accent-blue-hover: #1c70b2;
+            --accent-red: #d33c44;
+            --accent-red-hover: #a32a32;
+            --accent-green: #37b24d;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-light);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        /* Top Navigation Tabs */
+        .top-nav {
+            background-color: var(--bg-nav);
+            display: flex;
+            padding: 5px 10px 0 10px;
+            border-bottom: 2px solid var(--accent-blue);
+        }
+
+        .nav-tab {
+            background-color: transparent;
+            color: var(--text-dim);
+            border: none;
+            padding: 10px 20px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+        }
+
+        .nav-tab.active {
+            background-color: var(--accent-blue);
+            color: #fff;
+        }
+
+        /* Layout Container */
+        .container {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 320px;
+            background-color: var(--bg-sidebar);
+            border-right: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            overflow-y: auto;
+        }
+
+        .sidebar h2 {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sidebar h2::before {
+            content: '⚙';
+            color: var(--accent-blue);
+        }
+
+        .form-group {
+            margin-bottom: 12px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 11px;
+            color: var(--text-dim);
+            margin-bottom: 4px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 10px;
+        }
+
+        .form-row .form-group {
+            flex: 1;
+        }
+
+        input, select {
+            width: 100%;
+            background-color: var(--input-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-light);
+            padding: 7px 8px;
+            font-size: 13px;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        input:focus, select:focus {
+            border-color: var(--accent-blue);
+        }
+
+        /* Actions Buttons */
+        .actions {
+            margin-top: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 8px;
+            border: none;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: bold;
+            cursor: pointer;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-start { background-color: var(--accent-blue); }
+        .btn-start:hover { background-color: var(--accent-blue-hover); }
+
+        .btn-stop { background-color: var(--accent-red); }
+        .btn-stop:hover { background-color: var(--accent-red-hover); }
+
+        .btn-secondary { background-color: #3b506e; }
+        .btn-secondary:hover { background-color: #2a3a52; }
+
+        /* Status Panel */
+        .status-panel {
+            margin-top: 20px;
+            background-color: rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 10px;
+            font-size: 11px;
+            color: var(--text-dim);
+            line-height: 1.6;
+        }
+
+        .status-header {
+            color: var(--accent-green);
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 5px;
+        }
+
+        .live-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--accent-green);
+            border-radius: 50%;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0.3; }
+        }
+
+        /* Main Content (Charts) */
+        .content {
+            flex: 1;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            overflow-y: auto;
+        }
+
+        .chart-wrapper {
+            flex: 1;
+            min-height: 150px;
+            background-color: #172130;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            position: relative;
+            padding: 10px 10px 5px 10px;
+        }
+        
+        .chart-wrapper.comparative {
+            width: 100%;
+            max-width: 600px;
+            aspect-ratio: 1 / 1; /* Force perfect square for graph paper */
+            margin: 0 auto; /* Center it */
+            background-color: #ffffff;
+            border: 2px solid #2c3e50;
+            padding: 20px;
+            background-image: 
+                linear-gradient(rgba(41, 128, 185, 0.15) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(41, 128, 185, 0.15) 1px, transparent 1px);
+            background-size: 50px 50px; /* Graph paper squares */
+        }
+
+        .chart-title {
+            position: absolute;
+            top: 10px;
+            left: 15px;
+            font-size: 12px;
+            color: var(--accent-blue);
+            font-weight: bold;
+            z-index: 10;
+        }
+
+        canvas {
+            width: 100% !important;
+            height: 100% !important;
+        }
+        
+        .charts-row {
+            display: flex;
+            gap: 10px;
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Navigation -->
+    <div class="top-nav">
+        <button class="nav-tab active">Live Testing</button>
+        <button class="nav-tab">Bode Plot & Insights</button>
+        <button class="nav-tab">Stepped-Sine</button>
+        <button class="nav-tab">Friction Test</button>
+    </div>
+
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>TEST CONFIGURATION</h2>
+            
+            <div class="form-group">
+                <label>Target Robot:</label>
+                <div style="display:flex; gap:5px;">
+                    <select id="robotSelect">
+                        <option value="all">All Robots (Comparative)</option>
+                        <option value="robot1">Robot 1 (EKF)</option>
+                        <option value="robot2">Robot 2 (LiDAR/AMCL)</option>
+                        <option value="robot3">Robot 3 (LiDAR/AMCL)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row" style="margin-top: 15px;">
+                <div class="form-group"><label>Target X (m):</label><input type="number" id="inputTargetX" value="3.0" step="0.5"></div>
+                <div class="form-group"><label>Target Y (m):</label><input type="number" id="inputTargetY" value="1.0" step="0.5"></div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group"><label>Kp Gain:</label><input type="number" id="inputKp" value="0.5" step="0.1"></div>
+                <div class="form-group"><label>Ki Gain:</label><input type="number" id="inputKi" value="0.0" step="0.01"></div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group"><label>Kd Gain:</label><input type="number" id="inputKd" value="0.0" step="0.01"></div>
+            </div>
+
+            <div class="actions">
+                <button class="btn btn-start">▶ START TEST</button>
+                <button class="btn btn-stop">■ STOP</button>
+                <button class="btn btn-secondary" id="btnLoadCsv" onclick="document.getElementById('csvFileInput').click()">Load CSV</button>
+                <input type="file" id="csvFileInput" style="display: none;" accept=".csv">
+                <button class="btn btn-secondary" id="btnExportGraph">Export Graph</button>
+            </div>
+
+            <div class="status-panel">
+                <div class="status-header">
+                    <div class="live-dot"></div>
+                    <span id="liveTime">LIVE — 0 samples, t=0.0s</span>
+                </div>
+                <div id="sampleCount">Samples: 0</div>
+                <div id="errorRobot1" style="color:#2980b9;">Robot 1 Error: 0.00m</div>
+                <div id="errorRobot2" style="color:#c0392b;">Robot 2 Error: 0.00m</div>
+                <div id="errorRobot3" style="color:#8e44ad;">Robot 3 Error: 0.00m</div>
+                <div style="word-break: break-all; margin-top:5px;">File: sinetest_motor10_2.0Hz_0.03rad.csv</div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <!-- Comparative MATLAB-style Graph -->
+            <div class="chart-wrapper comparative">
+                <div class="chart-title" style="color:#2c3e50;">Comparative Trajectory Analysis (2D Path)</div>
+                <canvas id="chartComparative"></canvas>
+            </div>
+
+            <!-- Time Series Graphs -->
+            <div class="charts-row">
+                <div class="chart-wrapper">
+                    <div class="chart-title" style="color:#2980b9;">Robot 1 X-Position vs Time</div>
+                    <canvas id="chartTime1"></canvas>
+                </div>
+                <div class="chart-wrapper">
+                    <div class="chart-title" style="color:#c0392b;">Robot 2 X-Position vs Time</div>
+                    <canvas id="chartTime2"></canvas>
+                </div>
+                <div class="chart-wrapper">
+                    <div class="chart-title" style="color:#8e44ad;">Robot 3 X-Position vs Time</div>
+                    <canvas id="chartTime3"></canvas>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Minimalist options for the time series charts
+        const commonOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            animation: { duration: 0 },
+            elements: { point: { radius: 0 } },
+            plugins: { 
+                legend: { display: false }, 
+                tooltip: { enabled: false },
+                datalabels: { display: false }
+            },
+            scales: {
+                x: { display: false },
+                y: { 
+                    grid: { color: 'rgba(255,255,255,0.05)', tickLength: 0 },
+                    border: { display: false },
+                    ticks: { color: '#666', font: { size: 10 }, maxTicksLimit: 5 }
+                }
+            },
+            layout: { padding: { top: 25, bottom: 5, left: 0, right: 0 } }
+        };
+
+        // MATLAB-Style Comparative Options
+        const comparativeOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            animation: { duration: 0 },
+            plugins: { 
+                legend: { 
+                    display: true, 
+                    position: 'top',
+                    labels: { color: '#2c3e50', font: { size: 12, weight: 'bold' }, usePointStyle: true }
+                },
+                tooltip: { enabled: true },
+                datalabels: { display: false } // Disable globally
+            },
+            scales: {
+                x: { 
+                    type: 'linear', position: 'bottom',
+                    min: -4, max: 6, /* 10 units */
+                    grid: { color: 'rgba(41, 128, 185, 0.3)', tickLength: 0, drawBorder: true },
+                    ticks: { color: '#2c3e50', font: { size: 12 }, stepSize: 1 },
+                    title: { display: true, text: 'X (meters)', color: '#2c3e50', font: { weight: 'bold', size: 14 } },
+                    border: { color: '#2c3e50', width: 2 }
+                },
+                y: { 
+                    min: -2, max: 8, /* 10 units to maintain 1:1 aspect ratio with X */
+                    grid: { color: 'rgba(41, 128, 185, 0.3)', tickLength: 0, drawBorder: true },
+                    ticks: { color: '#2c3e50', font: { size: 12 }, stepSize: 1 },
+                    title: { display: true, text: 'Y (meters)', color: '#2c3e50', font: { weight: 'bold', size: 14 } },
+                    border: { color: '#2c3e50', width: 2 }
+                }
+            },
+            layout: { padding: { top: 20, bottom: 20, left: 20, right: 20 } }
+        };
+
+        // Register DataLabels
+        Chart.register(ChartDataLabels);
+
+        // Initialize Comparative Chart
+        const ctxComp = document.getElementById('chartComparative').getContext('2d');
+        const chartComparative = new Chart(ctxComp, {
+            type: 'scatter',
+            data: { datasets: [
+                { 
+                    label: 'Target Path', 
+                    backgroundColor: 'rgba(0,0,0,0)', 
+                    borderColor: '#7f8c8d', 
+                    showLine: true, 
+                    borderWidth: 2, 
+                    borderDash: [5, 5], 
+                    pointRadius: 0, 
+                    data: [] 
+                },
+                { 
+                    label: 'Robot 1 (EKF)', 
+                    backgroundColor: 'rgba(41, 128, 185, 0.5)', 
+                    borderColor: '#2980b9', 
+                    showLine: true, 
+                    borderWidth: 1.5, 
+                    pointRadius: 3,
+                    pointStyle: 'circle',
+                    data: [] 
+                },
+                { 
+                    label: 'Robot 2 (LiDAR)', 
+                    backgroundColor: 'rgba(192, 57, 43, 0.5)', 
+                    borderColor: '#c0392b', 
+                    showLine: true, 
+                    borderWidth: 1.5, 
+                    pointRadius: 3,
+                    pointStyle: 'rect',
+                    data: [] 
+                },
+                { 
+                    label: 'Robot 3 (Hybrid)', 
+                    backgroundColor: 'rgba(142, 68, 173, 0.5)', 
+                    borderColor: '#8e44ad', 
+                    showLine: true, 
+                    borderWidth: 1.5, 
+                    pointRadius: 3,
+                    pointStyle: 'triangle',
+                    data: [] 
+                },
+                {
+                    label: 'Goals (Waypoints)',
+                    backgroundColor: '#f1c40f',
+                    borderColor: '#f39c12',
+                    showLine: false,
+                    borderWidth: 2,
+                    pointRadius: 8,
+                    pointStyle: 'star',
+                    order: -2,
+                    data: [],
+                    datalabels: {
+                        display: true,
+                        align: 'top',
+                        anchor: 'end',
+                        color: '#d35400',
+                        font: { weight: 'bold', size: 12 },
+                        formatter: function(value) {
+                            return value.name;
+                        }
+                    }
+                }
+            ]},
+            options: comparativeOptions
+        });
+
+        // Initialize Time Series Charts
+        const ctxTime1 = document.getElementById('chartTime1').getContext('2d');
+        const chartTime1 = new Chart(ctxTime1, {
+            type: 'line',
+            data: { labels: [], datasets: [
+                { borderColor: '#7f8c8d', borderWidth: 2, borderDash: [3, 3], data: [] }, // Target
+                { borderColor: '#2980b9', borderWidth: 2, data: [] }  // Actual
+            ]},
+            options: commonOptions
+        });
+
+        const ctxTime2 = document.getElementById('chartTime2').getContext('2d');
+        const chartTime2 = new Chart(ctxTime2, {
+            type: 'line',
+            data: { labels: [], datasets: [
+                { borderColor: '#7f8c8d', borderWidth: 2, borderDash: [3, 3], data: [] }, // Target
+                { borderColor: '#c0392b', borderWidth: 2, data: [] }  // Actual
+            ]},
+            options: commonOptions
+        });
+
+        const ctxTime3 = document.getElementById('chartTime3').getContext('2d');
+        const chartTime3 = new Chart(ctxTime3, {
+            type: 'line',
+            data: { labels: [], datasets: [
+                { borderColor: '#7f8c8d', borderWidth: 2, borderDash: [3, 3], data: [] }, // Target
+                { borderColor: '#8e44ad', borderWidth: 2, data: [] }  // Actual
+            ]},
+            options: commonOptions
+        });
+
+        // Fetch data from real backend for Position Tracking
+        let timeCount = 0;
+        async function updateGraphs() {
+            try {
+                const response = await fetch('/api/data');
+                const data = await response.json();
+                
+                let labels1 = []; let r1TargetXY = []; let r1ActualXY = []; let r1TargetX = []; let r1ActualX = []; let lastError1 = 0; let sumError1 = 0;
+                let labels2 = []; let r2TargetXY = []; let r2ActualXY = []; let r2TargetX = []; let r2ActualX = []; let lastError2 = 0; let sumError2 = 0;
+                let labels3 = []; let r3TargetXY = []; let r3ActualXY = []; let r3TargetX = []; let r3ActualX = []; let lastError3 = 0; let sumError3 = 0;
+                
+                if(data.robot1 && data.robot1.timestamp.length > 0) {
+                    labels1 = data.robot1.timestamp;
+                    for (let i = 0; i < data.robot1.timestamp.length; i++) {
+                        let tx = data.robot1.target_x[i]; let ty = data.robot1.target_y[i];
+                        let ax = data.robot1.actual_x[i]; let ay = data.robot1.actual_y[i];
+                        r1TargetXY.push({x: tx, y: ty}); r1ActualXY.push({x: ax, y: ay});
+                        r1TargetX.push(tx); r1ActualX.push(ax);
+                        lastError1 = Math.sqrt(Math.pow(tx - ax, 2) + Math.pow(ty - ay, 2));
+                        sumError1 += lastError1;
+                    }
+                }
+                
+                if(data.robot2 && data.robot2.timestamp.length > 0) {
+                    labels2 = data.robot2.timestamp;
+                    for (let i = 0; i < data.robot2.timestamp.length; i++) {
+                        let tx = data.robot2.target_x[i]; let ty = data.robot2.target_y[i];
+                        let ax = data.robot2.actual_x[i]; let ay = data.robot2.actual_y[i];
+                        r2TargetXY.push({x: tx, y: ty}); r2ActualXY.push({x: ax, y: ay});
+                        r2TargetX.push(tx); r2ActualX.push(ax);
+                        lastError2 = Math.sqrt(Math.pow(tx - ax, 2) + Math.pow(ty - ay, 2));
+                        sumError2 += lastError2;
+                    }
+                }
+
+                if(data.robot3 && data.robot3.timestamp.length > 0) {
+                    labels3 = data.robot3.timestamp;
+                    for (let i = 0; i < data.robot3.timestamp.length; i++) {
+                        let tx = data.robot3.target_x[i]; let ty = data.robot3.target_y[i];
+                        let ax = data.robot3.actual_x[i]; let ay = data.robot3.actual_y[i];
+                        r3TargetXY.push({x: tx, y: ty}); r3ActualXY.push({x: ax, y: ay});
+                        r3TargetX.push(tx); r3ActualX.push(ax);
+                    }
+                }
+
+                // Helper function to calculate Average Final Error per Goal
+                function calculateGoalAverage(robotData) {
+                    if (!robotData || !robotData.timestamp || robotData.timestamp.length === 0) return { last: 0, avg: 0 };
+                    
+                    let finalErrors = [];
+                    let len = robotData.timestamp.length;
+                    
+                    let currentMinError = Infinity;
+                    
+                    for (let i = 0; i < len; i++) {
+                        let tx = robotData.target_x[i]; let ty = robotData.target_y[i];
+                        let ax = robotData.actual_x[i]; let ay = robotData.actual_y[i];
+                        let error = Math.sqrt(Math.pow(tx - ax, 2) + Math.pow(ty - ay, 2));
+                        
+                        if (error < currentMinError) {
+                            currentMinError = error;
+                        }
+                        
+                        // If the target changes, that means the robot finished the previous goal
+                        let isTargetChanging = false;
+                        if (i < len - 1) {
+                            let nextTx = robotData.target_x[i+1]; let nextTy = robotData.target_y[i+1];
+                            if (tx !== nextTx || ty !== nextTy) isTargetChanging = true;
+                        }
+                        
+                        if (isTargetChanging) {
+                            finalErrors.push(currentMinError);
+                            currentMinError = Infinity; // Reset for the next goal
+                        }
+                    }
+                    
+                    let sum = finalErrors.reduce((a, b) => a + b, 0);
+                    let avg = finalErrors.length > 0 ? sum / finalErrors.length : 0;
+                    
+                    // The very last error in the array is the "current" error
+                    let lastTx = robotData.target_x[len-1]; let lastTy = robotData.target_y[len-1];
+                    let lastAx = robotData.actual_x[len-1]; let lastAy = robotData.actual_y[len-1];
+                    let last = Math.sqrt(Math.pow(lastTx - lastAx, 2) + Math.pow(lastTy - lastAy, 2));
+                    
+                    return { last: last, avg: avg };
+                }
+
+                let stats1 = calculateGoalAverage(data.robot1);
+                let stats2 = calculateGoalAverage(data.robot2);
+                let stats3 = calculateGoalAverage(data.robot3);
+
+                // Update error text in sidebar (convert to cm)
+                document.getElementById('errorRobot1').innerText = `Robot 1 (Curr: ${(stats1.last*100).toFixed(2)}cm | Avg Final: ${(stats1.avg*100).toFixed(2)}cm)`;
+                document.getElementById('errorRobot2').innerText = `Robot 2 (Curr: ${(stats2.last*100).toFixed(2)}cm | Avg Final: ${(stats2.avg*100).toFixed(2)}cm)`;
+                document.getElementById('errorRobot3').innerText = `Robot 3 (Curr: ${(stats3.last*100).toFixed(2)}cm | Avg Final: ${(stats3.avg*100).toFixed(2)}cm)`;
+
+                // Handle dataset visibility based on dropdown selection
+                const selectedRobot = document.getElementById('robotSelect').value;
+                chartComparative.data.datasets[1].hidden = (selectedRobot !== 'all' && selectedRobot !== 'robot1');
+                chartComparative.data.datasets[2].hidden = (selectedRobot !== 'all' && selectedRobot !== 'robot2');
+                chartComparative.data.datasets[3].hidden = (selectedRobot !== 'all' && selectedRobot !== 'robot3');
+
+                // Update Comparative Chart
+                let currentTargetXY;
+                if (selectedRobot === 'robot1') {
+                    currentTargetXY = r1TargetXY;
+                } else if (selectedRobot === 'robot2') {
+                    currentTargetXY = r2TargetXY;
+                } else if (selectedRobot === 'robot3') {
+                    currentTargetXY = r3TargetXY;
+                } else {
+                    // Fallback for 'all'
+                    currentTargetXY = r3TargetXY.length > 0 ? r3TargetXY : (r2TargetXY.length > 0 ? r2TargetXY : r1TargetXY);
+                }
+                
+                chartComparative.data.datasets[0].data = currentTargetXY; 
+                chartComparative.data.datasets[1].data = r1ActualXY;
+                chartComparative.data.datasets[2].data = r2ActualXY;
+                chartComparative.data.datasets[3].data = r3ActualXY;
+                
+                // Extract unique waypoints from the targets
+                let waypointsList = [];
+                let lastWP = null;
+                for(let i=0; i<currentTargetXY.length; i++) {
+                    let tx = currentTargetXY[i].x;
+                    let ty = currentTargetXY[i].y;
+                    if(!lastWP || lastWP.x !== tx || lastWP.y !== ty) {
+                        lastWP = {x: tx, y: ty, name: `Goal ${waypointsList.length + 1}`};
+                        waypointsList.push(lastWP);
+                    }
+                }
+
+                if (waypointsList.length > 0) {
+                    chartComparative.data.datasets[4].data = waypointsList;
+                } else {
+                    chartComparative.data.datasets[4].data = [];
+                }
+
+                chartComparative.update();
+
+                // Helper to highlight start and goal in time series
+                const highlightTimeSeries = (dataset, dataArray) => {
+                    if (!dataArray || dataArray.length === 0) return;
+                    dataset.pointRadius = dataArray.map((_, i) => (i === 0 ? 5 : (i === dataArray.length - 1 ? 8 : 0)));
+                    dataset.pointStyle = dataArray.map((_, i) => (i === 0 ? 'rectRot' : (i === dataArray.length - 1 ? 'star' : 'circle')));
+                    dataset.pointBackgroundColor = dataArray.map((_, i) => (i === 0 ? '#2ecc71' : (i === dataArray.length - 1 ? '#f1c40f' : 'transparent')));
+                    dataset.pointBorderColor = dataArray.map((_, i) => (i === 0 ? '#27ae60' : (i === dataArray.length - 1 ? '#f39c12' : 'transparent')));
+                    dataset.pointBorderWidth = dataArray.map((_, i) => (i === 0 || i === dataArray.length - 1 ? 2 : 0));
+                };
+
+                // Update Time Series
+                chartTime1.data.labels = labels1;
+                chartTime1.data.datasets[0].data = r1TargetX;
+                chartTime1.data.datasets[1].data = r1ActualX;
+                highlightTimeSeries(chartTime1.data.datasets[0], r1TargetX);
+                chartTime1.update();
+
+                chartTime2.data.labels = labels2;
+                chartTime2.data.datasets[0].data = r2TargetX;
+                chartTime2.data.datasets[1].data = r2ActualX;
+                highlightTimeSeries(chartTime2.data.datasets[0], r2TargetX);
+                chartTime2.update();
+
+                chartTime3.data.labels = labels3;
+                chartTime3.data.datasets[0].data = r3TargetX;
+                chartTime3.data.datasets[1].data = r3ActualX;
+                highlightTimeSeries(chartTime3.data.datasets[0], r3TargetX);
+                chartTime3.update();
+
+                // Update status panel
+                const maxLen = Math.max(labels1.length, labels2.length, labels3.length);
+                document.getElementById('liveTime').innerText = `LIVE — ${maxLen} samples, t=${(maxLen*0.1).toFixed(1)}s`;
+                document.getElementById('sampleCount').innerText = `Samples: ${maxLen}`;
+                
+            } catch(e) {
+                console.error("Error updating graphs", e);
+            }
+        }
+
+        // Poll every 500ms
+        let pollingInterval = setInterval(updateGraphs, 500);
+
+        // --- Export Graph Logic ---
+        document.getElementById('btnExportGraph').addEventListener('click', function() {
+            const canvases = [
+                document.getElementById('chartComparative'),
+                document.getElementById('chartTime1'),
+                document.getElementById('chartTime2'),
+                document.getElementById('chartTime3')
+            ];
+            
+            setTimeout(() => {
+                const width = canvases[0].width;
+                let totalHeight = 0;
+                canvases.forEach(c => totalHeight += c.height);
+                
+                const exportCanvas = document.createElement('canvas');
+                exportCanvas.width = width;
+                exportCanvas.height = totalHeight;
+                const eCtx = exportCanvas.getContext('2d');
+                
+                eCtx.fillStyle = '#172130';
+                eCtx.fillRect(0, 0, width, totalHeight);
+                
+                let currentY = 0;
+                
+                canvases.forEach((c, i) => {
+                    // The first canvas (Comparative Trajectory) needs a white background
+                    if (i === 0) {
+                        eCtx.fillStyle = '#ffffff';
+                        eCtx.fillRect(0, currentY, width, c.height);
+                    }
+                    eCtx.drawImage(c, 0, currentY);
+                    currentY += c.height;
+                });
+                
+                const imgData = exportCanvas.toDataURL('image/png');
+                fetch('/api/save_graph', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ image: imgData })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if(data.success) {
+                        alert('Graph saved successfully to:\n' + data.path);
+                    } else {
+                        alert('Error saving graph: ' + data.error);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Error saving graph to server.');
+                });
+            }, 100);
+        });
+
+    </script>
+</body>
+</html>

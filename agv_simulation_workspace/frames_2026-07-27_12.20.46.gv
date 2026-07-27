@@ -1,0 +1,16 @@
+digraph G {
+"map" -> "robot3/odom"[label=" Broadcaster: default_authority\nAverage rate: 10.27\nBuffer length: 3.7\nMost recent transform: 227.703\nOldest transform: 224.003\n"];
+"robot3/odom" -> "robot3/base_link"[label=" Broadcaster: default_authority\nAverage rate: 9.73\nBuffer length: 3.7\nMost recent transform: 226.793\nOldest transform: 223.093\n"];
+"robot3/AGV_Body-v1" -> "robot3/ZLtech_6.5inch-v3"[label=" Broadcaster: default_authority\nAverage rate: 30.172\nBuffer length: 3.48\nMost recent transform: 226.853\nOldest transform: 223.373\n"];
+"robot3/base_link" -> "robot3/AGV_Body-v1"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"robot3/AGV_Body-v1" -> "robot3/ZLtech_6.5inch-v3-1"[label=" Broadcaster: default_authority\nAverage rate: 30.172\nBuffer length: 3.48\nMost recent transform: 226.853\nOldest transform: 223.373\n"];
+"robot3/AGV_Body-v1" -> "robot3/scanner-v2"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"robot3/base_link" -> "robot3/caster_back"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"robot3/base_link" -> "robot3/caster_front"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"robot3/base_link" -> "robot3/front_indicator"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"robot3/base_link" -> "robot3/laser_frame"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1785135046.5096369"[ shape=plaintext ] ;
+}->"map";
+}

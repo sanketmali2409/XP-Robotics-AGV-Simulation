@@ -5,13 +5,6 @@ agv.urdf.xacro
 package.xml
 setup.cfg
 setup.py
-../../build/agv/agv.egg-info/PKG-INFO
-../../build/agv/agv.egg-info/SOURCES.txt
-../../build/agv/agv.egg-info/dependency_links.txt
-../../build/agv/agv.egg-info/entry_points.txt
-../../build/agv/agv.egg-info/requires.txt
-../../build/agv/agv.egg-info/top_level.txt
-../../build/agv/agv.egg-info/zip-safe
 agv/__init__.py
 agv/analyze_results.py
 agv/goal_pid_controller.py
@@ -28,9 +21,12 @@ agv.egg-info/top_level.txt
 agv.egg-info/zip-safe
 config/agv.rviz
 config/ekf.yaml
+config/nav2_params.yaml
 launch/agv_bringup.launch.py
 launch/multi_robot_bringup.launch.py
 launch/multi_robot_navigation.launch.py
+launch/my_navigation_launch.py
+launch/nav2_robot3_launch.py
 maps/final_test_map.pgm
 maps/final_test_map.yaml
 maps/my_new_map.pgm

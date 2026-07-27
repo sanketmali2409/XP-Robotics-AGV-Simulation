@@ -1,45 +1,55 @@
 #!/usr/bin/env python3
 import rclpy
 from rclpy.node import Node
-from geometry_msgs.msg import PoseStamped
+from nav2_msgs.action import NavigateToPose
+from rclpy.action import ActionClient
 from nav_msgs.msg import Odometry
 import time
-import math
 
 class TestOrchestrator(Node):
     def __init__(self):
-        super().__init__('test_orchestrator')
+        super().__init__('test_orchestrator', parameter_overrides=[
+            rclpy.parameter.Parameter('use_sim_time', rclpy.Parameter.Type.BOOL, True)
+        ])
         
-        # Define the test parameters
         self.robots = ['robot3']
         
-        # New set of waypoints for Robot 3 (Avoiding the Blue Box at X=2, Y=2)
         self.waypoints = [
             (-3.5, 3.5),
             (3.5, 3.5),
             (3.5, -3.5),
             (-3.5, -3.5),
-            (-3.5, 0.0),
-            (0.0, 0.0)
+            (0.0, 0.0),
+            (-2.0, 2.0)
         ]
         
         self.current_robot_idx = 0
         self.current_phase = 0
-        self.retry_count = 0
         
-        # State
-        self.current_x = None
-        self.current_y = None
+        self.action_client = None
+        self.odom_sub = None
+        self.timer = None
+        self.csv_f = None
+        
+        self.actual_x = 0.0
+        self.actual_y = 0.0
         self.goal_x = 0.0
         self.goal_y = 0.0
-        self.phase_start_time = time.time()
+        self.goal_active = False
         
-        self.goal_pub = None
-        self.odom_sub = None
+        self.start_time = self.get_clock().now()
         
         self.setup_current_robot()
-        
-        self.timer = self.create_timer(0.5, self.check_progress)
+
+    def odom_callback(self, msg):
+        self.actual_x = msg.pose.pose.position.x
+        self.actual_y = msg.pose.pose.position.y
+
+    def log_telemetry(self):
+        if self.goal_active and self.csv_f:
+            t = (self.get_clock().now() - self.start_time).nanoseconds / 1e9
+            self.csv_f.write(f"{t:.2f},{self.goal_x:.2f},{self.goal_y:.2f},{self.actual_x:.2f},{self.actual_y:.2f}\n")
+            self.csv_f.flush()
 
     def setup_current_robot(self):
         if self.current_robot_idx >= len(self.robots):
@@ -48,36 +58,33 @@ class TestOrchestrator(Node):
             return
             
         robot = self.robots[self.current_robot_idx]
-        self.get_logger().info(f"--- Starting test sequence for {robot} ---")
+        self.get_logger().info(f"--- Starting Nav2 test sequence for {robot} ---")
         
-        # Setup topics
-        if self.goal_pub: self.destroy_publisher(self.goal_pub)
-        if self.odom_sub: self.destroy_subscription(self.odom_sub)
-        
-        self.goal_pub = self.create_publisher(PoseStamped, f'/{robot}/goal_pose', 10)
+        if self.action_client:
+            self.action_client.destroy()
+        if self.odom_sub:
+            self.odom_sub.destroy()
+        if self.csv_f:
+            self.csv_f.close()
+        if self.timer:
+            self.timer.destroy()
+            
+        self.action_client = ActionClient(self, NavigateToPose, f'/{robot}/navigate_to_pose')
         self.odom_sub = self.create_subscription(Odometry, f'/{robot}/odometry/global_amcl', self.odom_callback, 10)
         
-        # Clear the CSV file for this robot so we only show live data (use absolute path)
         csv_name = f"/home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/{robot}_lidar_test.csv"
-        if robot == 'robot1':
-            csv_name = "/home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/robot1_ekf_test.csv"
-        
         try:
-            with open(csv_name, 'w') as f:
-                f.write("Timestamp,Target_X,Target_Y,Actual_X,Actual_Y,Error,PWM_Command,Kp,Ki,Kd\n")
-            self.get_logger().info(f"Cleared CSV file: {csv_name}")
+            self.csv_f = open(csv_name, 'w')
+            self.csv_f.write("Timestamp,Target_X,Target_Y,Actual_X,Actual_Y\n")
+            self.get_logger().info(f"Created CSV file: {csv_name}")
         except Exception as e:
             self.get_logger().warn(f"Could not clear CSV {csv_name}: {e}")
         
+        self.timer = self.create_timer(0.1, self.log_telemetry)
+        
         self.current_phase = 0
         self.achieved_goals = 0
-        self.total_errors = []
-        self.settle_start_time = None
         self.send_goal()
-
-    def odom_callback(self, msg):
-        self.current_x = msg.pose.pose.position.x
-        self.current_y = msg.pose.pose.position.y
 
     def send_goal(self):
         robot = self.robots[self.current_robot_idx]
@@ -87,81 +94,87 @@ class TestOrchestrator(Node):
         else:
             return
             
-        self.get_logger().info(f"Commanding {robot} to {phase_name} at ({self.goal_x}, {self.goal_y})")
+        self.get_logger().info(f"Waiting for Nav2 action server for {robot}...")
+        self.action_client.wait_for_server()
         
-        # Small delay to ensure publisher connects
-        time.sleep(1.0)
+        self.get_logger().info(f"Commanding {robot} via Nav2 to {phase_name} at ({self.goal_x}, {self.goal_y})")
         
-        msg = PoseStamped()
-        msg.header.frame_id = 'map'
-        msg.header.stamp = self.get_clock().now().to_msg()
-        msg.pose.position.x = self.goal_x
-        msg.pose.position.y = self.goal_y
-        msg.pose.orientation.w = 1.0
+        goal_msg = NavigateToPose.Goal()
+        goal_msg.pose.header.frame_id = 'map'
+        goal_msg.pose.header.stamp = self.get_clock().now().to_msg()
+        goal_msg.pose.pose.position.x = self.goal_x
+        goal_msg.pose.pose.position.y = self.goal_y
+        goal_msg.pose.pose.orientation.w = 1.0
         
-        self.goal_pub.publish(msg)
-        self.phase_start_time = self.get_clock().now().nanoseconds / 1e9
-        self.settle_start_time = None
+        self.send_goal_future = self.action_client.send_goal_async(goal_msg)
+        self.send_goal_future.add_done_callback(self.goal_response_callback)
 
-    def check_progress(self):
-        if self.goal_pub is None:
+    def goal_response_callback(self, future):
+        goal_handle = future.result()
+        if not goal_handle.accepted:
+            self.get_logger().info('Nav2 rejected the goal!')
+            self.goal_active = False
+            self.advance_phase()
             return
 
-        robot = self.robots[self.current_robot_idx]
+        self.get_logger().info('Nav2 accepted the goal. Path planning in progress... (30s timeout started)')
+        self.goal_active = True
         
-        # Continuously publish goal to ensure delivery
-        msg = PoseStamped()
-        msg.header.frame_id = 'map'
-        msg.header.stamp = self.get_clock().now().to_msg()
-        msg.pose.position.x = self.goal_x
-        msg.pose.position.y = self.goal_y
-        msg.pose.orientation.w = 1.0
-        self.goal_pub.publish(msg)
+        # Start a 30-second maximum travel timeout for this goal
+        self.timeout_timer = self.create_timer(30.0, lambda: self.on_goal_timeout(goal_handle))
         
-        if self.current_x is None or self.current_y is None:
+        self.get_result_future = goal_handle.get_result_async()
+        self.get_result_future.add_done_callback(self.get_result_callback)
+
+    def on_goal_timeout(self, goal_handle):
+        if self.timeout_timer:
+            self.timeout_timer.destroy()
+            self.timeout_timer = None
+            
+        self.get_logger().warn(f'TIMEOUT: Failed to reach Waypoint {self.current_phase + 1} within 30 seconds. Canceling goal and advancing.')
+        # Try to cancel the goal on the action server
+        self.action_client._cancel_goal_async(goal_handle)
+        
+        self.goal_active = False
+        self.advance_phase()
+
+    def get_result_callback(self, future):
+        # Cancel the timeout timer if the goal completes before 30 seconds
+        if hasattr(self, 'timeout_timer') and self.timeout_timer:
+            self.timeout_timer.destroy()
+            self.timeout_timer = None
+            
+        result = future.result().result
+        status = future.result().status
+        
+        # If the goal was already marked inactive (e.g., by a timeout), do not advance again
+        if not self.goal_active:
             return
             
-        current_time = self.get_clock().now().nanoseconds / 1e9
-        elapsed = current_time - self.phase_start_time
+        self.goal_active = False
         
-        # Distance to goal
-        dist = math.sqrt((self.goal_x - self.current_x)**2 + (self.goal_y - self.current_y)**2)
-        
-        time_limit = 20.0 # Strict 20s timeout per goal (now properly using sim time)
-        phase_name = f"Waypoint {self.current_phase + 1}"
-        
-        # 1.5 cm = 0.015 meters
-        if dist < 0.015:
-            if self.settle_start_time is None:
-                self.settle_start_time = current_time
-            elif current_time - self.settle_start_time >= 2.0:
-                self.achieved_goals += 1
-                self.total_errors.append(dist)
-                self.get_logger().info(f"SUCCESS: {robot} achieved and settled at {phase_name} in {elapsed:.1f}s. Final Error: {dist*100:.2f} cm")
-                self.advance_phase()
+        # 4 is SUCCEEDED in actionlib status
+        if status == 4:
+            self.get_logger().info(f'SUCCESS: Reached Waypoint {self.current_phase + 1} under 30s! Immediately advancing to next goal.')
+            self.achieved_goals += 1
         else:
-            self.settle_start_time = None
-            if elapsed > time_limit:
-                self.total_errors.append(dist)
-                self.get_logger().warn(f"TIMEOUT: {robot} NOT achieved {phase_name} after {elapsed:.1f}s. Final Error: {dist*100:.2f} cm")
-                self.advance_phase()
-
+            self.get_logger().warn(f'FAILED: Nav2 returned status code {status}')
+            
+        self.advance_phase()
+        
     def advance_phase(self):
         self.current_phase += 1
         if self.current_phase >= len(self.waypoints):
             robot = self.robots[self.current_robot_idx]
-            avg_err = sum(self.total_errors) / len(self.total_errors) if self.total_errors else 0.0
-            self.get_logger().info(f"--- TEST SUMMARY FOR {robot} ---")
-            self.get_logger().info(f"Achieved Goals (< 1.5 cm): {self.achieved_goals} / {len(self.waypoints)}")
-            self.get_logger().info(f"Average Final Error Across All Goals: {avg_err*100:.2f} cm")
+            self.get_logger().info(f"--- NAV2 TEST SUMMARY FOR {robot} ---")
+            self.get_logger().info(f"Achieved Goals: {self.achieved_goals} / {len(self.waypoints)}")
             
             self.current_robot_idx += 1
             if self.current_robot_idx >= len(self.robots):
                 self.get_logger().info("All tests completed successfully!")
                 rclpy.shutdown()
                 return
-            self.get_logger().info("Test for current robot complete. Waiting 10 seconds before starting the next robot...")
-            time.sleep(10.0)
+            time.sleep(2.0)
             self.setup_current_robot()
         else:
             self.send_goal()

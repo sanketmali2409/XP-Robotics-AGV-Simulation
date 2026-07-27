@@ -66,7 +66,10 @@ def generate_launch_description():
             'base_frame_id': 'robot2/base_link',
             'global_frame_id': 'map',
             'set_initial_pose': True,
-            'initial_pose': {'x': 0.0, 'y': -1.0, 'z': 0.0, 'yaw': 0.0}
+            'initial_pose.x': 0.0,
+            'initial_pose.y': -1.0,
+            'initial_pose.z': 0.0,
+            'initial_pose.yaw': 0.0
         }]
     )
     
@@ -94,6 +97,7 @@ def generate_launch_description():
         executable='amcl',
         name='amcl3',
         output='screen',
+        arguments=['--ros-args', '-p', 'use_sim_time:=true'],
         remappings=[
             ('scan', '/robot3/scan'),
             ('initialpose', '/robot3/initialpose'),
@@ -106,12 +110,19 @@ def generate_launch_description():
             'base_frame_id': 'robot3/base_link',
             'global_frame_id': 'map',
             'set_initial_pose': True,
-            'initial_pose': {'x': 0.0, 'y': 3.0, 'z': 0.0, 'yaw': 0.0}
+            'initial_pose.x': 0.0,
+            'initial_pose.y': 3.0,
+            'initial_pose.z': 0.0,
+            'initial_pose.yaw': 0.0
         }]
     )
     
     tf_odom3 = Node(package='agv', executable='tf_to_odom', namespace='robot3', parameters=[{'base_frame': 'robot3/base_link', 'odom_frame': 'map', 'use_sim_time': True}])
-    pid3 = Node(package='agv', executable='goal_pid_controller', namespace='robot3', parameters=[{'use_sim_time': True, 'test_name': 'robot3_lidar_test', 'kp': 0.5, 'ki': 0.01, 'kd': 0.1, 'enable_obstacle_avoidance': True}])
+    
+    nav2_robot3 = ExecuteProcess(
+        cmd=['ros2', 'launch', 'agv', 'nav2_robot3_launch.py'],
+        output='screen'
+    )
 
 
 
@@ -120,5 +131,5 @@ def generate_launch_description():
         # rsp1, spawn1, ekf1, pid1, map_to_odom1,
         # rsp2, spawn2, ekf2, amcl, tf_odom2, pid2,
         map_server, lifecycle_manager,
-        rsp3, spawn3, ekf3, amcl3, tf_odom3, pid3
+        rsp3, spawn3, ekf3, amcl3, tf_odom3, nav2_robot3
     ])

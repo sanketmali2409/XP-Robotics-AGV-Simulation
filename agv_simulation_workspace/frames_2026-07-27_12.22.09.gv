@@ -1,0 +1,16 @@
+digraph G {
+"robot3/AGV_Body-v1" -> "robot3/ZLtech_6.5inch-v3"[label=" Broadcaster: default_authority\nAverage rate: 30.04\nBuffer length: 5.06\nMost recent transform: 309.953\nOldest transform: 304.893\n"];
+"robot3/base_link" -> "robot3/AGV_Body-v1"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"robot3/AGV_Body-v1" -> "robot3/ZLtech_6.5inch-v3-1"[label=" Broadcaster: default_authority\nAverage rate: 30.04\nBuffer length: 5.06\nMost recent transform: 309.953\nOldest transform: 304.893\n"];
+"robot3/AGV_Body-v1" -> "robot3/scanner-v2"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"robot3/odom" -> "robot3/base_link"[label=" Broadcaster: default_authority\nAverage rate: 10.2\nBuffer length: 5.0\nMost recent transform: 309.893\nOldest transform: 304.893\n"];
+"robot3/base_link" -> "robot3/caster_back"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"robot3/base_link" -> "robot3/caster_front"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"robot3/base_link" -> "robot3/front_indicator"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"robot3/base_link" -> "robot3/laser_frame"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"map" -> "robot3/odom"[label=" Broadcaster: default_authority\nAverage rate: 10.2\nBuffer length: 5.0\nMost recent transform: 310.804\nOldest transform: 305.804\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1785135129.7518892"[ shape=plaintext ] ;
+}->"map";
+}

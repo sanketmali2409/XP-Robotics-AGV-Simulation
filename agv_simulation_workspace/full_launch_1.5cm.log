@@ -1,0 +1,504 @@
+[INFO] [launch]: All log files can be found below /home/sanket/.ros/log/2026-07-27-16-40-31-164926-sanket-Victus-by-HP-Laptop-16-d0xxx-6255
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [gzserver-1]: process started with pid [6257]
+[INFO] [gzclient-2]: process started with pid [6259]
+[INFO] [rviz2-3]: process started with pid [6261]
+[INFO] [map_server-4]: process started with pid [6263]
+[INFO] [lifecycle_manager-5]: process started with pid [6265]
+[INFO] [robot_state_publisher-6]: process started with pid [6267]
+[INFO] [spawn_entity.py-7]: process started with pid [6269]
+[INFO] [ekf_node-8]: process started with pid [6271]
+[INFO] [amcl-9]: process started with pid [6273]
+[INFO] [tf_to_odom-10]: process started with pid [6275]
+[INFO] [ros2-11]: process started with pid [6277]
+[lifecycle_manager-5] [INFO] [1785150631.359641725] [lifecycle_manager_localization]: Creating
+[map_server-4] [INFO] [1785150631.360734159] [map_server]: 
+[map_server-4] 	map_server lifecycle node launched. 
+[map_server-4] 	Waiting on external lifecycle transitions to activate
+[map_server-4] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[map_server-4] [INFO] [1785150631.361855572] [map_server]: Creating
+[amcl-9] [INFO] [1785150631.361989892] [amcl3]: 
+[amcl-9] 	amcl3 lifecycle node launched. 
+[amcl-9] 	Waiting on external lifecycle transitions to activate
+[amcl-9] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[amcl-9] [INFO] [1785150631.366221939] [amcl3]: Creating
+[lifecycle_manager-5] [INFO] [1785150631.366888501] [lifecycle_manager_localization]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+[lifecycle_manager-5] [INFO] [1785150631.369308475] [lifecycle_manager_localization]: [34m[1mStarting managed nodes bringup...[0m[0m
+[lifecycle_manager-5] [INFO] [1785150631.369348395] [lifecycle_manager_localization]: [34m[1mConfiguring map_server[0m[0m
+[map_server-4] [INFO] [1785150631.369583812] [map_server]: Configuring
+[map_server-4] [INFO] [1785150631.369649190] [map_io]: Loading yaml file: /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/share/agv/maps/my_new_map.yaml
+[map_server-4] [INFO] [1785150631.369937213] [map_io]: resolution: 0.05
+[map_server-4] [INFO] [1785150631.369946990] [map_io]: origin[0]: -7.275
+[map_server-4] [INFO] [1785150631.369952562] [map_io]: origin[1]: -6.625
+[map_server-4] [INFO] [1785150631.369957413] [map_io]: origin[2]: 0
+[map_server-4] [INFO] [1785150631.369962211] [map_io]: free_thresh: 0.25
+[map_server-4] [INFO] [1785150631.369967126] [map_io]: occupied_thresh: 0.65
+[map_server-4] [INFO] [1785150631.369972756] [map_io]: mode: trinary
+[map_server-4] [INFO] [1785150631.369977997] [map_io]: negate: 0
+[map_server-4] [INFO] [1785150631.375941271] [map_io]: Loading image_file: /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/share/agv/maps/my_new_map.pgm
+[map_server-4] [INFO] [1785150631.382381073] [map_io]: Read map /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/share/agv/maps/my_new_map.pgm: 275 X 241 map @ 0.05 m/cell
+[lifecycle_manager-5] [INFO] [1785150631.385144581] [lifecycle_manager_localization]: [34m[1mConfiguring amcl3[0m[0m
+[amcl-9] [INFO] [1785150631.385333702] [amcl3]: Configuring
+[amcl-9] [INFO] [1785150631.385441613] [amcl3]: initTransforms
+[amcl-9] [INFO] [1785150631.391230775] [amcl3]: initPubSub
+[robot_state_publisher-6] [INFO] [1785150631.395780441] [robot3.robot_state_publisher]: got segment robot3/AGV_Body-v1
+[robot_state_publisher-6] [INFO] [1785150631.395934858] [robot3.robot_state_publisher]: got segment robot3/ZLtech_6.5inch-v3
+[robot_state_publisher-6] [INFO] [1785150631.395945269] [robot3.robot_state_publisher]: got segment robot3/ZLtech_6.5inch-v3-1
+[robot_state_publisher-6] [INFO] [1785150631.395950763] [robot3.robot_state_publisher]: got segment robot3/base_link
+[robot_state_publisher-6] [INFO] [1785150631.395955855] [robot3.robot_state_publisher]: got segment robot3/caster_back
+[robot_state_publisher-6] [INFO] [1785150631.395960990] [robot3.robot_state_publisher]: got segment robot3/caster_front
+[robot_state_publisher-6] [INFO] [1785150631.395965516] [robot3.robot_state_publisher]: got segment robot3/front_indicator
+[robot_state_publisher-6] [INFO] [1785150631.395970404] [robot3.robot_state_publisher]: got segment robot3/laser_frame
+[robot_state_publisher-6] [INFO] [1785150631.395975060] [robot3.robot_state_publisher]: got segment robot3/scanner-v2
+[amcl-9] [INFO] [1785150631.396272677] [amcl3]: Subscribed to map topic.
+[lifecycle_manager-5] [INFO] [1785150631.398380549] [lifecycle_manager_localization]: [34m[1mActivating map_server[0m[0m
+[map_server-4] [INFO] [1785150631.398548658] [map_server]: Activating
+[map_server-4] [INFO] [1785150631.398808833] [map_server]: Creating bond (map_server) to lifecycle manager.
+[amcl-9] [INFO] [1785150631.399002692] [amcl3]: Received a 275 X 241 map @ 0.050 m/pix
+[lifecycle_manager-5] [INFO] [1785150631.502676659] [lifecycle_manager_localization]: Server map_server connected with bond.
+[lifecycle_manager-5] [INFO] [1785150631.502729110] [lifecycle_manager_localization]: [34m[1mActivating amcl3[0m[0m
+[amcl-9] [INFO] [1785150631.502922309] [amcl3]: Activating
+[amcl-9] [INFO] [1785150631.502956919] [amcl3]: initialPoseReceived
+[amcl-9] [INFO] [1785150631.503022278] [amcl3]: Setting pose (0.000000): 0.000 3.000 0.000
+[amcl-9] [INFO] [1785150631.503495109] [amcl3]: Creating bond (amcl3) to lifecycle manager.
+[lifecycle_manager-5] [INFO] [1785150631.608531516] [lifecycle_manager_localization]: Server amcl3 connected with bond.
+[lifecycle_manager-5] [INFO] [1785150631.608643957] [lifecycle_manager_localization]: [34m[1mManaged nodes are active[0m[0m
+[lifecycle_manager-5] [INFO] [1785150631.608662026] [lifecycle_manager_localization]: [34m[1mCreating bond timer...[0m[0m
+[ros2-11] [INFO] [launch]: All log files can be found below /home/sanket/.ros/log/2026-07-27-16-40-31-607939-sanket-Victus-by-HP-Laptop-16-d0xxx-6277
+[ros2-11] [INFO] [launch]: Default logging verbosity is set to INFO
+[tf_to_odom-10] [INFO] [1785150631.736236372] [robot3.tf_to_odom]: Publishing TF (map -> robot3/base_link) to odometry/filtered
+[spawn_entity.py-7] [INFO] [1785150631.794457911] [spawn_entity]: Spawn Entity started
+[spawn_entity.py-7] [INFO] [1785150631.794852451] [spawn_entity]: Loading entity published on topic /robot3/robot_description
+[spawn_entity.py-7] [INFO] [1785150631.796507607] [spawn_entity]: Waiting for entity xml on /robot3/robot_description
+[spawn_entity.py-7] [INFO] [1785150631.807685794] [spawn_entity]: Waiting for service /spawn_entity, timeout = 30
+[spawn_entity.py-7] [INFO] [1785150631.807939912] [spawn_entity]: Waiting for service /spawn_entity
+[ros2-11] [INFO] [controller_server-1]: process started with pid [6404]
+[ros2-11] [INFO] [smoother_server-2]: process started with pid [6406]
+[ros2-11] [INFO] [planner_server-3]: process started with pid [6408]
+[ros2-11] [INFO] [behavior_server-4]: process started with pid [6410]
+[ros2-11] [INFO] [bt_navigator-5]: process started with pid [6412]
+[ros2-11] [INFO] [waypoint_follower-6]: process started with pid [6414]
+[ros2-11] [INFO] [velocity_smoother-7]: process started with pid [6416]
+[ros2-11] [INFO] [lifecycle_manager-8]: process started with pid [6418]
+[ros2-11] [smoother_server-2] [INFO] [1785150631.877783690] [robot3.smoother_server]: 
+[ros2-11] [smoother_server-2] 	smoother_server lifecycle node launched. 
+[ros2-11] [smoother_server-2] 	Waiting on external lifecycle transitions to activate
+[ros2-11] [smoother_server-2] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[ros2-11] [behavior_server-4] [INFO] [1785150631.882005326] [robot3.behavior_server]: 
+[ros2-11] [behavior_server-4] 	behavior_server lifecycle node launched. 
+[ros2-11] [behavior_server-4] 	Waiting on external lifecycle transitions to activate
+[ros2-11] [behavior_server-4] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[ros2-11] [lifecycle_manager-8] [INFO] [1785150631.882312654] [robot3.lifecycle_manager_navigation]: Creating
+[ros2-11] [bt_navigator-5] [INFO] [1785150631.884865574] [robot3.bt_navigator]: 
+[ros2-11] [bt_navigator-5] 	bt_navigator lifecycle node launched. 
+[ros2-11] [bt_navigator-5] 	Waiting on external lifecycle transitions to activate
+[ros2-11] [bt_navigator-5] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[ros2-11] [bt_navigator-5] [INFO] [1785150631.885039878] [robot3.bt_navigator]: Creating
+[ros2-11] [lifecycle_manager-8] [INFO] [1785150631.888610392] [robot3.lifecycle_manager_navigation]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+[ros2-11] [controller_server-1] [INFO] [1785150631.891381802] [robot3.controller_server]: 
+[ros2-11] [controller_server-1] 	controller_server lifecycle node launched. 
+[ros2-11] [controller_server-1] 	Waiting on external lifecycle transitions to activate
+[ros2-11] [controller_server-1] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[ros2-11] [waypoint_follower-6] [INFO] [1785150631.892840456] [robot3.waypoint_follower]: 
+[ros2-11] [waypoint_follower-6] 	waypoint_follower lifecycle node launched. 
+[ros2-11] [waypoint_follower-6] 	Waiting on external lifecycle transitions to activate
+[ros2-11] [waypoint_follower-6] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[ros2-11] [waypoint_follower-6] [INFO] [1785150631.893875718] [robot3.waypoint_follower]: Creating
+[ros2-11] [controller_server-1] [INFO] [1785150631.896387994] [robot3.controller_server]: Creating controller server
+[ros2-11] [planner_server-3] [INFO] [1785150631.898694786] [robot3.planner_server]: 
+[ros2-11] [planner_server-3] 	planner_server lifecycle node launched. 
+[ros2-11] [planner_server-3] 	Waiting on external lifecycle transitions to activate
+[ros2-11] [planner_server-3] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[ros2-11] [smoother_server-2] [INFO] [1785150631.899353463] [robot3.smoother_server]: Creating smoother server
+[ros2-11] [planner_server-3] [INFO] [1785150631.899983924] [robot3.planner_server]: Creating
+[ros2-11] [velocity_smoother-7] [INFO] [1785150631.904284291] [robot3.velocity_smoother]: 
+[ros2-11] [velocity_smoother-7] 	velocity_smoother lifecycle node launched. 
+[ros2-11] [velocity_smoother-7] 	Waiting on external lifecycle transitions to activate
+[ros2-11] [velocity_smoother-7] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[rviz2-3] [INFO] [1785150631.905708878] [rviz2]: Stereo is NOT SUPPORTED
+[rviz2-3] [INFO] [1785150631.905822158] [rviz2]: OpenGl version: 4.6 (GLSL 4.6)
+[ros2-11] [controller_server-1] [INFO] [1785150631.922393340] [robot3.local_costmap.local_costmap]: 
+[ros2-11] [controller_server-1] 	local_costmap lifecycle node launched. 
+[ros2-11] [controller_server-1] 	Waiting on external lifecycle transitions to activate
+[ros2-11] [controller_server-1] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[ros2-11] [controller_server-1] [INFO] [1785150631.924910659] [robot3.local_costmap.local_costmap]: Creating Costmap
+[ros2-11] [planner_server-3] [INFO] [1785150631.929130389] [robot3.global_costmap.global_costmap]: 
+[ros2-11] [planner_server-3] 	global_costmap lifecycle node launched. 
+[ros2-11] [planner_server-3] 	Waiting on external lifecycle transitions to activate
+[ros2-11] [planner_server-3] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[ros2-11] [planner_server-3] [INFO] [1785150631.929726284] [robot3.global_costmap.global_costmap]: Creating Costmap
+[rviz2-3] [INFO] [1785150631.936533758] [rviz2]: Stereo is NOT SUPPORTED
+[rviz2-3] [INFO] [1785150632.708899430] [rviz2]: Trying to create a map of size 275 x 241 using 1 swatches
+[ros2-11] [lifecycle_manager-8] [INFO] [1785150632.945909882] [robot3.lifecycle_manager_navigation]: [34m[1mStarting managed nodes bringup...[0m[0m
+[ros2-11] [lifecycle_manager-8] [INFO] [1785150632.945956046] [robot3.lifecycle_manager_navigation]: [34m[1mConfiguring controller_server[0m[0m
+[ros2-11] [controller_server-1] [INFO] [1785150632.946211078] [robot3.controller_server]: Configuring controller interface
+[ros2-11] [controller_server-1] [INFO] [1785150632.946361538] [robot3.controller_server]: getting goal checker plugins..
+[ros2-11] [controller_server-1] [INFO] [1785150632.946414751] [robot3.controller_server]: Controller frequency set to 20.0000Hz
+[ros2-11] [controller_server-1] [INFO] [1785150632.946444517] [robot3.local_costmap.local_costmap]: Configuring
+[ros2-11] [controller_server-1] [INFO] [1785150632.951358290] [robot3.local_costmap.local_costmap]: Using plugin "voxel_layer"
+[ros2-11] [controller_server-1] [INFO] [1785150632.957669017] [robot3.local_costmap.local_costmap]: Subscribed to Topics: scan
+[ros2-11] [controller_server-1] [INFO] [1785150632.965019303] [robot3.local_costmap.local_costmap]: Initialized plugin "voxel_layer"
+[ros2-11] [controller_server-1] [INFO] [1785150632.965062788] [robot3.local_costmap.local_costmap]: Using plugin "inflation_layer"
+[ros2-11] [controller_server-1] [INFO] [1785150632.965522853] [robot3.local_costmap.local_costmap]: Initialized plugin "inflation_layer"
+[ros2-11] [controller_server-1] [INFO] [1785150632.973160575] [robot3.controller_server]: Created progress_checker : progress_checker of type nav2_controller::SimpleProgressChecker
+[ros2-11] [controller_server-1] [INFO] [1785150632.974063135] [robot3.controller_server]: Created goal checker : general_goal_checker of type nav2_controller::SimpleGoalChecker
+[ros2-11] [controller_server-1] [INFO] [1785150632.974400539] [robot3.controller_server]: Controller Server has general_goal_checker  goal checkers available.
+[ros2-11] [controller_server-1] [INFO] [1785150632.975485592] [robot3.controller_server]: Created controller : FollowPath of type nav2_regulated_pure_pursuit_controller::RegulatedPurePursuitController
+[ros2-11] [controller_server-1] [INFO] [1785150632.978995564] [robot3.controller_server]: Controller Server has FollowPath  controllers available.
+[ros2-11] [lifecycle_manager-8] [INFO] [1785150632.985733474] [robot3.lifecycle_manager_navigation]: [34m[1mConfiguring smoother_server[0m[0m
+[ros2-11] [smoother_server-2] [INFO] [1785150632.985924050] [robot3.smoother_server]: Configuring smoother server
+[ros2-11] [smoother_server-2] [INFO] [1785150632.993976532] [robot3.smoother_server]: Created smoother : simple_smoother of type nav2_smoother::SimpleSmoother
+[ros2-11] [smoother_server-2] [INFO] [1785150632.994277507] [robot3.smoother_server]: Smoother Server has simple_smoother  smoothers available.
+[ros2-11] [lifecycle_manager-8] [INFO] [1785150632.998206601] [robot3.lifecycle_manager_navigation]: [34m[1mConfiguring planner_server[0m[0m
+[ros2-11] [planner_server-3] [INFO] [1785150632.998423050] [robot3.planner_server]: Configuring
+[ros2-11] [planner_server-3] [INFO] [1785150632.998466599] [robot3.global_costmap.global_costmap]: Configuring
+[ros2-11] [planner_server-3] [INFO] [1785150633.002947128] [robot3.global_costmap.global_costmap]: Using plugin "static_layer"
+[ros2-11] [planner_server-3] [INFO] [1785150633.005093357] [robot3.global_costmap.global_costmap]: Subscribing to the map topic (/map) with transient local durability
+[ros2-11] [planner_server-3] [INFO] [1785150633.006504327] [robot3.global_costmap.global_costmap]: Initialized plugin "static_layer"
+[ros2-11] [planner_server-3] [INFO] [1785150633.006531041] [robot3.global_costmap.global_costmap]: Using plugin "obstacle_layer"
+[ros2-11] [planner_server-3] [INFO] [1785150633.006784329] [robot3.global_costmap.global_costmap]: Subscribed to Topics: scan
+[ros2-11] [planner_server-3] [INFO] [1785150633.009346524] [robot3.global_costmap.global_costmap]: Initialized plugin "obstacle_layer"
+[ros2-11] [planner_server-3] [INFO] [1785150633.009377081] [robot3.global_costmap.global_costmap]: Using plugin "inflation_layer"
+[ros2-11] [planner_server-3] [INFO] [1785150633.009773187] [robot3.global_costmap.global_costmap]: Initialized plugin "inflation_layer"
+[ros2-11] [planner_server-3] [INFO] [1785150633.016889620] [robot3.planner_server]: Created global planner plugin GridBased of type nav2_navfn_planner/NavfnPlanner
+[ros2-11] [planner_server-3] [INFO] [1785150633.016929041] [robot3.global_costmap.global_costmap]: StaticLayer: Resizing costmap to 275 X 241 at 0.050000 m/pix
+[ros2-11] [planner_server-3] [INFO] [1785150633.016931118] [robot3.planner_server]: Configuring plugin GridBased of type NavfnPlanner
+[ros2-11] [planner_server-3] [INFO] [1785150633.017238853] [robot3.planner_server]: Planner Server has GridBased  planners available.
+[ros2-11] [lifecycle_manager-8] [INFO] [1785150633.024768259] [robot3.lifecycle_manager_navigation]: [34m[1mConfiguring behavior_server[0m[0m
+[ros2-11] [behavior_server-4] [INFO] [1785150633.024991472] [robot3.behavior_server]: Configuring
+[ros2-11] [behavior_server-4] [INFO] [1785150633.031329659] [robot3.behavior_server]: Creating behavior plugin spin of type nav2_behaviors/Spin
+[ros2-11] [behavior_server-4] [INFO] [1785150633.032718292] [robot3.behavior_server]: Configuring spin
+[ros2-11] [behavior_server-4] [INFO] [1785150633.037077057] [robot3.behavior_server]: Creating behavior plugin backup of type nav2_behaviors/BackUp
+[ros2-11] [behavior_server-4] [INFO] [1785150633.038566780] [robot3.behavior_server]: Configuring backup
+[ros2-11] [behavior_server-4] [INFO] [1785150633.042463199] [robot3.behavior_server]: Creating behavior plugin drive_on_heading of type nav2_behaviors/DriveOnHeading
+[ros2-11] [behavior_server-4] [INFO] [1785150633.043944101] [robot3.behavior_server]: Configuring drive_on_heading
+[ros2-11] [behavior_server-4] [INFO] [1785150633.047062625] [robot3.behavior_server]: Creating behavior plugin assisted_teleop of type nav2_behaviors/AssistedTeleop
+[ros2-11] [behavior_server-4] [INFO] [1785150633.050411400] [robot3.behavior_server]: Configuring assisted_teleop
+[ros2-11] [behavior_server-4] [INFO] [1785150633.055507594] [robot3.behavior_server]: Creating behavior plugin wait of type nav2_behaviors/Wait
+[ros2-11] [behavior_server-4] [INFO] [1785150633.057839385] [robot3.behavior_server]: Configuring wait
+[ros2-11] [lifecycle_manager-8] [INFO] [1785150633.062156287] [robot3.lifecycle_manager_navigation]: [34m[1mConfiguring bt_navigator[0m[0m
+[ros2-11] [bt_navigator-5] [INFO] [1785150633.062376468] [robot3.bt_navigator]: Configuring
+[spawn_entity.py-7] [INFO] [1785150633.069367225] [spawn_entity]: Calling service /spawn_entity
+[ros2-11] [lifecycle_manager-8] [INFO] [1785150633.141166067] [robot3.lifecycle_manager_navigation]: [34m[1mConfiguring waypoint_follower[0m[0m
+[ros2-11] [waypoint_follower-6] [INFO] [1785150633.141370045] [robot3.waypoint_follower]: Configuring
+[ros2-11] [waypoint_follower-6] [INFO] [1785150633.150435542] [robot3.waypoint_follower]: Created waypoint_task_executor : wait_at_waypoint of type nav2_waypoint_follower::WaitAtWaypoint
+[ros2-11] [lifecycle_manager-8] [INFO] [1785150633.151247275] [robot3.lifecycle_manager_navigation]: [34m[1mConfiguring velocity_smoother[0m[0m
+[ros2-11] [velocity_smoother-7] [INFO] [1785150633.151471966] [robot3.velocity_smoother]: Configuring velocity smoother
+[ros2-11] [lifecycle_manager-8] [INFO] [1785150633.154363230] [robot3.lifecycle_manager_navigation]: [34m[1mActivating controller_server[0m[0m
+[ros2-11] [controller_server-1] [INFO] [1785150633.154587240] [robot3.controller_server]: Activating
+[ros2-11] [controller_server-1] [INFO] [1785150633.154625202] [robot3.local_costmap.local_costmap]: Activating
+[ros2-11] [controller_server-1] [INFO] [1785150633.154635299] [robot3.local_costmap.local_costmap]: Checking transform
+[ros2-11] [controller_server-1] [INFO] [1785150633.154654851] [robot3.local_costmap.local_costmap]: Timed out waiting for transform from robot3/base_link to robot3/odom to become available, tf error: Invalid frame ID "robot3/odom" passed to canTransform argument target_frame - frame does not exist
+[spawn_entity.py-7] [INFO] [1785150633.341931552] [spawn_entity]: Spawn status: SpawnEntity: Successfully spawned entity [robot3]
+[gzserver-1] [INFO] [1785150633.362401650] [robot3.diff_drive]: Wheel pair 1 separation set to [0.560000m]
+[gzserver-1] [INFO] [1785150633.362865768] [robot3.diff_drive]: Wheel pair 1 diameter set to [0.165000m]
+[gzserver-1] [INFO] [1785150633.364507581] [robot3.diff_drive]: Subscribed to [/robot3/cmd_vel]
+[gzserver-1] [INFO] [1785150633.367548177] [robot3.diff_drive]: Advertise odometry on [/robot3/odom]
+[gzserver-1] [INFO] [1785150633.387718380] [robot3.joint_state]: Going to publish joint [robot3/AGV_Body-v1_Revolute-2]
+[gzserver-1] [INFO] [1785150633.387870887] [robot3.joint_state]: Going to publish joint [robot3/AGV_Body-v1_Revolute-3]
+[amcl-9] [INFO] [1785150633.493701467] [amcl3]: createLaserObject
+[INFO] [spawn_entity.py-7]: process has finished cleanly [pid 6269]
+[ros2-11] [controller_server-1] [INFO] [1785150633.654825469] [robot3.local_costmap.local_costmap]: start
+[ros2-11] [controller_server-1] [INFO] [1785150633.855728872] [robot3.controller_server]: Activating controller: FollowPath of type regulated_pure_pursuit_controller::RegulatedPurePursuitController
+[ros2-11] [controller_server-1] [INFO] [1785150633.855777590] [robot3.controller_server]: Creating bond (controller_server) to lifecycle manager.
+[ros2-11] [lifecycle_manager-8] [INFO] [1785150633.959642766] [robot3.lifecycle_manager_navigation]: Server controller_server connected with bond.
+[ros2-11] [lifecycle_manager-8] [INFO] [1785150633.959682101] [robot3.lifecycle_manager_navigation]: [34m[1mActivating smoother_server[0m[0m
+[ros2-11] [smoother_server-2] [INFO] [1785150633.959927269] [robot3.smoother_server]: Activating
+[ros2-11] [smoother_server-2] [INFO] [1785150633.959966206] [robot3.smoother_server]: Creating bond (smoother_server) to lifecycle manager.
+[ros2-11] [lifecycle_manager-8] [INFO] [1785150634.062929051] [robot3.lifecycle_manager_navigation]: Server smoother_server connected with bond.
+[ros2-11] [lifecycle_manager-8] [INFO] [1785150634.063004965] [robot3.lifecycle_manager_navigation]: [34m[1mActivating planner_server[0m[0m
+[ros2-11] [planner_server-3] [INFO] [1785150634.063310552] [robot3.planner_server]: Activating
+[ros2-11] [planner_server-3] [INFO] [1785150634.063357121] [robot3.global_costmap.global_costmap]: Activating
+[ros2-11] [planner_server-3] [INFO] [1785150634.063370821] [robot3.global_costmap.global_costmap]: Checking transform
+[ros2-11] [planner_server-3] [INFO] [1785150634.063436411] [robot3.global_costmap.global_costmap]: Timed out waiting for transform from robot3/base_link to map to become available, tf error: Lookup would require extrapolation into the past.  Requested time 0.796000 but the earliest data is at time 1.296000, when looking up transform from frame [robot3/base_link] to frame [map]
+[ros2-11] [planner_server-3] [INFO] [1785150634.563542304] [robot3.global_costmap.global_costmap]: start
+[ros2-11] [planner_server-3] [INFO] [1785150635.614401822] [robot3.planner_server]: Activating plugin GridBased of type NavfnPlanner
+[ros2-11] [planner_server-3] [INFO] [1785150635.616271614] [robot3.planner_server]: Creating bond (planner_server) to lifecycle manager.
+[ros2-11] [lifecycle_manager-8] [INFO] [1785150635.721460796] [robot3.lifecycle_manager_navigation]: Server planner_server connected with bond.
+[ros2-11] [lifecycle_manager-8] [INFO] [1785150635.721581227] [robot3.lifecycle_manager_navigation]: [34m[1mActivating behavior_server[0m[0m
+[ros2-11] [behavior_server-4] [INFO] [1785150635.722045596] [robot3.behavior_server]: Activating
+[ros2-11] [behavior_server-4] [INFO] [1785150635.722083229] [robot3.behavior_server]: Activating spin
+[ros2-11] [behavior_server-4] [INFO] [1785150635.722099740] [robot3.behavior_server]: Activating backup
+[ros2-11] [behavior_server-4] [INFO] [1785150635.722110821] [robot3.behavior_server]: Activating drive_on_heading
+[ros2-11] [behavior_server-4] [INFO] [1785150635.722121832] [robot3.behavior_server]: Activating assisted_teleop
+[ros2-11] [behavior_server-4] [INFO] [1785150635.722132740] [robot3.behavior_server]: Activating wait
+[ros2-11] [behavior_server-4] [INFO] [1785150635.722148231] [robot3.behavior_server]: Creating bond (behavior_server) to lifecycle manager.
+[ros2-11] [lifecycle_manager-8] [INFO] [1785150635.825847928] [robot3.lifecycle_manager_navigation]: Server behavior_server connected with bond.
+[ros2-11] [lifecycle_manager-8] [INFO] [1785150635.825888191] [robot3.lifecycle_manager_navigation]: [34m[1mActivating bt_navigator[0m[0m
+[ros2-11] [bt_navigator-5] [INFO] [1785150635.826170689] [robot3.bt_navigator]: Activating
+[ros2-11] [bt_navigator-5] [INFO] [1785150635.875545855] [robot3.bt_navigator]: Creating bond (bt_navigator) to lifecycle manager.
+[ros2-11] [lifecycle_manager-8] [INFO] [1785150635.979451480] [robot3.lifecycle_manager_navigation]: Server bt_navigator connected with bond.
+[ros2-11] [lifecycle_manager-8] [INFO] [1785150635.979530720] [robot3.lifecycle_manager_navigation]: [34m[1mActivating waypoint_follower[0m[0m
+[ros2-11] [waypoint_follower-6] [INFO] [1785150635.980024649] [robot3.waypoint_follower]: Activating
+[ros2-11] [waypoint_follower-6] [INFO] [1785150635.980096554] [robot3.waypoint_follower]: Creating bond (waypoint_follower) to lifecycle manager.
+[ros2-11] [lifecycle_manager-8] [INFO] [1785150636.085420765] [robot3.lifecycle_manager_navigation]: Server waypoint_follower connected with bond.
+[ros2-11] [lifecycle_manager-8] [INFO] [1785150636.085463025] [robot3.lifecycle_manager_navigation]: [34m[1mActivating velocity_smoother[0m[0m
+[ros2-11] [velocity_smoother-7] [INFO] [1785150636.085735924] [robot3.velocity_smoother]: Activating
+[ros2-11] [velocity_smoother-7] [INFO] [1785150636.085787298] [robot3.velocity_smoother]: Creating bond (velocity_smoother) to lifecycle manager.
+[ros2-11] [lifecycle_manager-8] [INFO] [1785150636.189251762] [robot3.lifecycle_manager_navigation]: Server velocity_smoother connected with bond.
+[ros2-11] [lifecycle_manager-8] [INFO] [1785150636.189303370] [robot3.lifecycle_manager_navigation]: [34m[1mManaged nodes are active[0m[0m
+[ros2-11] [lifecycle_manager-8] [INFO] [1785150636.189315937] [robot3.lifecycle_manager_navigation]: [34m[1mCreating bond timer...[0m[0m
+[ros2-11] [bt_navigator-5] [INFO] [1785150658.754599199] [robot3.bt_navigator]: Begin navigating from current location (0.00, 3.00) to (-3.50, 3.50)
+[ros2-11] [controller_server-1] [INFO] [1785150658.775572060] [robot3.controller_server]: Received a goal, begin computing control effort.
+[ros2-11] [controller_server-1] [WARN] [1785150658.775631020] [robot3.controller_server]: No goal checker was specified in parameter 'current_goal_checker'. Server will use only plugin loaded general_goal_checker . This warning will appear once.
+[ros2-11] [controller_server-1] [INFO] [1785150659.825744027] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150660.875743032] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150661.875743233] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150662.925739084] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150663.925736367] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150664.975743125] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150666.025743282] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150667.025721632] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150668.075728225] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150669.075739223] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150670.125704405] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150671.175727760] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150672.175738378] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150673.225724204] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150674.225738556] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150675.275725252] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150676.325741035] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150677.325724277] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150678.375741031] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150679.375725290] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150680.425730370] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150681.475727035] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150682.475727499] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150683.525739055] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150684.525741547] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150685.575727045] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150686.625765775] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150687.625738521] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150688.675722281] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150689.675726318] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [ERROR] [1785150690.425798731] [robot3.controller_server]: Failed to make progress
+[ros2-11] [controller_server-1] [WARN] [1785150690.425919908] [robot3.controller_server]: [follow_path] [ActionServer] Aborting handle.
+[ros2-11] [controller_server-1] [INFO] [1785150690.445005461] [robot3.local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[ros2-11] [controller_server-1] [INFO] [1785150690.445693454] [robot3.controller_server]: Received a goal, begin computing control effort.
+[ros2-11] [controller_server-1] [INFO] [1785150690.745842859] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150691.745857984] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150692.795842098] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150693.795827079] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150694.845843092] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150694.995945092] [robot3.controller_server]: Reached the goal!
+[ros2-11] [bt_navigator-5] [INFO] [1785150695.034893719] [robot3.bt_navigator]: Goal succeeded
+[ros2-11] [bt_navigator-5] [INFO] [1785150725.020379979] [robot3.bt_navigator]: Begin navigating from current location (-3.51, 3.48) to (3.50, 3.50)
+[ros2-11] [controller_server-1] [INFO] [1785150725.041124030] [robot3.controller_server]: Received a goal, begin computing control effort.
+[ros2-11] [controller_server-1] [INFO] [1785150726.091286829] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150727.141267813] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150728.141283048] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150729.191267885] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150730.191269325] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150731.241277487] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [planner_server-3] [WARN] [1785150732.231453276] [robot3.planner_server]: Planner loop missed its desired rate of 20.0000 Hz. Current loop rate is 10.0000 Hz
+[ros2-11] [controller_server-1] [INFO] [1785150732.291269825] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150733.291288404] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150734.341283230] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150735.341274112] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150736.391267949] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150737.441268818] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150738.441270042] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [planner_server-3] [WARN] [1785150739.441268789] [robot3.planner_server]: Planner loop missed its desired rate of 20.0000 Hz. Current loop rate is 10.0000 Hz
+[ros2-11] [controller_server-1] [INFO] [1785150739.491273045] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150740.491275145] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150741.541280602] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150742.591272202] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150743.591268877] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150744.641270921] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150745.641279414] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [planner_server-3] [WARN] [1785150746.651139158] [robot3.planner_server]: Planner loop missed its desired rate of 20.0000 Hz. Current loop rate is 10.0000 Hz
+[ros2-11] [controller_server-1] [INFO] [1785150746.691282376] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150747.741273911] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150748.741270643] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150749.791277605] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150750.791273173] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150751.841270721] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150752.891285523] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150753.891284350] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150754.941284284] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150755.941271264] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150756.991272798] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150758.041275127] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150759.041277569] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150759.091388813] [robot3.controller_server]: Reached the goal!
+[ros2-11] [bt_navigator-5] [INFO] [1785150759.130601200] [robot3.bt_navigator]: Goal succeeded
+[ros2-11] [bt_navigator-5] [INFO] [1785150789.107608084] [robot3.bt_navigator]: Begin navigating from current location (3.50, 3.51) to (3.50, -3.50)
+[ros2-11] [controller_server-1] [INFO] [1785150789.128151415] [robot3.controller_server]: Received a goal, begin computing control effort.
+[ros2-11] [controller_server-1] [INFO] [1785150790.178307775] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150791.228288163] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150792.228302042] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150793.278288983] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150794.278286074] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150795.328297420] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150796.378305004] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150797.378306583] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150798.428304908] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150799.428284365] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150800.478307538] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150801.528293704] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150802.528304794] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150803.578302674] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150804.578285478] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150805.628294369] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150806.678287219] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150807.678304533] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150808.728290097] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150809.728287709] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150810.778288724] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150811.828291961] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150812.828306605] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150813.878301756] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150814.878287717] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150815.928305449] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150816.978324337] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150817.978295536] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150819.028308381] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150820.028285547] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150821.078291916] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150822.128290120] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150823.128304154] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150824.178292648] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150825.178297099] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150826.228293246] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150827.278301233] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150828.278302644] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150829.328304576] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [ERROR] [1785150829.378335984] [robot3.controller_server]: Failed to make progress
+[ros2-11] [controller_server-1] [WARN] [1785150829.378417420] [robot3.controller_server]: [follow_path] [ActionServer] Aborting handle.
+[ros2-11] [controller_server-1] [INFO] [1785150829.397795036] [robot3.local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[ros2-11] [controller_server-1] [INFO] [1785150829.398130992] [robot3.controller_server]: Received a goal, begin computing control effort.
+[ros2-11] [controller_server-1] [WARN] [1785150829.458346504] [robot3.controller_server]: Control loop missed its desired rate of 20.0000Hz
+[ros2-11] [controller_server-1] [INFO] [1785150830.348254619] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150831.398253460] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150832.398239128] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150833.448236767] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150834.448235290] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150835.498254650] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150836.548257506] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150837.548237167] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150838.498430437] [robot3.controller_server]: Reached the goal!
+[ros2-11] [bt_navigator-5] [INFO] [1785150838.537799598] [robot3.bt_navigator]: Goal succeeded
+[ros2-11] [bt_navigator-5] [INFO] [1785150868.515934914] [robot3.bt_navigator]: Begin navigating from current location (3.52, -3.50) to (-3.50, -3.50)
+[ros2-11] [controller_server-1] [INFO] [1785150868.536555831] [robot3.controller_server]: Received a goal, begin computing control effort.
+[ros2-11] [controller_server-1] [INFO] [1785150869.586710726] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150870.636720029] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150871.636701577] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150872.686709111] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150873.686710229] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150874.736732459] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150875.786720354] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150876.786713115] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150877.836708662] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150878.836701365] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150879.886714241] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150880.936723119] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150881.936727832] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150882.986718473] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150883.986700129] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150885.036721063] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150886.086715413] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150887.086704334] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150888.136706837] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150889.136704917] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150890.186706028] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150891.236720317] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150892.236711547] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150893.286708323] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150894.286703545] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150895.336725068] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150896.386703028] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150897.386704956] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150898.436704061] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150899.436704563] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150900.486707852] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150901.536722329] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150902.536703505] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150903.586728607] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150904.586700910] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150905.636701663] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150906.686711575] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150907.686708650] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150908.736721336] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150909.736724049] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150910.786726142] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [ERROR] [1785150911.386758769] [robot3.controller_server]: Failed to make progress
+[ros2-11] [controller_server-1] [WARN] [1785150911.386845585] [robot3.controller_server]: [follow_path] [ActionServer] Aborting handle.
+[ros2-11] [controller_server-1] [INFO] [1785150911.406244907] [robot3.local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[ros2-11] [controller_server-1] [INFO] [1785150911.406596511] [robot3.controller_server]: Received a goal, begin computing control effort.
+[ros2-11] [controller_server-1] [WARN] [1785150911.456832034] [robot3.controller_server]: Control loop missed its desired rate of 20.0000Hz
+[ros2-11] [controller_server-1] [INFO] [1785150911.806725620] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150912.856712360] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150913.856707889] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150914.306866670] [robot3.controller_server]: Reached the goal!
+[ros2-11] [bt_navigator-5] [INFO] [1785150914.346144082] [robot3.bt_navigator]: Goal succeeded
+[ros2-11] [bt_navigator-5] [INFO] [1785150944.312100829] [robot3.bt_navigator]: Begin navigating from current location (-3.49, -3.48) to (0.00, 0.00)
+[ros2-11] [controller_server-1] [INFO] [1785150944.332624583] [robot3.controller_server]: Received a goal, begin computing control effort.
+[ros2-11] [controller_server-1] [INFO] [1785150945.382778961] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150946.432773291] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150947.432759025] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150948.482777317] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150949.482764827] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150950.532759203] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150951.582781063] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150952.582775184] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150953.632760900] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150954.632762321] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150955.682775262] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150956.732723115] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150957.732759862] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150958.782780752] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150959.782756600] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150960.832759044] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150961.882784060] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150962.882763481] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150963.932774068] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150964.932757014] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150965.982777378] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150967.032775628] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150968.032784205] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150969.082777678] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150970.082757533] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150971.132745956] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785150971.582908881] [robot3.controller_server]: Reached the goal!
+[ros2-11] [bt_navigator-5] [INFO] [1785150971.622318382] [robot3.bt_navigator]: Goal succeeded
+[ros2-11] [bt_navigator-5] [INFO] [1785151001.587446458] [robot3.bt_navigator]: Begin navigating from current location (0.05, 0.00) to (-2.00, 2.00)
+[ros2-11] [controller_server-1] [INFO] [1785151001.607993244] [robot3.controller_server]: Received a goal, begin computing control effort.
+[ros2-11] [controller_server-1] [INFO] [1785151002.658124891] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785151003.708129325] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785151004.708143363] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785151005.758139390] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785151006.758126448] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785151007.808132729] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785151008.858129309] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785151009.858123571] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785151010.908127740] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785151011.908121937] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785151012.958133431] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785151014.008130859] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785151015.008141565] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785151016.058128582] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785151017.058124424] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785151018.108116750] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785151019.158124771] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785151020.158127446] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785151021.208122400] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785151022.208126237] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785151023.258124101] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785151024.308139829] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785151025.308125518] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785151026.358140215] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785151027.358121088] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [ERROR] [1785151028.058165743] [robot3.controller_server]: Failed to make progress
+[ros2-11] [controller_server-1] [WARN] [1785151028.058266795] [robot3.controller_server]: [follow_path] [ActionServer] Aborting handle.
+[ros2-11] [controller_server-1] [INFO] [1785151028.077690260] [robot3.local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[ros2-11] [controller_server-1] [INFO] [1785151028.078002133] [robot3.controller_server]: Received a goal, begin computing control effort.
+[ros2-11] [controller_server-1] [WARN] [1785151028.258189387] [robot3.controller_server]: Control loop missed its desired rate of 20.0000Hz
+[ros2-11] [controller_server-1] [INFO] [1785151028.408743590] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785151029.463201017] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785151030.467155770] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785151031.521132701] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785151032.524993160] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785151033.579468879] [robot3.controller_server]: Passing new path to controller.
+[ros2-11] [controller_server-1] [INFO] [1785151034.332511153] [robot3.controller_server]: Reached the goal!
+[ros2-11] [bt_navigator-5] [INFO] [1785151034.367670595] [robot3.bt_navigator]: Goal succeeded
+[gzserver-1] AL lib: (EE) ALCpulsePlayback_streamStateCallback: Received stream failure!
