@@ -1,0 +1,48 @@
+[0.000000] (-) TimerEvent: {}
+[0.000509] (agv) JobQueued: {'identifier': 'agv', 'dependencies': OrderedDict()}
+[0.000765] (agv) JobStarted: {'identifier': 'agv'}
+[0.099868] (-) TimerEvent: {}
+[0.200391] (-) TimerEvent: {}
+[0.300882] (-) TimerEvent: {}
+[0.401346] (-) TimerEvent: {}
+[0.501773] (-) TimerEvent: {}
+[0.602169] (-) TimerEvent: {}
+[0.702805] (-) TimerEvent: {}
+[0.803183] (-) TimerEvent: {}
+[0.905098] (-) TimerEvent: {}
+[0.963424] (agv) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/agv', 'build', '--build-base', '/home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/agv/build', 'install', '--record', '/home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/agv/install.log', '--install-scripts', '$base/lib/agv', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/src/agv', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'VSCODE_CWD': '/home/sanket', 'LANGUAGE': 'en_IN:en', 'USER': 'sanket', 'VSCODE_NLS_CONFIG': '{"userLocale":"en-gb","osLocale":"en-in","resolvedLanguage":"en","defaultMessagesFile":"/usr/share/antigravity/resources/app/out/nls.messages.json","locale":"en-gb","availableLanguages":{}}', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/sanket', 'CHROME_DESKTOP': 'antigravity.desktop', 'DESKTOP_SESSION': 'ubuntu', 'NVM_BIN': '/home/sanket/.nvm/versions/node/v20.19.4/bin', 'NVM_INC': '/home/sanket/.nvm/versions/node/v20.19.4/include/node', 'VSCODE_IPC_HOOK': '/run/user/1000/vscode-bf2a475c-1.10-main.sock', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/antigravity.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'PAGER': 'cat', 'MANAGERPID': '2349', 'SYSTEMD_EXEC_PID': '2691', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'ANTIGRAVITY_AGENT': '1', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '4240', 'NVM_DIR': '/home/sanket/.nvm', 'MANDATORY_PATH': '/usr/share/gconf/ubuntu.mandatory.path', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': '', 'COLCON_PREFIX_PATH': '/home/sanket/stair_robot_ws/install:/home/sanket/ros2_ws/install:/home/sanket/robot_ws/install', 'ROS_DISTRO': 'humble', 'GTK_IM_MODULE': 'ibus', 'LOGNAME': 'sanket', 'JOURNAL_STREAM': '8:22871', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'DEFAULTS_PATH': '/usr/share/gconf/ubuntu.default.path', 'USERNAME': 'sanket', 'TERM': 'dumb', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'FC_FONTATIONS': '1', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'ANTIGRAVITY_EDITOR_APP_ROOT': '/usr/share/antigravity/resources/app', 'PATH': '/home/sanket/.local/bin:/home/sanket/bin:/home/sanket/.npm-global/bin:/home/sanket/.nvm/versions/node/v20.19.4/bin:/home/sanket/robot_ws/install/slam_robot/bin:/opt/ros/humble/bin:/home/sanket/.local/bin:/home/sanket/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/sanket-Victus-by-HP-Laptop-16-d0xxx:@/tmp/.ICE-unix/2659,unix/sanket-Victus-by-HP-Laptop-16-d0xxx:/tmp/.ICE-unix/2659', 'INVOCATION_ID': 'abe5962fc87b4d2a845ddfe2bc3c7233', 'XDG_MENU_PREFIX': 'gnome-', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': '', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/sanket/stair_robot_ws/install/stair_robot:/home/sanket/ros2_ws/install/qt_gui_ros2:/home/sanket/ros2_ws/install/my_robot_controller:/home/sanket/robot_ws/install/slam_robot:/opt/ros/humble', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'QT_IM_MODULE': 'ibus', 'ANTIGRAVITY_TRAJECTORY_ID': 'e02733cd-743a-4778-88a2-90ddbb64f6d3', 'PWD': '/home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/agv', 'QT_QPA_PLATFORM': 'xcb', 'TURTLEBOT3_MODEL': 'waffle', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'VSCODE_CODE_CACHE_PATH': '/home/sanket/.config/Antigravity/CachedData/15487b3041e65228cae24980a3f796c905ef582c', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/agv/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/lib/python3.10/site-packages:/home/sanket/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages:/home/sanket/robot_ws/install/slam_robot/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/sanket/stair_robot_ws/install/stair_robot:/home/sanket/ros2_ws/install/qt_gui_ros2', 'VSCODE_PID': '4240'}, 'shell': False}
+[1.005196] (-) TimerEvent: {}
+[1.105537] (-) TimerEvent: {}
+[1.205856] (-) TimerEvent: {}
+[1.306233] (-) TimerEvent: {}
+[1.324674] (agv) StdoutLine: {'line': b'running egg_info\n'}
+[1.325250] (agv) StdoutLine: {'line': b'writing ../../build/agv/agv.egg-info/PKG-INFO\n'}
+[1.325648] (agv) StdoutLine: {'line': b'writing dependency_links to ../../build/agv/agv.egg-info/dependency_links.txt\n'}
+[1.325807] (agv) StdoutLine: {'line': b'writing entry points to ../../build/agv/agv.egg-info/entry_points.txt\n'}
+[1.326068] (agv) StdoutLine: {'line': b'writing requirements to ../../build/agv/agv.egg-info/requires.txt\n'}
+[1.326196] (agv) StdoutLine: {'line': b'writing top-level names to ../../build/agv/agv.egg-info/top_level.txt\n'}
+[1.328593] (agv) StdoutLine: {'line': b"reading manifest file '../../build/agv/agv.egg-info/SOURCES.txt'\n"}
+[1.329712] (agv) StdoutLine: {'line': b"writing manifest file '../../build/agv/agv.egg-info/SOURCES.txt'\n"}
+[1.329907] (agv) StdoutLine: {'line': b'running build\n'}
+[1.330051] (agv) StdoutLine: {'line': b'running build_py\n'}
+[1.330570] (agv) StdoutLine: {'line': b'copying agv/test_orchestrator.py -> /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/agv/build/lib/agv\n'}
+[1.330911] (agv) StdoutLine: {'line': b'running install\n'}
+[1.331490] (agv) StdoutLine: {'line': b'running install_lib\n'}
+[1.333649] (agv) StdoutLine: {'line': b'copying /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/agv/build/lib/agv/test_orchestrator.py -> /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/lib/python3.10/site-packages/agv\n'}
+[1.334371] (agv) StdoutLine: {'line': b'byte-compiling /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/lib/python3.10/site-packages/agv/test_orchestrator.py to test_orchestrator.cpython-310.pyc\n'}
+[1.335755] (agv) StdoutLine: {'line': b'running install_data\n'}
+[1.337087] (agv) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.339998] (agv) StdoutLine: {'line': b"removing '/home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/lib/python3.10/site-packages/agv-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[1.340369] (agv) StdoutLine: {'line': b'Copying ../../build/agv/agv.egg-info to /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/lib/python3.10/site-packages/agv-0.0.0-py3.10.egg-info\n'}
+[1.341191] (agv) StdoutLine: {'line': b'running install_scripts\n'}
+[1.363822] (agv) StdoutLine: {'line': b'Installing analyze_results script to /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/lib/agv\n'}
+[1.364199] (agv) StdoutLine: {'line': b'Installing goal_pid_controller script to /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/lib/agv\n'}
+[1.364351] (agv) StdoutLine: {'line': b'Installing random_orchestrator script to /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/lib/agv\n'}
+[1.364504] (agv) StdoutLine: {'line': b'Installing run_tests script to /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/lib/agv\n'}
+[1.364676] (agv) StdoutLine: {'line': b'Installing test_orchestrator script to /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/lib/agv\n'}
+[1.364812] (agv) StdoutLine: {'line': b'Installing tf_to_odom script to /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/lib/agv\n'}
+[1.365288] (agv) StdoutLine: {'line': b"writing list of installed files to '/home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/agv/install.log'\n"}
+[1.406340] (-) TimerEvent: {}
+[1.411861] (agv) CommandEnded: {'returncode': 0}
+[1.430661] (agv) JobEnded: {'identifier': 'agv', 'rc': 0}
+[1.431803] (-) EventReactorShutdown: {}

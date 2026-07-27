@@ -1,0 +1,37 @@
+[1.270s] Invoking command in '/home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/agv': PYTHONPATH=/home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/agv/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/agv/build --no-deps symlink_data --force
+[1.611s] running develop
+[1.860s] running egg_info
+[1.860s] writing agv.egg-info/PKG-INFO
+[1.861s] writing dependency_links to agv.egg-info/dependency_links.txt
+[1.861s] writing entry points to agv.egg-info/entry_points.txt
+[1.861s] writing requirements to agv.egg-info/requires.txt
+[1.861s] writing top-level names to agv.egg-info/top_level.txt
+[1.865s] reading manifest file 'agv.egg-info/SOURCES.txt'
+[1.866s] writing manifest file 'agv.egg-info/SOURCES.txt'
+[1.868s] running build_ext
+[1.869s] Creating /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/lib/python3.10/site-packages/agv.egg-link (link to .)
+[1.870s] Installing analyze_results script to /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/lib/agv
+[1.870s] Installing goal_pid_controller script to /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/lib/agv
+[1.870s] Installing run_tests script to /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/lib/agv
+[1.871s] Installing tf_to_odom script to /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/lib/agv
+[1.871s] 
+[1.871s] Installed /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/agv
+[1.871s] running symlink_data
+[1.871s] symbolically linking /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/agv/resource/agv -> /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/share/ament_index/resource_index/packages
+[1.871s] symbolically linking /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/agv/package.xml -> /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/share/agv
+[1.871s] symbolically linking /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/agv/launch/multi_robot_bringup.launch.py -> /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/share/agv/launch
+[1.871s] symbolically linking /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/agv/launch/multi_robot_navigation.launch.py -> /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/share/agv/launch
+[1.871s] symbolically linking /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/agv/launch/agv_bringup.launch.py -> /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/share/agv/launch
+[1.872s] symbolically linking /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/agv/config/ekf.yaml -> /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/share/agv/config
+[1.872s] symbolically linking /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/agv/config/agv.rviz -> /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/share/agv/config
+[1.872s] symbolically linking /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/agv/AGV.urdf -> /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/share/agv
+[1.872s] symbolically linking /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/agv/agv.urdf.xacro -> /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/share/agv
+[1.872s] symbolically linking /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/agv/AGV.sdf -> /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/share/agv
+[1.872s] symbolically linking /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/agv/AGV.world -> /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/share/agv
+[1.872s] symbolically linking /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/agv/meshes/scanner-v2.stl -> /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/share/agv/meshes
+[1.872s] symbolically linking /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/agv/meshes/ZLtech_6.5inch-v3-1.stl -> /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/share/agv/meshes
+[1.873s] symbolically linking /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/agv/meshes/AGV_Body-v1.stl -> /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/share/agv/meshes
+[1.873s] symbolically linking /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/agv/meshes/ZLtech_6.5inch-v3.stl -> /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/share/agv/meshes
+[1.874s] symbolically linking /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/agv/maps/room_map.pgm -> /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/share/agv/maps
+[1.874s] symbolically linking /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/agv/maps/room_map.yaml -> /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/share/agv/maps
+[1.910s] Invoked command in '/home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/agv' returned '0': PYTHONPATH=/home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/agv/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/agv/build --no-deps symlink_data --force

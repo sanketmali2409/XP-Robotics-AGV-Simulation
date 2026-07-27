@@ -1,0 +1,177 @@
+[0.000000] (-) TimerEvent: {}
+[0.000868] (agv) JobQueued: {'identifier': 'agv', 'dependencies': OrderedDict()}
+[0.000987] (agv) JobStarted: {'identifier': 'agv'}
+[0.086916] (-) TimerEvent: {}
+[0.187753] (-) TimerEvent: {}
+[0.288404] (-) TimerEvent: {}
+[0.388948] (-) TimerEvent: {}
+[0.489712] (-) TimerEvent: {}
+[0.590502] (-) TimerEvent: {}
+[0.694331] (-) TimerEvent: {}
+[0.794939] (-) TimerEvent: {}
+[0.895676] (-) TimerEvent: {}
+[0.996289] (-) TimerEvent: {}
+[1.096880] (-) TimerEvent: {}
+[1.197544] (-) TimerEvent: {}
+[1.298844] (-) TimerEvent: {}
+[1.399322] (-) TimerEvent: {}
+[1.499723] (-) TimerEvent: {}
+[1.601190] (-) TimerEvent: {}
+[1.703081] (-) TimerEvent: {}
+[1.803599] (-) TimerEvent: {}
+[1.904534] (-) TimerEvent: {}
+[2.009099] (-) TimerEvent: {}
+[2.109538] (-) TimerEvent: {}
+[2.212383] (-) TimerEvent: {}
+[2.315823] (-) TimerEvent: {}
+[2.417512] (-) TimerEvent: {}
+[2.518125] (-) TimerEvent: {}
+[2.618552] (-) TimerEvent: {}
+[2.720753] (-) TimerEvent: {}
+[2.822051] (-) TimerEvent: {}
+[2.922793] (-) TimerEvent: {}
+[3.023338] (-) TimerEvent: {}
+[3.123846] (-) TimerEvent: {}
+[3.224516] (-) TimerEvent: {}
+[3.325232] (-) TimerEvent: {}
+[3.425958] (-) TimerEvent: {}
+[3.527790] (-) TimerEvent: {}
+[3.628775] (-) TimerEvent: {}
+[3.731187] (-) TimerEvent: {}
+[3.831675] (-) TimerEvent: {}
+[3.932243] (-) TimerEvent: {}
+[4.035114] (-) TimerEvent: {}
+[4.135945] (-) TimerEvent: {}
+[4.241437] (-) TimerEvent: {}
+[4.344147] (-) TimerEvent: {}
+[4.444659] (-) TimerEvent: {}
+[4.546245] (-) TimerEvent: {}
+[4.647533] (-) TimerEvent: {}
+[4.751125] (-) TimerEvent: {}
+[4.852090] (-) TimerEvent: {}
+[4.955313] (-) TimerEvent: {}
+[5.055785] (-) TimerEvent: {}
+[5.156752] (-) TimerEvent: {}
+[5.258203] (-) TimerEvent: {}
+[5.358872] (-) TimerEvent: {}
+[5.460735] (-) TimerEvent: {}
+[5.561935] (-) TimerEvent: {}
+[5.665212] (-) TimerEvent: {}
+[5.766146] (-) TimerEvent: {}
+[5.867269] (-) TimerEvent: {}
+[5.967954] (-) TimerEvent: {}
+[6.070493] (-) TimerEvent: {}
+[6.171049] (-) TimerEvent: {}
+[6.271766] (-) TimerEvent: {}
+[6.372445] (-) TimerEvent: {}
+[6.473173] (-) TimerEvent: {}
+[6.573770] (-) TimerEvent: {}
+[6.681114] (-) TimerEvent: {}
+[6.781767] (-) TimerEvent: {}
+[6.882307] (-) TimerEvent: {}
+[6.982799] (-) TimerEvent: {}
+[7.085542] (-) TimerEvent: {}
+[7.186169] (-) TimerEvent: {}
+[7.288304] (-) TimerEvent: {}
+[7.394982] (-) TimerEvent: {}
+[7.496905] (-) TimerEvent: {}
+[7.599984] (-) TimerEvent: {}
+[7.703980] (-) TimerEvent: {}
+[7.804446] (-) TimerEvent: {}
+[7.905169] (-) TimerEvent: {}
+[8.006521] (-) TimerEvent: {}
+[8.107045] (-) TimerEvent: {}
+[8.208507] (-) TimerEvent: {}
+[8.310492] (-) TimerEvent: {}
+[8.412314] (-) TimerEvent: {}
+[8.512803] (-) TimerEvent: {}
+[8.616398] (-) TimerEvent: {}
+[8.718151] (-) TimerEvent: {}
+[8.821697] (-) TimerEvent: {}
+[8.922912] (-) TimerEvent: {}
+[9.026486] (-) TimerEvent: {}
+[9.128838] (-) TimerEvent: {}
+[9.229541] (-) TimerEvent: {}
+[9.330137] (-) TimerEvent: {}
+[9.432663] (-) TimerEvent: {}
+[9.539495] (-) TimerEvent: {}
+[9.640937] (-) TimerEvent: {}
+[9.689556] (agv) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/agv/build', '--no-deps', 'symlink_data'], 'cwd': '/home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/agv', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'VSCODE_CWD': '/home/sanket', 'LANGUAGE': 'en_IN:en', 'USER': 'sanket', 'VSCODE_NLS_CONFIG': '{"userLocale":"en-gb","osLocale":"en-in","resolvedLanguage":"en","defaultMessagesFile":"/usr/share/antigravity/resources/app/out/nls.messages.json","locale":"en-gb","availableLanguages":{}}', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '0', 'LD_LIBRARY_PATH': '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/sanket', 'CHROME_DESKTOP': 'antigravity.desktop', 'DESKTOP_SESSION': 'ubuntu', 'NVM_BIN': '/home/sanket/.nvm/versions/node/v20.19.4/bin', 'NVM_INC': '/home/sanket/.nvm/versions/node/v20.19.4/include/node', 'VSCODE_IPC_HOOK': '/run/user/1000/vscode-bf2a475c-1.10-main.sock', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/antigravity.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'PAGER': 'cat', 'MANAGERPID': '2369', 'SYSTEMD_EXEC_PID': '2703', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'ANTIGRAVITY_AGENT': '1', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '7488', 'NVM_DIR': '/home/sanket/.nvm', 'MANDATORY_PATH': '/usr/share/gconf/ubuntu.mandatory.path', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': '', 'COLCON_PREFIX_PATH': '/home/sanket/stair_robot_ws/install:/home/sanket/ros2_ws/install:/home/sanket/robot_ws/install', 'ROS_DISTRO': 'humble', 'GTK_IM_MODULE': 'ibus', 'LOGNAME': 'sanket', '_': '/usr/bin/colcon', 'JOURNAL_STREAM': '8:24629', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'DEFAULTS_PATH': '/usr/share/gconf/ubuntu.default.path', 'USERNAME': 'sanket', 'TERM': 'dumb', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'FC_FONTATIONS': '1', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'ANTIGRAVITY_EDITOR_APP_ROOT': '/usr/share/antigravity/resources/app', 'PATH': '/home/sanket/.local/bin:/home/sanket/bin:/home/sanket/.npm-global/bin:/home/sanket/.nvm/versions/node/v20.19.4/bin:/home/sanket/robot_ws/install/slam_robot/bin:/opt/ros/humble/bin:/home/sanket/.local/bin:/home/sanket/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/sanket-Victus-by-HP-Laptop-16-d0xxx:@/tmp/.ICE-unix/2670,unix/sanket-Victus-by-HP-Laptop-16-d0xxx:/tmp/.ICE-unix/2670', 'INVOCATION_ID': 'ea6a2bca89b24ab4ba76817a3543b337', 'XDG_MENU_PREFIX': 'gnome-', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': '', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/sanket/stair_robot_ws/install/stair_robot:/home/sanket/ros2_ws/install/qt_gui_ros2:/home/sanket/ros2_ws/install/my_robot_controller:/home/sanket/robot_ws/install/slam_robot:/opt/ros/humble', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'QT_IM_MODULE': 'ibus', 'ANTIGRAVITY_TRAJECTORY_ID': '23d682e8-beb5-4243-80cb-3d17c6575139', 'PWD': '/home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/agv', 'QT_QPA_PLATFORM': 'xcb', 'TURTLEBOT3_MODEL': 'waffle', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'VSCODE_CODE_CACHE_PATH': '/home/sanket/.config/Antigravity/CachedData/15487b3041e65228cae24980a3f796c905ef582c', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/agv/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/lib/python3.10/site-packages:/home/sanket/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages:/home/sanket/robot_ws/install/slam_robot/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/sanket/stair_robot_ws/install/stair_robot:/home/sanket/ros2_ws/install/qt_gui_ros2', 'VSCODE_PID': '7488'}, 'shell': False}
+[9.741831] (-) TimerEvent: {}
+[9.842355] (-) TimerEvent: {}
+[9.944089] (-) TimerEvent: {}
+[10.044772] (-) TimerEvent: {}
+[10.145464] (-) TimerEvent: {}
+[10.245964] (-) TimerEvent: {}
+[10.346499] (-) TimerEvent: {}
+[10.447185] (-) TimerEvent: {}
+[10.547709] (-) TimerEvent: {}
+[10.648201] (-) TimerEvent: {}
+[10.748996] (-) TimerEvent: {}
+[10.849417] (-) TimerEvent: {}
+[10.951314] (-) TimerEvent: {}
+[11.051823] (-) TimerEvent: {}
+[11.153455] (-) TimerEvent: {}
+[11.254092] (-) TimerEvent: {}
+[11.355904] (-) TimerEvent: {}
+[11.456468] (-) TimerEvent: {}
+[11.558089] (-) TimerEvent: {}
+[11.658560] (-) TimerEvent: {}
+[11.759029] (-) TimerEvent: {}
+[11.859839] (-) TimerEvent: {}
+[11.960302] (-) TimerEvent: {}
+[12.060804] (-) TimerEvent: {}
+[12.161393] (-) TimerEvent: {}
+[12.261928] (-) TimerEvent: {}
+[12.363644] (-) TimerEvent: {}
+[12.466166] (-) TimerEvent: {}
+[12.568376] (-) TimerEvent: {}
+[12.676515] (-) TimerEvent: {}
+[12.777024] (-) TimerEvent: {}
+[12.856510] (agv) StdoutLine: {'line': b'running develop\n'}
+[12.877165] (-) TimerEvent: {}
+[12.977713] (-) TimerEvent: {}
+[13.078981] (-) TimerEvent: {}
+[13.179430] (-) TimerEvent: {}
+[13.279879] (-) TimerEvent: {}
+[13.380354] (-) TimerEvent: {}
+[13.480897] (-) TimerEvent: {}
+[13.581371] (-) TimerEvent: {}
+[13.681832] (-) TimerEvent: {}
+[13.782344] (-) TimerEvent: {}
+[13.882855] (-) TimerEvent: {}
+[13.983508] (-) TimerEvent: {}
+[14.084104] (-) TimerEvent: {}
+[14.186358] (-) TimerEvent: {}
+[14.286913] (-) TimerEvent: {}
+[14.390623] (-) TimerEvent: {}
+[14.491510] (-) TimerEvent: {}
+[14.592000] (-) TimerEvent: {}
+[14.692561] (-) TimerEvent: {}
+[14.793062] (-) TimerEvent: {}
+[14.895035] (-) TimerEvent: {}
+[15.000631] (agv) StdoutLine: {'line': b'running egg_info\n'}
+[15.002203] (-) TimerEvent: {}
+[15.002445] (agv) StdoutLine: {'line': b'writing agv.egg-info/PKG-INFO\n'}
+[15.002609] (agv) StdoutLine: {'line': b'writing dependency_links to agv.egg-info/dependency_links.txt\n'}
+[15.002702] (agv) StdoutLine: {'line': b'writing entry points to agv.egg-info/entry_points.txt\n'}
+[15.002787] (agv) StdoutLine: {'line': b'writing requirements to agv.egg-info/requires.txt\n'}
+[15.002878] (agv) StdoutLine: {'line': b'writing top-level names to agv.egg-info/top_level.txt\n'}
+[15.027040] (agv) StdoutLine: {'line': b"reading manifest file 'agv.egg-info/SOURCES.txt'\n"}
+[15.029945] (agv) StdoutLine: {'line': b"writing manifest file 'agv.egg-info/SOURCES.txt'\n"}
+[15.055431] (agv) StdoutLine: {'line': b'running build_ext\n'}
+[15.055873] (agv) StdoutLine: {'line': b'Creating /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/lib/python3.10/site-packages/agv.egg-link (link to .)\n'}
+[15.061161] (agv) StdoutLine: {'line': b'Installing analyze_results script to /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/lib/agv\n'}
+[15.062420] (agv) StdoutLine: {'line': b'Installing goal_pid_controller script to /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/lib/agv\n'}
+[15.064409] (agv) StdoutLine: {'line': b'Installing random_orchestrator script to /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/lib/agv\n'}
+[15.065058] (agv) StdoutLine: {'line': b'Installing run_tests script to /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/lib/agv\n'}
+[15.065165] (agv) StdoutLine: {'line': b'Installing test_orchestrator script to /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/lib/agv\n'}
+[15.065234] (agv) StdoutLine: {'line': b'Installing tf_to_odom script to /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/agv/lib/agv\n'}
+[15.065301] (agv) StdoutLine: {'line': b'\n'}
+[15.065367] (agv) StdoutLine: {'line': b'Installed /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/agv\n'}
+[15.065431] (agv) StdoutLine: {'line': b'running symlink_data\n'}
+[15.104136] (-) TimerEvent: {}
+[15.205614] (-) TimerEvent: {}
+[15.215642] (agv) CommandEnded: {'returncode': 0}
+[15.289064] (agv) JobEnded: {'identifier': 'agv', 'rc': 0}
+[15.290513] (-) EventReactorShutdown: {}
