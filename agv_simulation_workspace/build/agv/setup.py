@@ -1,1 +1,0 @@
-/home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/src/agv/setup.py

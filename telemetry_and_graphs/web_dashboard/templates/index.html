@@ -576,8 +576,14 @@
                         }
                     }
                     
-                    let sum = finalErrors.reduce((a, b) => a + b, 0);
-                    let avg = finalErrors.length > 0 ? sum / finalErrors.length : 0;
+                    if (currentMinError !== Infinity) {
+                        finalErrors.push(currentMinError);
+                    }
+                    
+                    // Only calculate the average of the last 6 goals, to ignore old data from previous aborted runs
+                    let last6Errors = finalErrors.slice(-6);
+                    let sum = last6Errors.reduce((a, b) => a + b, 0);
+                    let avg = last6Errors.length > 0 ? sum / last6Errors.length : 0;
                     
                     // The very last error in the array is the "current" error
                     let lastTx = robotData.target_x[len-1]; let lastTy = robotData.target_y[len-1];

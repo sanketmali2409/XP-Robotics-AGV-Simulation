@@ -1,1 +1,232 @@
-/home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/agv/AGV.urdf
+<robot name="(Unsaved)">
+    <link name="base_link" />
+    <joint name="base_link_joint" type="fixed">
+        <origin xyz="-0.325 0.26 0.1" rpy="1.57079632679 0 0" />
+        <parent link="base_link" />
+        <child link="AGV_Body-v1" />
+    </joint>
+    <link name="AGV_Body-v1">
+        <inertial>
+            <origin xyz="0.3229904863977187 -0.0072174919690824275 0.25999613974450747" rpy="0.0 0.0 0.0" />
+            <mass value="15.670426440127093" />
+            <inertia ixx="0.6205078214829778" iyy="1.3196121111623782" izz="0.712775451969633" ixy="-0.0017424676412807988" iyz="-3.50318197330655e-06" ixz="-1.2448628121240034e-06" />
+        </inertial>
+        <visual name="AGV_Body-v1_visual">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="file:///home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/meshes/AGV_Body-v1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="AGV_Body-v1_collision">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="file:///home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/meshes/AGV_Body-v1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="scanner-v2">
+        <inertial>
+            <origin xyz="4.367808480765234e-07 -0.02095119644650936 -0.0016786658583506347" rpy="0.0 -0.0 0.0" />
+            <mass value="0.16440318096066595" />
+            <inertia ixx="0.00013209372724856498" iyy="0.00016410890229113378" izz="0.00011549334707684766" ixy="2.6162225164050306e-11" iyz="1.3847142711683606e-06" ixz="-2.9041876768828212e-09" />
+        </inertial>
+        <visual name="scanner-v2_visual">
+            <origin xyz="-2.8606644519868495e-09 -2.471059765696282e-09 4.668277805430776e-09" rpy="1.570796326794899 5.1880892014336505e-14 1.2707837889703737e-28" />
+            <geometry>
+                <mesh filename="file:///home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/meshes/scanner-v2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="scanner-v2_collision">
+            <origin xyz="-2.8606644519868495e-09 -2.471059765696282e-09 4.668277805430776e-09" rpy="1.570796326794899 5.1880892014336505e-14 1.2707837889703737e-28" />
+            <geometry>
+                <mesh filename="file:///home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/meshes/scanner-v2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="ZLtech_6.5inch-v3">
+        <inertial>
+            <origin xyz="-0.032061914636755055 -1.6546965686536907e-10 2.8806427678773618e-08" rpy="0.0 -0.0 0.0" />
+            <mass value="4.525520796328306" />
+            <inertia ixx="0.007741829397084898" iyy="0.004879036795581715" izz="0.004879066873380122" ixy="6.817815221345398e-10" iyz="-1.1088760118459618e-11" ixz="-4.113791712337018e-09" />
+        </inertial>
+        <visual name="ZLtech_6.5inch-v3_visual">
+            <origin xyz="-0.032500002860658225 2.8417012981618585e-09 -0.06500000060855196" rpy="-8.12390389900205e-31 1.570796326794862 0" />
+            <geometry>
+                <mesh filename="file:///home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/meshes/ZLtech_6.5inch-v3.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="ZLtech_6.5inch-v3_collision">
+            <origin xyz="0 0 0" rpy="0 1.57079632679 0" />
+            <geometry>
+                <cylinder radius="0.0825" length="0.065" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="ZLtech_6.5inch-v3-1">
+        <inertial>
+            <origin xyz="0.03206190891543507 6.512318119766824e-09 3.002350535297183e-08" rpy="0.0 -0.0 0.0" />
+            <mass value="4.525520796328306" />
+            <inertia ixx="0.007741829397084898" iyy="0.004879036795581548" izz="0.0048790668733802445" ixy="6.817815201287658e-10" iyz="1.1088759251100942e-11" ixz="4.113791775246009e-09" />
+        </inertial>
+        <visual name="ZLtech_6.5inch-v3-1_visual">
+            <origin xyz="0.03249999713933853 3.5051471941605073e-09 -0.06499999939147422" rpy="3.141592653589793 1.5707963267948668 0" />
+            <geometry>
+                <mesh filename="file:///home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/meshes/ZLtech_6.5inch-v3-1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="ZLtech_6.5inch-v3-1_collision">
+            <origin xyz="0 0 0" rpy="0 1.57079632679 0" />
+            <geometry>
+                <cylinder radius="0.0825" length="0.065" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="AGV_Body-v1_Rigid-1" type="fixed">
+        <origin xyz="0.32503200466827303 0.0179999975289358 0.25999999713933813" rpy="3.141592653589793 1.5707963267948353 0" />
+        <parent link="AGV_Body-v1" />
+        <child link="scanner-v2" />
+    </joint>
+    <joint name="AGV_Body-v1_Revolute-2" type="continuous">
+        <origin xyz="0.32502966466828753 -0.02475879247105489 0.5399999971393393" rpy="-1.5707963267948968 1.5707963267948353 0" />
+        <parent link="AGV_Body-v1" />
+        <child link="ZLtech_6.5inch-v3" />
+        <axis xyz="1.0 6.193484724124565e-48 -1.7223512342900838e-15" />
+    </joint>
+    <joint name="AGV_Body-v1_Revolute-3" type="continuous">
+        <origin xyz="0.3249703346682585 -0.024758792471073328 -0.02000000286066019" rpy="1.5707963267948963 1.5707963267948353 0" />
+        <parent link="AGV_Body-v1" />
+        <child link="ZLtech_6.5inch-v3-1" />
+        <axis xyz="1.0 1.7604743104351526e-60 3.042431952117858e-15" />
+    </joint>
+    <gazebo>
+        <plugin name="diff_drive" filename="libgazebo_ros_diff_drive.so">
+            <ros>
+                <namespace></namespace>
+                <remapping>cmd_vel:=cmd_vel</remapping>
+                <remapping>odom:=odom</remapping>
+            </ros>
+            <update_rate>50.0</update_rate>
+            <!-- wheels -->
+            <left_joint>AGV_Body-v1_Revolute-3</left_joint>
+            <right_joint>AGV_Body-v1_Revolute-2</right_joint>
+            <!-- kinematics -->
+            <wheel_separation>0.56</wheel_separation>
+            <wheel_diameter>0.165</wheel_diameter>
+            <!-- limits -->
+            <max_wheel_torque>20</max_wheel_torque>
+            <max_wheel_acceleration>1.0</max_wheel_acceleration>
+            <!-- output -->
+            <publish_odom>true</publish_odom>
+            <publish_odom_tf>false</publish_odom_tf>
+            <publish_wheel_tf>true</publish_wheel_tf>
+            <odometry_frame>odom</odometry_frame>
+            <robot_base_frame>base_link</robot_base_frame>
+        </plugin>
+        
+        <plugin name="joint_state" filename="libgazebo_ros_joint_state_publisher.so">
+            <ros>
+                <remapping>~/out:=joint_states</remapping>
+            </ros>
+            <update_rate>50.0</update_rate>
+            <joint_name>AGV_Body-v1_Revolute-2</joint_name>
+            <joint_name>AGV_Body-v1_Revolute-3</joint_name>
+        </plugin>
+    </gazebo>
+
+    <gazebo reference="ZLtech_6.5inch-v3">
+        <mu1>1.0</mu1>
+        <mu2>0.1</mu2>
+        <kp>1000000.0</kp>
+        <kd>100.0</kd>
+    </gazebo>
+    <gazebo reference="ZLtech_6.5inch-v3-1">
+        <mu1>1.0</mu1>
+        <mu2>0.1</mu2>
+        <kp>1000000.0</kp>
+        <kd>100.0</kd>
+    </gazebo>
+
+    <!-- Front Caster Wheel to prevent body dragging -->
+    <link name="caster_front">
+        <collision>
+            <geometry><sphere radius="0.02"/></geometry>
+        </collision>
+        <inertial>
+            <mass value="0.1"/>
+            <inertia ixx="0.0001" iyy="0.0001" izz="0.0001" ixy="0" iyz="0" ixz="0" />
+        </inertial>
+    </link>
+    <joint name="caster_front_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="caster_front"/>
+        <!-- Positioned to match the bottom of the main wheels -->
+        <origin xyz="0.3 0.0 0.0135" rpy="0 0 0"/>
+    </joint>
+    <gazebo reference="caster_front">
+        <mu1>0.0</mu1>
+        <mu2>0.0</mu2>
+    </gazebo>
+
+    <!-- Back Caster Wheel to prevent body dragging -->
+    <link name="caster_back">
+        <collision>
+            <geometry><sphere radius="0.02"/></geometry>
+        </collision>
+        <inertial>
+            <mass value="0.1"/>
+            <inertia ixx="0.0001" iyy="0.0001" izz="0.0001" ixy="0" iyz="0" ixz="0" />
+        </inertial>
+    </link>
+    <joint name="caster_back_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="caster_back"/>
+        <!-- Positioned to match the bottom of the main wheels -->
+        <origin xyz="-0.3 0.0 0.0135" rpy="0 0 0"/>
+    </joint>
+    <gazebo reference="caster_back">
+        <mu1>0.0</mu1>
+        <mu2>0.0</mu2>
+    </gazebo>
+
+    <!-- Front Indicator Arrow for Visualization -->
+    <link name="front_indicator">
+        <visual>
+            <geometry>
+                <box size="0.3 0.05 0.05"/>
+            </geometry>
+            <material name="red">
+                <color rgba="1.0 0.0 0.0 1.0"/>
+            </material>
+        </visual>
+    </link>
+    <joint name="front_indicator_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="front_indicator"/>
+        <origin xyz="0.3 0.0 0.2" rpy="0 0 0"/>
+    </joint>
+    <gazebo reference="base_link">
+        <sensor name="imu_sensor" type="imu">
+            <always_on>true</always_on>
+            <update_rate>50</update_rate>
+            <imu>
+              <angular_velocity>
+                <x><noise type="gaussian"><mean>0.0</mean><stddev>0.01</stddev></noise></x>
+                <y><noise type="gaussian"><mean>0.0</mean><stddev>0.01</stddev></noise></y>
+                <z><noise type="gaussian"><mean>0.0</mean><stddev>0.01</stddev></noise></z>
+              </angular_velocity>
+              <linear_acceleration>
+                <x><noise type="gaussian"><mean>0.0</mean><stddev>0.01</stddev></noise></x>
+                <y><noise type="gaussian"><mean>0.0</mean><stddev>0.01</stddev></noise></y>
+                <z><noise type="gaussian"><mean>0.0</mean><stddev>0.01</stddev></noise></z>
+              </linear_acceleration>
+            </imu>
+            <plugin name="imu_plugin" filename="libgazebo_ros_imu_sensor.so">
+                <ros>
+                    <namespace>/imu</namespace>
+                    <remapping>~/out:=data</remapping>
+                </ros>
+                <initial_orientation_as_reference>false</initial_orientation_as_reference>
+            </plugin>
+        </sensor>
+    </gazebo>
+</robot>
