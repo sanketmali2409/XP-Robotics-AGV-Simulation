@@ -35,7 +35,10 @@ setup(
             'run_tests = agv.run_tests:main',
             'analyze_results = agv.analyze_results:main',
             'test_orchestrator = agv.test_orchestrator:main',
-            'random_orchestrator = agv.random_orchestrator:main'
+            'trajectory_visualizer = agv.trajectory_visualizer:main',
+            'random_orchestrator = agv.random_orchestrator:main',
+            'scan_self_filter = agv.scan_self_filter:main',
+            'pose_logger = agv.pose_logger:main'
         ],
     },
 )

@@ -15,10 +15,13 @@ setup.py
 agv/__init__.py
 agv/analyze_results.py
 agv/goal_pid_controller.py
+agv/pose_logger.py
 agv/random_orchestrator.py
 agv/run_tests.py
+agv/scan_self_filter.py
 agv/test_orchestrator.py
 agv/tf_to_odom.py
+agv/trajectory_visualizer.py
 config/agv.rviz
 config/ekf.yaml
 config/nav2_params.yaml

@@ -138,6 +138,32 @@
             gap: 8px;
         }
 
+        /* Node Grid */
+        .node-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 4px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+        .node-btn {
+            background-color: var(--input-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-dim);
+            padding: 8px 0;
+            font-size: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 3px;
+            text-align: center;
+            transition: all 0.2s;
+        }
+        .node-btn:hover { 
+            background-color: var(--accent-blue); 
+            color: white; 
+            border-color: var(--accent-blue-hover);
+        }
+
         .btn {
             width: 100%;
             padding: 8px;
@@ -291,6 +317,15 @@
             <div class="form-row">
                 <div class="form-group"><label>Kd Gain:</label><input type="number" id="inputKd" value="0.0" step="0.01"></div>
             </div>
+            
+            <div style="margin-top: 5px;">
+                <label style="display: block; font-size: 11px; color: var(--text-dim); margin-bottom: 4px;">Node Navigation Grid (Nav2):</label>
+                <div class="node-grid">
+                    <!-- Javascript will populate this -->
+                </div>
+                <div id="navStatus" style="font-size: 10px; color: var(--accent-green); margin-top: 4px; word-break: break-all;"></div>
+                <button class="btn btn-secondary" style="margin-top:6px; font-size:10px; padding:5px;" onclick="clearActiveNav()">Clear Active Nav / Show Full History</button>
+            </div>
 
             <div class="actions">
                 <button class="btn btn-start">▶ START TEST</button>
@@ -309,6 +344,7 @@
                 <div id="errorRobot1" style="color:#2980b9;">Robot 1 Error: 0.00m</div>
                 <div id="errorRobot2" style="color:#c0392b;">Robot 2 Error: 0.00m</div>
                 <div id="errorRobot3" style="color:#8e44ad;">Robot 3 Error: 0.00m</div>
+                <div id="liveNavError" style="color:#f1c40f; font-weight:bold; margin-top:6px; font-size:10px; line-height:1.5; word-break:break-word;">Live Nav: idle</div>
                 <div style="word-break: break-all; margin-top:5px;">File: sinetest_motor10_2.0Hz_0.03rad.csv</div>
             </div>
         </aside>
@@ -385,8 +421,8 @@
                     title: { display: true, text: 'X (meters)', color: '#2c3e50', font: { weight: 'bold', size: 14 } },
                     border: { color: '#2c3e50', width: 2 }
                 },
-                y: { 
-                    min: -2, max: 8, /* 10 units to maintain 1:1 aspect ratio with X */
+                y: {
+                    min: -5, max: 5, /* 10 units to maintain 1:1 aspect ratio with X, covers full 5x5 grid (y: -4..0) */
                     grid: { color: 'rgba(41, 128, 185, 0.3)', tickLength: 0, drawBorder: true },
                     ticks: { color: '#2c3e50', font: { size: 12 }, stepSize: 1 },
                     title: { display: true, text: 'Y (meters)', color: '#2c3e50', font: { weight: 'bold', size: 14 } },
@@ -404,15 +440,15 @@
         const chartComparative = new Chart(ctxComp, {
             type: 'scatter',
             data: { datasets: [
-                { 
-                    label: 'Target Path', 
-                    backgroundColor: 'rgba(0,0,0,0)', 
-                    borderColor: '#7f8c8d', 
-                    showLine: true, 
-                    borderWidth: 2, 
-                    borderDash: [5, 5], 
-                    pointRadius: 0, 
-                    data: [] 
+                {
+                    label: 'Ideal Path (BFS Planned)',
+                    backgroundColor: 'rgba(0,0,0,0)',
+                    borderColor: '#2c3e50',
+                    showLine: true,
+                    borderWidth: 2.5,
+                    borderDash: [8, 5],
+                    pointRadius: 0,
+                    data: []
                 },
                 { 
                     label: 'Robot 1 (EKF)', 
@@ -445,12 +481,12 @@
                     data: [] 
                 },
                 {
-                    label: 'Goals (Waypoints)',
+                    label: 'Waypoints',
                     backgroundColor: '#f1c40f',
                     borderColor: '#f39c12',
                     showLine: false,
                     borderWidth: 2,
-                    pointRadius: 8,
+                    pointRadius: 6,
                     pointStyle: 'star',
                     order: -2,
                     data: [],
@@ -459,10 +495,40 @@
                         align: 'top',
                         anchor: 'end',
                         color: '#d35400',
-                        font: { weight: 'bold', size: 12 },
-                        formatter: function(value) {
-                            return value.name;
-                        }
+                        font: { weight: 'bold', size: 11 },
+                        formatter: function(value) { return value.name; }
+                    }
+                },
+                {
+                    label: 'START',
+                    backgroundColor: '#27ae60',
+                    borderColor: '#145a32',
+                    showLine: false,
+                    borderWidth: 2,
+                    pointRadius: 12,
+                    pointStyle: 'rectRot',
+                    order: -3,
+                    data: [],
+                    datalabels: {
+                        display: true, align: 'bottom', anchor: 'start',
+                        color: '#145a32', font: { weight: 'bold', size: 13 },
+                        formatter: function(value) { return value.name || 'START'; }
+                    }
+                },
+                {
+                    label: 'GOAL',
+                    backgroundColor: '#e74c3c',
+                    borderColor: '#7b241c',
+                    showLine: false,
+                    borderWidth: 2,
+                    pointRadius: 14,
+                    pointStyle: 'star',
+                    order: -4,
+                    data: [],
+                    datalabels: {
+                        display: true, align: 'top', anchor: 'end',
+                        color: '#7b241c', font: { weight: 'bold', size: 13 },
+                        formatter: function(value) { return value.name || 'GOAL'; }
                     }
                 }
             ]},
@@ -608,40 +674,131 @@
                 chartComparative.data.datasets[2].hidden = (selectedRobot !== 'all' && selectedRobot !== 'robot2');
                 chartComparative.data.datasets[3].hidden = (selectedRobot !== 'all' && selectedRobot !== 'robot3');
 
-                // Update Comparative Chart
-                let currentTargetXY;
-                if (selectedRobot === 'robot1') {
-                    currentTargetXY = r1TargetXY;
-                } else if (selectedRobot === 'robot2') {
-                    currentTargetXY = r2TargetXY;
-                } else if (selectedRobot === 'robot3') {
-                    currentTargetXY = r3TargetXY;
-                } else {
-                    // Fallback for 'all'
-                    currentTargetXY = r3TargetXY.length > 0 ? r3TargetXY : (r2TargetXY.length > 0 ? r2TargetXY : r1TargetXY);
-                }
-                
-                chartComparative.data.datasets[0].data = currentTargetXY; 
-                chartComparative.data.datasets[1].data = r1ActualXY;
-                chartComparative.data.datasets[2].data = r2ActualXY;
-                chartComparative.data.datasets[3].data = r3ActualXY;
-                
-                // Extract unique waypoints from the targets
-                let waypointsList = [];
-                let lastWP = null;
-                for(let i=0; i<currentTargetXY.length; i++) {
-                    let tx = currentTargetXY[i].x;
-                    let ty = currentTargetXY[i].y;
-                    if(!lastWP || lastWP.x !== tx || lastWP.y !== ty) {
-                        lastWP = {x: tx, y: ty, name: `Goal ${waypointsList.length + 1}`};
-                        waypointsList.push(lastWP);
-                    }
-                }
+                // If a node navigation is active, restrict the graph to just
+                // that robot's live trace since the click, overlay the full
+                // BFS-planned grid path, and update the live nav error.
+                const allActuals = { robot1: r1ActualXY, robot2: r2ActualXY, robot3: r3ActualXY };
+                if (activeNav) {
+                    const trace = allActuals[activeNav.robot] || [];
+                    const liveTrace = trace.slice(activeNav.startIndex);
 
-                if (waypointsList.length > 0) {
-                    chartComparative.data.datasets[4].data = waypointsList;
+                    // Only this robot's dataset is visible; live trace grows every poll.
+                    chartComparative.data.datasets[1].hidden = (activeNav.robot !== 'robot1');
+                    chartComparative.data.datasets[2].hidden = (activeNav.robot !== 'robot2');
+                    chartComparative.data.datasets[3].hidden = (activeNav.robot !== 'robot3');
+                    chartComparative.data.datasets[1].data = (activeNav.robot === 'robot1') ? liveTrace : [];
+                    chartComparative.data.datasets[2].data = (activeNav.robot === 'robot2') ? liveTrace : [];
+                    chartComparative.data.datasets[3].data = (activeNav.robot === 'robot3') ? liveTrace : [];
+
+                    // Defer planning until we have at least one fresh sample
+                    // after the click. Otherwise findClosestNode would use the
+                    // destination as the start and produce a nonsense plan.
+                    let waiting = !activeNav.plannedPathXY && liveTrace.length === 0;
+                    if (waiting) {
+                        document.getElementById('liveNavError').innerText =
+                            `Live ${activeNav.robot} → ${activeNav.node}: waiting for first pose...`;
+                        chartComparative.data.datasets[6].data = [{
+                            x: activeNav.destX, y: activeNav.destY, name: 'GOAL (' + activeNav.node + ')'
+                        }];
+                    } else if (!activeNav.plannedPathXY) {
+                        // Ideal path is now the STRAIGHT LINE from the robot's
+                        // actual starting pose to the clicked destination —
+                        // matching what Nav2 actually attempts (direct goal).
+                        const startPose = liveTrace[0];
+                        const goalXY = { x: activeNav.destX, y: activeNav.destY };
+                        activeNav.startXY = { x: startPose.x, y: startPose.y };
+                        activeNav.startNode = findClosestNode(startPose.x, startPose.y);
+                        activeNav.plannedPathXY = [activeNav.startXY, goalXY];
+                        // plannedPath is used only for waypoint labels; empty
+                        // intermediates now since it's a single straight line.
+                        activeNav.plannedPath = [activeNav.startNode, activeNav.node];
+                        activeNav.idealLength = Math.hypot(
+                            goalXY.x - activeNav.startXY.x,
+                            goalXY.y - activeNav.startXY.y
+                        );
+                    }
+
+                    if (!waiting) {
+                        // Datasets:
+                        //   0 = ideal dashed line
+                        //   4 = intermediate waypoints (excluding start/goal to avoid overlap)
+                        //   5 = START marker
+                        //   6 = GOAL marker
+                        chartComparative.data.datasets[0].data = activeNav.plannedPathXY;
+                        // No intermediate waypoints in direct-goal mode.
+                        chartComparative.data.datasets[4].data = [];
+                        chartComparative.data.datasets[5].data = [{
+                            x: activeNav.startXY.x, y: activeNav.startXY.y,
+                            name: 'START (' + activeNav.startNode + ')'
+                        }];
+                        chartComparative.data.datasets[6].data = [{
+                            x: activeNav.destX, y: activeNav.destY,
+                            name: 'GOAL (' + activeNav.node + ')'
+                        }];
+
+                        // Live error metrics computed from the post-click trace only.
+                        const li = liveTrace.length - 1;
+                        const ax = liveTrace[li].x, ay = liveTrace[li].y;
+                        const rob = data[activeNav.robot];
+                        // Hop target: last CSV row's target (whatever Nav2 is chasing now).
+                        const tx = rob.target_x[rob.target_x.length - 1];
+                        const ty = rob.target_y[rob.target_y.length - 1];
+                        const errCurHop = Math.hypot(tx - ax, ty - ay);
+                        const errFinal = Math.hypot(activeNav.destX - ax, activeNav.destY - ay);
+                        const errStart = Math.hypot(activeNav.startXY.x - ax, activeNav.startXY.y - ay);
+
+                        let actualLen = 0;
+                        for (let i = 1; i < liveTrace.length; i++) {
+                            actualLen += Math.hypot(liveTrace[i].x - liveTrace[i-1].x,
+                                                     liveTrace[i].y - liveTrace[i-1].y);
+                        }
+                        let maxCT = 0;
+                        for (const p of liveTrace) {
+                            let best = Infinity;
+                            for (let i = 1; i < activeNav.plannedPathXY.length; i++) {
+                                best = Math.min(best, distPointToSegment(p, activeNav.plannedPathXY[i-1], activeNav.plannedPathXY[i]));
+                            }
+                            if (best > maxCT) maxCT = best;
+                        }
+                        const extra = actualLen - activeNav.idealLength;
+
+                        if (!activeNav.completed) {
+                            document.getElementById('liveNavError').innerText =
+                                `Live ${activeNav.robot} ${activeNav.startNode}→${activeNav.node}  |  ` +
+                                `Ideal ${activeNav.idealLength.toFixed(2)}m  ` +
+                                `Actual ${actualLen.toFixed(2)}m  ` +
+                                `Extra ${(extra*100).toFixed(1)}cm  ` +
+                                `CrossTrack ${(maxCT*100).toFixed(1)}cm  ` +
+                                `ToGoal ${(errFinal*100).toFixed(1)}cm  ` +
+                                `FromStart ${errStart.toFixed(2)}m  ` +
+                                `HopErr ${(errCurHop*100).toFixed(1)}cm`;
+                        }
+
+                        // Detect arrival (30cm of goal for 3 consecutive polls)
+                        // but DO NOT auto-clear the chart — keep the completed
+                        // nav on screen until the user picks a new goal or
+                        // clicks Clear. Just flip the status text once.
+                        const GOAL_THRESHOLD_M = 0.30;
+                        if (errFinal < GOAL_THRESHOLD_M) {
+                            activeNav.arrivedCount = (activeNav.arrivedCount || 0) + 1;
+                        } else {
+                            activeNav.arrivedCount = 0;
+                        }
+                        if (activeNav.arrivedCount >= 3 && !activeNav.completed) {
+                            activeNav.completed = true;
+                            document.getElementById('liveNavError').innerText =
+                                `✓ REACHED ${activeNav.node}  |  Final error ${(errFinal*100).toFixed(1)}cm, ` +
+                                `actual ${actualLen.toFixed(2)}m vs ideal ${activeNav.idealLength.toFixed(2)}m ` +
+                                `(extra ${(extra*100).toFixed(1)}cm). Chart stays until next goal.`;
+                        }
+                    }
                 } else {
-                    chartComparative.data.datasets[4].data = [];
+                    // Idle: keep the comparative chart empty. Time-series
+                    // charts below still show accumulated CSV history.
+                    document.getElementById('liveNavError').innerText = 'Live Nav: idle — select a robot and click a grid node';
+                    for (let i = 0; i < chartComparative.data.datasets.length; i++) {
+                        chartComparative.data.datasets[i].data = [];
+                    }
                 }
 
                 chartComparative.update();
@@ -685,8 +842,188 @@
             }
         }
 
-        // Poll every 500ms
-        let pollingInterval = setInterval(updateGraphs, 500);
+        // Poll every 250ms so the live trace looks smooth during active nav
+        let pollingInterval = setInterval(updateGraphs, 250);
+
+        // --- Interactive 5x5 Node Grid ---
+        // Grid layout: N1 at (0,0). +col -> +X (right). +row -> -Y (down).
+        // Spacing must match GridMap(spacing=1.0) in grid_navigation/grid_nodes.py
+        const GRID_SPACING = 1.0;
+        const GRID_COLS = 5, GRID_ROWS = 5;
+        function nodeCoords(nodeName) {
+            const n = parseInt(nodeName.slice(1), 10);
+            const idx = n - 1;
+            const row = Math.floor(idx / GRID_COLS);
+            const col = idx % GRID_COLS;
+            return { x: col * GRID_SPACING, y: -row * GRID_SPACING };
+        }
+
+        // Same BFS as grid_navigation/path_planner.py — 4-connected grid,
+        // returns minimum-hop node names from start to dest inclusive.
+        function bfsGridPath(startNode, destNode) {
+            const startId = parseInt(startNode.slice(1), 10);
+            const destId = parseInt(destNode.slice(1), 10);
+            if (startId === destId) return [startNode];
+            const visited = new Set([startId]);
+            const queue = [[startId]];
+            while (queue.length) {
+                const path = queue.shift();
+                const cur = path[path.length - 1];
+                const idx = cur - 1;
+                const row = Math.floor(idx / GRID_COLS);
+                const col = idx % GRID_COLS;
+                const neighbours = [];
+                if (col > 0) neighbours.push(cur - 1);
+                if (col < GRID_COLS - 1) neighbours.push(cur + 1);
+                if (row > 0) neighbours.push(cur - GRID_COLS);
+                if (row < GRID_ROWS - 1) neighbours.push(cur + GRID_COLS);
+                for (const nb of neighbours) {
+                    if (visited.has(nb)) continue;
+                    visited.add(nb);
+                    const np = path.concat(nb);
+                    if (nb === destId) return np.map(n => 'N' + n);
+                    queue.push(np);
+                }
+            }
+            return [];
+        }
+
+        // Perpendicular distance from point p to segment ab (2D).
+        function distPointToSegment(p, a, b) {
+            const dx = b.x - a.x, dy = b.y - a.y;
+            const len2 = dx*dx + dy*dy;
+            if (len2 === 0) return Math.hypot(p.x - a.x, p.y - a.y);
+            let t = ((p.x - a.x)*dx + (p.y - a.y)*dy) / len2;
+            t = Math.max(0, Math.min(1, t));
+            const cx = a.x + t*dx, cy = a.y + t*dy;
+            return Math.hypot(p.x - cx, p.y - cy);
+        }
+
+        // Find closest node to (x, y) — mirrors go_to_node.find_closest_node.
+        function findClosestNode(x, y) {
+            let best = 'N1', bestD = Infinity;
+            for (let n = 1; n <= 25; n++) {
+                const c = nodeCoords('N' + n);
+                const d = Math.hypot(c.x - x, c.y - y);
+                if (d < bestD) { bestD = d; best = 'N' + n; }
+            }
+            return best;
+        }
+
+        // Tracks the currently-executing node navigation so the trajectory
+        // graph can be filtered to the live path only.
+        let activeNav = null;
+
+        (function populateNodeGrid() {
+            const grid = document.querySelector('.node-grid');
+            if (!grid) return;
+            for (let i = 1; i <= 25; i++) {
+                const btn = document.createElement('button');
+                btn.className = 'node-btn';
+                btn.textContent = 'N' + i;
+                btn.dataset.node = 'N' + i;
+                btn.addEventListener('click', () => sendNodeCommand(btn.dataset.node, btn));
+                grid.appendChild(btn);
+            }
+        })();
+
+        function highlightActiveButton(nodeName) {
+            document.querySelectorAll('.node-btn').forEach(b => {
+                if (b.dataset.node === nodeName) {
+                    b.style.backgroundColor = '#f1c40f';
+                    b.style.color = '#000';
+                } else {
+                    b.style.backgroundColor = '';
+                    b.style.color = '';
+                }
+            });
+        }
+
+        // Wipes every dataset on the comparative chart. Call this on new goal
+        // click so stale traces / planned paths from a previous run disappear
+        // instantly instead of lingering until the next 250ms poll.
+        function wipeComparativeChart() {
+            for (let i = 0; i < chartComparative.data.datasets.length; i++) {
+                chartComparative.data.datasets[i].data = [];
+            }
+            chartComparative.update('none');
+        }
+
+        // Tracks the pending auto-clear timer so a new click cancels it before
+        // it can wipe the fresh nav.
+        let pendingClearTimer = null;
+
+        async function sendNodeCommand(nodeName, btnEl) {
+            const robot = document.getElementById('robotSelect').value;
+            if (robot === 'all') {
+                alert('Please select a specific robot (Robot 2 or Robot 3) before choosing a node.');
+                return;
+            }
+            if (robot === 'robot1') {
+                alert('Robot 1 uses basic PID and does not support Nav2 grid navigation.');
+                return;
+            }
+
+            // Cancel any pending auto-clear from the previous nav so it can't
+            // fire mid-way through this new one.
+            if (pendingClearTimer) { clearTimeout(pendingClearTimer); pendingClearTimer = null; }
+
+            // Snapshot the current CSV length for this robot so we filter
+            // the graph to only samples produced AFTER this click.
+            let startIndex = 0;
+            try {
+                const snap = await fetch('/api/data').then(r => r.json());
+                const rob = snap[robot];
+                if (rob && rob.actual_x) startIndex = rob.actual_x.length;
+            } catch (e) { /* best-effort */ }
+
+            const dest = nodeCoords(nodeName);
+            // Fully replace activeNav so no old plan / start / arrival counters leak.
+            activeNav = {
+                robot: robot,
+                node: nodeName,
+                destX: dest.x,
+                destY: dest.y,
+                startIndex: startIndex,
+            };
+            // Immediately blank the chart so the previous nav's trace/path
+            // vanishes right away, then place a preliminary GOAL marker.
+            wipeComparativeChart();
+            chartComparative.data.datasets[6].data = [{ x: dest.x, y: dest.y, name: 'GOAL (' + nodeName + ')' }];
+            chartComparative.update('none');
+
+            highlightActiveButton(nodeName);
+            document.getElementById('navStatus').innerText = `Navigating ${robot} → ${nodeName} (${dest.x.toFixed(1)}, ${dest.y.toFixed(1)})`;
+
+            try {
+                const res = await fetch('/api/navigate_to_node', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ robot: robot, node: nodeName })
+                });
+                const data = await res.json();
+                if (!data.success) {
+                    alert('Navigation failed: ' + (data.error || 'unknown error'));
+                    clearActiveNav();
+                } else {
+                    console.log(data.message, 'log:', data.log);
+                    document.getElementById('navStatus').innerText += `  |  log: ${data.log}`;
+                }
+            } catch (e) {
+                console.error('Failed to send node command', e);
+                alert('Failed to reach backend: ' + e.message);
+                clearActiveNav();
+            }
+        }
+
+        function clearActiveNav() {
+            if (pendingClearTimer) { clearTimeout(pendingClearTimer); pendingClearTimer = null; }
+            activeNav = null;
+            highlightActiveButton(null);
+            document.getElementById('navStatus').innerText = '';
+            document.getElementById('liveNavError').innerText = 'Live Nav: idle';
+            wipeComparativeChart();
+        }
 
         // --- Export Graph Logic ---
         document.getElementById('btnExportGraph').addEventListener('click', function() {

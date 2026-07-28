@@ -1,0 +1,23 @@
+running egg_info
+writing ../../build/grid_navigation/grid_navigation.egg-info/PKG-INFO
+writing dependency_links to ../../build/grid_navigation/grid_navigation.egg-info/dependency_links.txt
+writing entry points to ../../build/grid_navigation/grid_navigation.egg-info/entry_points.txt
+writing requirements to ../../build/grid_navigation/grid_navigation.egg-info/requires.txt
+writing top-level names to ../../build/grid_navigation/grid_navigation.egg-info/top_level.txt
+reading manifest file '../../build/grid_navigation/grid_navigation.egg-info/SOURCES.txt'
+writing manifest file '../../build/grid_navigation/grid_navigation.egg-info/SOURCES.txt'
+running build
+running build_py
+copying grid_navigation/go_to_node.py -> /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/grid_navigation/build/lib/grid_navigation
+running install
+running install_lib
+copying /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/grid_navigation/build/lib/grid_navigation/go_to_node.py -> /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/grid_navigation/lib/python3.10/site-packages/grid_navigation
+byte-compiling /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/grid_navigation/lib/python3.10/site-packages/grid_navigation/go_to_node.py to go_to_node.cpython-310.pyc
+running install_data
+running install_egg_info
+removing '/home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/grid_navigation/lib/python3.10/site-packages/grid_navigation-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/grid_navigation/grid_navigation.egg-info to /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/grid_navigation/lib/python3.10/site-packages/grid_navigation-0.0.0-py3.10.egg-info
+running install_scripts
+Installing go_to_node script to /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/grid_navigation/lib/grid_navigation
+Installing grid_navigator script to /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/grid_navigation/lib/grid_navigation
+writing list of installed files to '/home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/grid_navigation/install.log'

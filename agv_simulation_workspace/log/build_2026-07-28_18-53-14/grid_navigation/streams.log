@@ -1,0 +1,25 @@
+[4.200s] Invoking command in '/home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/src/grid_navigation': PYTHONPATH=/home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/grid_navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/grid_navigation/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/grid_navigation build --build-base /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/grid_navigation/build install --record /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/grid_navigation/install.log --install-scripts $base/lib/grid_navigation --single-version-externally-managed install_data
+[5.150s] running egg_info
+[5.151s] writing ../../build/grid_navigation/grid_navigation.egg-info/PKG-INFO
+[5.151s] writing dependency_links to ../../build/grid_navigation/grid_navigation.egg-info/dependency_links.txt
+[5.154s] writing entry points to ../../build/grid_navigation/grid_navigation.egg-info/entry_points.txt
+[5.155s] writing requirements to ../../build/grid_navigation/grid_navigation.egg-info/requires.txt
+[5.156s] writing top-level names to ../../build/grid_navigation/grid_navigation.egg-info/top_level.txt
+[5.161s] reading manifest file '../../build/grid_navigation/grid_navigation.egg-info/SOURCES.txt'
+[5.165s] writing manifest file '../../build/grid_navigation/grid_navigation.egg-info/SOURCES.txt'
+[5.165s] running build
+[5.165s] running build_py
+[5.166s] copying grid_navigation/go_to_node.py -> /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/grid_navigation/build/lib/grid_navigation
+[5.169s] running install
+[5.172s] running install_lib
+[5.173s] copying /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/grid_navigation/build/lib/grid_navigation/go_to_node.py -> /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/grid_navigation/lib/python3.10/site-packages/grid_navigation
+[5.178s] byte-compiling /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/grid_navigation/lib/python3.10/site-packages/grid_navigation/go_to_node.py to go_to_node.cpython-310.pyc
+[5.184s] running install_data
+[5.184s] running install_egg_info
+[5.185s] removing '/home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/grid_navigation/lib/python3.10/site-packages/grid_navigation-0.0.0-py3.10.egg-info' (and everything under it)
+[5.186s] Copying ../../build/grid_navigation/grid_navigation.egg-info to /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/grid_navigation/lib/python3.10/site-packages/grid_navigation-0.0.0-py3.10.egg-info
+[5.188s] running install_scripts
+[5.251s] Installing go_to_node script to /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/grid_navigation/lib/grid_navigation
+[5.256s] Installing grid_navigator script to /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/grid_navigation/lib/grid_navigation
+[5.256s] writing list of installed files to '/home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/grid_navigation/install.log'
+[5.417s] Invoked command in '/home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/src/grid_navigation' returned '0': PYTHONPATH=/home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/grid_navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/grid_navigation/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/grid_navigation build --build-base /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/grid_navigation/build install --record /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/grid_navigation/install.log --install-scripts $base/lib/grid_navigation --single-version-externally-managed install_data

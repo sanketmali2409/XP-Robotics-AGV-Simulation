@@ -224,6 +224,34 @@
         <origin xyz="0.3 0.0 0.2" rpy="0 0 0" />
     </joint>
 
+    <!-- Silhouette: tall thin collision so other robots' LiDARs can see this
+         robot at scan height (z=0.35). The physical body collision is only
+         0.10 m tall, well below the scan plane, so without this the robots
+         would be invisible to each other. The scan_self_filter node strips
+         returns from this silhouette out of the robot's OWN laser scan. -->
+    <link name="$(arg prefix)silhouette">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <mass value="0.001" />
+            <inertia ixx="1e-5" iyy="1e-5" izz="1e-5" ixy="0" iyz="0" ixz="0" />
+        </inertial>
+        <collision>
+            <origin xyz="0 0 0.375" rpy="0 0 0" />
+            <geometry>
+                <box size="0.5 0.4 0.35" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="$(arg prefix)silhouette_joint" type="fixed">
+        <parent link="$(arg prefix)base_link" />
+        <child link="$(arg prefix)silhouette" />
+        <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint>
+    <gazebo reference="$(arg prefix)silhouette">
+        <mu1>0.0</mu1>
+        <mu2>0.0</mu2>
+    </gazebo>
+
     <!-- Virtual Horizontal Laser Link to fix CAD rotation issues -->
     <link name="$(arg prefix)laser_frame" />
     <joint name="$(arg prefix)laser_joint" type="fixed">

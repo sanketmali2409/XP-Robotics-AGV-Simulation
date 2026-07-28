@@ -226,7 +226,7 @@ local_costmap:
 
         scan:
 
-          topic: /robot2/scan
+          topic: /robot2/scan_filtered
 
           max_obstacle_height: 2.0
 
@@ -312,7 +312,7 @@ global_costmap:
 
         scan:
 
-          topic: /robot2/scan
+          topic: /robot2/scan_filtered
 
           max_obstacle_height: 2.0
 

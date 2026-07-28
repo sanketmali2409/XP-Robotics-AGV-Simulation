@@ -1,0 +1,44 @@
+running egg_info
+creating ../../build/grid_navigation/grid_navigation.egg-info
+writing ../../build/grid_navigation/grid_navigation.egg-info/PKG-INFO
+writing dependency_links to ../../build/grid_navigation/grid_navigation.egg-info/dependency_links.txt
+writing entry points to ../../build/grid_navigation/grid_navigation.egg-info/entry_points.txt
+writing requirements to ../../build/grid_navigation/grid_navigation.egg-info/requires.txt
+writing top-level names to ../../build/grid_navigation/grid_navigation.egg-info/top_level.txt
+writing manifest file '../../build/grid_navigation/grid_navigation.egg-info/SOURCES.txt'
+reading manifest file '../../build/grid_navigation/grid_navigation.egg-info/SOURCES.txt'
+writing manifest file '../../build/grid_navigation/grid_navigation.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/grid_navigation/build
+creating /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/grid_navigation/build/lib
+creating /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/grid_navigation/build/lib/grid_navigation
+copying grid_navigation/grid_nodes.py -> /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/grid_navigation/build/lib/grid_navigation
+copying grid_navigation/main.py -> /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/grid_navigation/build/lib/grid_navigation
+copying grid_navigation/navigator.py -> /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/grid_navigation/build/lib/grid_navigation
+copying grid_navigation/path_planner.py -> /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/grid_navigation/build/lib/grid_navigation
+copying grid_navigation/__init__.py -> /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/grid_navigation/build/lib/grid_navigation
+running install
+running install_lib
+creating /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/grid_navigation/lib/python3.10/site-packages/grid_navigation
+copying /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/grid_navigation/build/lib/grid_navigation/grid_nodes.py -> /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/grid_navigation/lib/python3.10/site-packages/grid_navigation
+copying /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/grid_navigation/build/lib/grid_navigation/main.py -> /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/grid_navigation/lib/python3.10/site-packages/grid_navigation
+copying /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/grid_navigation/build/lib/grid_navigation/navigator.py -> /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/grid_navigation/lib/python3.10/site-packages/grid_navigation
+copying /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/grid_navigation/build/lib/grid_navigation/path_planner.py -> /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/grid_navigation/lib/python3.10/site-packages/grid_navigation
+copying /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/grid_navigation/build/lib/grid_navigation/__init__.py -> /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/grid_navigation/lib/python3.10/site-packages/grid_navigation
+byte-compiling /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/grid_navigation/lib/python3.10/site-packages/grid_navigation/grid_nodes.py to grid_nodes.cpython-310.pyc
+byte-compiling /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/grid_navigation/lib/python3.10/site-packages/grid_navigation/main.py to main.cpython-310.pyc
+byte-compiling /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/grid_navigation/lib/python3.10/site-packages/grid_navigation/navigator.py to navigator.cpython-310.pyc
+byte-compiling /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/grid_navigation/lib/python3.10/site-packages/grid_navigation/path_planner.py to path_planner.cpython-310.pyc
+byte-compiling /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/grid_navigation/lib/python3.10/site-packages/grid_navigation/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/grid_navigation/share/ament_index
+creating /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/grid_navigation/share/ament_index/resource_index
+creating /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/grid_navigation/share/ament_index/resource_index/packages
+copying resource/grid_navigation -> /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/grid_navigation/share/ament_index/resource_index/packages
+copying package.xml -> /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/grid_navigation/share/grid_navigation
+running install_egg_info
+Copying ../../build/grid_navigation/grid_navigation.egg-info to /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/grid_navigation/lib/python3.10/site-packages/grid_navigation-0.0.0-py3.10.egg-info
+running install_scripts
+Installing grid_navigator script to /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/grid_navigation/lib/grid_navigation
+writing list of installed files to '/home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/grid_navigation/install.log'
