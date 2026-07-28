@@ -12,7 +12,9 @@ class TestOrchestrator(Node):
             rclpy.parameter.Parameter('use_sim_time', rclpy.Parameter.Type.BOOL, True)
         ])
         
-        self.robots = ['robot3']
+        self.declare_parameter('robot_name', 'robot3')
+        robot_name = self.get_parameter('robot_name').value
+        self.robots = [robot_name]
         
         self.waypoints = [
             (-3.5, 3.5),

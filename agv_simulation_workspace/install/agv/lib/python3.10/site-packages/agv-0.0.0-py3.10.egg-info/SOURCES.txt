@@ -22,10 +22,12 @@ agv/tf_to_odom.py
 config/agv.rviz
 config/ekf.yaml
 config/nav2_params.yaml
+config/nav2_params_robot2.yaml
 launch/agv_bringup.launch.py
 launch/multi_robot_bringup.launch.py
 launch/multi_robot_navigation.launch.py
 launch/my_navigation_launch.py
+launch/nav2_robot2_launch.py
 launch/nav2_robot3_launch.py
 maps/final_test_map.pgm
 maps/final_test_map.yaml

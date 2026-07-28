@@ -1,6 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
 <robot xmlns:ns0="http://ros.org/wiki/xacro" name="agv">
     <ns0:arg name="prefix" default="" />
+    <ns0:arg name="publish_odom_tf" default="false" />
+    <ns0:arg name="gazebo_body_material" default="Gazebo/Grey" />
+    <ns0:arg name="gazebo_lidar_material" default="Gazebo/Blue" />
     <link name="$(arg prefix)base_link" />
     <joint name="$(arg prefix)base_link_joint" type="fixed">
         <origin xyz="-0.325 0.26 0.1" rpy="1.57079632679 0 0" />
@@ -126,7 +129,7 @@
             <max_wheel_acceleration>1.0</max_wheel_acceleration>
             
             <publish_odom>true</publish_odom>
-            <publish_odom_tf>false</publish_odom_tf>
+            <publish_odom_tf>$(arg publish_odom_tf)</publish_odom_tf>
             <publish_wheel_tf>false</publish_wheel_tf>
             <odometry_frame>$(arg prefix)odom</odometry_frame>
             <robot_base_frame>$(arg prefix)base_link</robot_base_frame>
@@ -140,6 +143,13 @@
             <joint_name>$(arg prefix)AGV_Body-v1_Revolute-2</joint_name>
             <joint_name>$(arg prefix)AGV_Body-v1_Revolute-3</joint_name>
         </plugin>
+    </gazebo>
+
+    <gazebo reference="$(arg prefix)AGV_Body-v1">
+        <material>$(arg gazebo_body_material)</material>
+    </gazebo>
+    <gazebo reference="$(arg prefix)scanner-v2">
+        <material>$(arg gazebo_lidar_material)</material>
     </gazebo>
 
     <gazebo reference="$(arg prefix)ZLtech_6.5inch-v3">

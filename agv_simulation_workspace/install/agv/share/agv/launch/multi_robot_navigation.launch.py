@@ -15,11 +15,26 @@ def generate_launch_description():
     map_yaml_file = os.path.join(pkg_share, 'maps', 'my_new_map.yaml')
 
     # Parse Xacro
-    doc1 = xacro.process_file(xacro_file, mappings={'prefix': 'robot1/'})
+    doc1 = xacro.process_file(xacro_file, mappings={
+        'prefix': 'robot1/',
+        'publish_odom_tf': 'false',
+        'gazebo_body_material': 'Gazebo/Grey',
+        'gazebo_lidar_material': 'Gazebo/Blue'
+    })
     robot_desc1 = doc1.toxml()
-    doc2 = xacro.process_file(xacro_file, mappings={'prefix': 'robot2/'})
+    doc2 = xacro.process_file(xacro_file, mappings={
+        'prefix': 'robot2/',
+        'publish_odom_tf': 'true',
+        'gazebo_body_material': 'Gazebo/Green',
+        'gazebo_lidar_material': 'Gazebo/Yellow'
+    })
     robot_desc2 = doc2.toxml()
-    doc3 = xacro.process_file(xacro_file, mappings={'prefix': 'robot3/'})
+    doc3 = xacro.process_file(xacro_file, mappings={
+        'prefix': 'robot3/',
+        'publish_odom_tf': 'false',
+        'gazebo_body_material': 'Gazebo/Grey',
+        'gazebo_lidar_material': 'Gazebo/Blue'
+    })
     robot_desc3 = doc3.toxml()
 
     # Gazebo & RViz
@@ -34,21 +49,9 @@ def generate_launch_description():
     pid1 = Node(package='agv', executable='goal_pid_controller', namespace='robot1', parameters=[{'use_sim_time': True, 'test_name': 'robot1_ekf_test', 'kp': 1.2, 'kd': 0.2, 'odom_topic': 'odometry/filtered'}])
     map_to_odom1 = Node(package='tf2_ros', executable='static_transform_publisher', arguments=['0', '1.0', '0', '0', '0', '0', 'map', 'robot1/odom'], parameters=[{'use_sim_time': True}])
 
-    # Robot 2 (Navigating on Saved Map)
+    # Robot 2 (localize on saved map using LiDAR only)
     rsp2 = Node(package='robot_state_publisher', executable='robot_state_publisher', namespace='robot2', parameters=[{'use_sim_time': True, 'robot_description': robot_desc2}])
     spawn2 = Node(package='gazebo_ros', executable='spawn_entity.py', arguments=['-entity', 'robot2', '-topic', '/robot2/robot_description', '-robot_namespace', 'robot2', '-y', '-1.0'])
-    ekf2 = Node(package='robot_localization', executable='ekf_node', namespace='robot2', parameters=[ekf_config_file, {'use_sim_time': True, 'odom_frame': 'robot2/odom', 'base_link_frame': 'robot2/base_link', 'world_frame': 'robot2/odom'}], remappings=[('odometry/filtered', 'odometry/local')])
-    
-    # Map Server
-    map_server = Node(
-        package='nav2_map_server',
-        executable='map_server',
-        name='map_server',
-        output='screen',
-        parameters=[{'use_sim_time': True, 'yaml_filename': map_yaml_file}]
-    )
-    
-    # AMCL for Localization (Replaces SLAM)
     amcl = Node(
         package='nav2_amcl',
         executable='amcl',
@@ -65,6 +68,7 @@ def generate_launch_description():
             'odom_frame_id': 'robot2/odom',
             'base_frame_id': 'robot2/base_link',
             'global_frame_id': 'map',
+            'scan_topic': '/robot2/scan',
             'set_initial_pose': True,
             'initial_pose.x': 0.0,
             'initial_pose.y': -1.0,
@@ -73,7 +77,16 @@ def generate_launch_description():
         }]
     )
     
-    # Lifecycle Manager to activate Map Server and AMCLs
+    # Map Server
+    map_server = Node(
+        package='nav2_map_server',
+        executable='map_server',
+        name='map_server',
+        output='screen',
+        parameters=[{'use_sim_time': True, 'yaml_filename': map_yaml_file}]
+    )
+    
+    # Lifecycle Manager to activate Map Server and AMCL localization
     lifecycle_manager = Node(
         package='nav2_lifecycle_manager',
         executable='lifecycle_manager',
@@ -85,7 +98,12 @@ def generate_launch_description():
     )
 
     tf_odom2 = Node(package='agv', executable='tf_to_odom', namespace='robot2', parameters=[{'base_frame': 'robot2/base_link', 'odom_frame': 'map', 'use_sim_time': True}])
-    pid2 = Node(package='agv', executable='goal_pid_controller', namespace='robot2', parameters=[{'use_sim_time': True, 'test_name': 'robot2_lidar_test', 'kp': 0.5, 'ki': 0.01, 'kd': 0.1}])
+    
+    # Nav2 Path Planner for Robot 2
+    nav2_robot2 = ExecuteProcess(
+        cmd=['ros2', 'launch', 'agv', 'nav2_robot2_launch.py'],
+        output='screen'
+    )
 
     # Robot 3 (Navigating on Saved Map)
     rsp3 = Node(package='robot_state_publisher', executable='robot_state_publisher', namespace='robot3', parameters=[{'use_sim_time': True, 'robot_description': robot_desc3}])
@@ -129,7 +147,8 @@ def generate_launch_description():
     return LaunchDescription([
         gazebo_server, gazebo_client, rviz,
         rsp1, spawn1, ekf1, pid1, map_to_odom1,
-        rsp2, spawn2, ekf2, amcl, tf_odom2, pid2,
+        rsp2, spawn2, amcl, tf_odom2,
+        nav2_robot2,
         map_server, lifecycle_manager,
         rsp3, spawn3, ekf3, amcl3, tf_odom3, nav2_robot3
     ])
