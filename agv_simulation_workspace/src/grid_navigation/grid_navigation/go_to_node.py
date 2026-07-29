@@ -3,9 +3,11 @@ import rclpy
 from rclpy.node import Node
 import argparse
 import math
+import time
 from nav_msgs.msg import Odometry
 
 from grid_navigation.grid_nodes import GridMap
+from grid_navigation.path_planner import GridPlanner
 from grid_navigation.navigator import Nav2Client
 
 class OdomReader(Node):
@@ -48,43 +50,55 @@ def main():
     dest_node = temp_node.get_parameter('dest_node').value
     temp_node.destroy_node()
     
-    # Log the robot's current pose for context, then send ONE Nav2 goal
-    # straight to the destination node. Nav2's global planner will pick the
-    # optimal path from wherever the robot currently is — no detour through
-    # a "closest grid node" first.
     grid = GridMap(spacing=1.0, start_x=0.0, start_y=0.0)
+    planner = GridPlanner(cols=5, rows=5)
     dest = grid.get_node(dest_node)
     if dest is None:
         print(f"ERROR: Unknown destination node {dest_node}")
         rclpy.shutdown()
         return
-    dest_x, dest_y, dest_yaw = dest
 
+    # Snap the robot's current pose to the nearest grid node so the planner
+    # can build an L-shaped Manhattan path that steps through every node
+    # between the start and the destination.
     odom_reader = OdomReader(robot_name)
-    rclpy.spin_once(odom_reader, timeout_sec=2.0)
-    if odom_reader.current_x is not None:
-        print(f"INFO: {robot_name} currently at "
-              f"({odom_reader.current_x:.2f}, {odom_reader.current_y:.2f}), "
-              f"sending direct Nav2 goal to {dest_node} "
-              f"({dest_x:.2f}, {dest_y:.2f}).")
+    start_time = time.time()
+    while odom_reader.current_x is None and time.time() - start_time < 5.0:
+        rclpy.spin_once(odom_reader, timeout_sec=0.2)
+
+    if odom_reader.current_x is None:
+        print(f"WARN: No odometry for {robot_name}; defaulting start to N1.")
+        start_node = 'N1'
     else:
-        print(f"WARN: Could not read odometry for {robot_name}; sending goal anyway.")
+        start_node = find_closest_node(
+            grid, odom_reader.current_x, odom_reader.current_y)
+        print(f"INFO: {robot_name} at "
+              f"({odom_reader.current_x:.2f}, {odom_reader.current_y:.2f}); "
+              f"snapping to {start_node}.")
     odom_reader.destroy_node()
+
+    path = planner.plan_path(start_node, dest_node)
+    if not path:
+        print(f"ERROR: No path from {start_node} to {dest_node}.")
+        rclpy.shutdown()
+        return
+    print(f"INFO: L-shaped path: {' -> '.join(path)}")
 
     navigator = Nav2Client(robot_name=robot_name)
     try:
-        # Publish the straight start->goal line to RViz so the operator sees
-        # the intent, even though Nav2 may curve around obstacles.
-        if odom_reader.current_x is not None:
-            navigator.publish_path_to_rviz([
-                (odom_reader.current_x, odom_reader.current_y),
-                (dest_x, dest_y),
-            ])
-        ok = navigator.navigate_to_pose(dest_x, dest_y, dest_yaw)
-        if ok:
-            navigator.get_logger().info(f"Reached {dest_node}.")
-        else:
-            navigator.get_logger().warn(f"Nav2 failed to reach {dest_node}.")
+        path_coords = [grid.get_node(n)[:2] for n in path]
+        navigator.publish_path_to_rviz(path_coords)
+
+        for i, node_name in enumerate(path):
+            x, y, yaw = grid.get_node(node_name)
+            navigator.get_logger().info(
+                f"[{i+1}/{len(path)}] Navigating to {node_name} "
+                f"at ({x:.2f}, {y:.2f})")
+            if not navigator.navigate_to_pose(x, y, yaw):
+                navigator.get_logger().warn(
+                    f"Nav2 failed at {node_name}; aborting remaining path.")
+                return
+        navigator.get_logger().info(f"Reached {dest_node}.")
     except KeyboardInterrupt:
         pass
     finally:

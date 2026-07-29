@@ -441,7 +441,7 @@
             type: 'scatter',
             data: { datasets: [
                 {
-                    label: 'Ideal Path (BFS Planned)',
+                    label: 'Ideal Path (L-shape Planned)',
                     backgroundColor: 'rgba(0,0,0,0)',
                     borderColor: '#2c3e50',
                     showLine: true,
@@ -701,21 +701,22 @@
                             x: activeNav.destX, y: activeNav.destY, name: 'GOAL (' + activeNav.node + ')'
                         }];
                     } else if (!activeNav.plannedPathXY) {
-                        // Ideal path is now the STRAIGHT LINE from the robot's
-                        // actual starting pose to the clicked destination —
-                        // matching what Nav2 actually attempts (direct goal).
+                        // Ideal path is the horizontal-first L-shape across
+                        // the grid — same routing the backend planner uses so
+                        // the dashboard shows every node the robot will pass
+                        // through.
                         const startPose = liveTrace[0];
-                        const goalXY = { x: activeNav.destX, y: activeNav.destY };
-                        activeNav.startXY = { x: startPose.x, y: startPose.y };
                         activeNav.startNode = findClosestNode(startPose.x, startPose.y);
-                        activeNav.plannedPathXY = [activeNav.startXY, goalXY];
-                        // plannedPath is used only for waypoint labels; empty
-                        // intermediates now since it's a single straight line.
-                        activeNav.plannedPath = [activeNav.startNode, activeNav.node];
-                        activeNav.idealLength = Math.hypot(
-                            goalXY.x - activeNav.startXY.x,
-                            goalXY.y - activeNav.startXY.y
-                        );
+                        activeNav.plannedPath = lShapedGridPath(activeNav.startNode, activeNav.node);
+                        activeNav.plannedPathXY = activeNav.plannedPath.map(nodeCoords);
+                        activeNav.startXY = activeNav.plannedPathXY[0];
+                        let idealLen = 0;
+                        for (let i = 1; i < activeNav.plannedPathXY.length; i++) {
+                            idealLen += Math.hypot(
+                                activeNav.plannedPathXY[i].x - activeNav.plannedPathXY[i-1].x,
+                                activeNav.plannedPathXY[i].y - activeNav.plannedPathXY[i-1].y);
+                        }
+                        activeNav.idealLength = idealLen;
                     }
 
                     if (!waiting) {
@@ -725,8 +726,13 @@
                         //   5 = START marker
                         //   6 = GOAL marker
                         chartComparative.data.datasets[0].data = activeNav.plannedPathXY;
-                        // No intermediate waypoints in direct-goal mode.
-                        chartComparative.data.datasets[4].data = [];
+                        // Intermediate waypoints = every planned node except
+                        // the start and the goal, so each hop is labelled.
+                        const midNodes = activeNav.plannedPath.slice(1, -1);
+                        chartComparative.data.datasets[4].data = midNodes.map(n => {
+                            const c = nodeCoords(n);
+                            return { x: c.x, y: c.y, name: n };
+                        });
                         chartComparative.data.datasets[5].data = [{
                             x: activeNav.startXY.x, y: activeNav.startXY.y,
                             name: 'START (' + activeNav.startNode + ')'
@@ -858,34 +864,26 @@
             return { x: col * GRID_SPACING, y: -row * GRID_SPACING };
         }
 
-        // Same BFS as grid_navigation/path_planner.py — 4-connected grid,
-        // returns minimum-hop node names from start to dest inclusive.
-        function bfsGridPath(startNode, destNode) {
+        // Mirrors grid_navigation/path_planner.py — walk the start row to the
+        // destination column, then walk that column to the destination row
+        // (horizontal-first L-shape). Returns every node the robot passes
+        // through, inclusive of start and dest.
+        function lShapedGridPath(startNode, destNode) {
             const startId = parseInt(startNode.slice(1), 10);
             const destId = parseInt(destNode.slice(1), 10);
             if (startId === destId) return [startNode];
-            const visited = new Set([startId]);
-            const queue = [[startId]];
-            while (queue.length) {
-                const path = queue.shift();
-                const cur = path[path.length - 1];
-                const idx = cur - 1;
-                const row = Math.floor(idx / GRID_COLS);
-                const col = idx % GRID_COLS;
-                const neighbours = [];
-                if (col > 0) neighbours.push(cur - 1);
-                if (col < GRID_COLS - 1) neighbours.push(cur + 1);
-                if (row > 0) neighbours.push(cur - GRID_COLS);
-                if (row < GRID_ROWS - 1) neighbours.push(cur + GRID_COLS);
-                for (const nb of neighbours) {
-                    if (visited.has(nb)) continue;
-                    visited.add(nb);
-                    const np = path.concat(nb);
-                    if (nb === destId) return np.map(n => 'N' + n);
-                    queue.push(np);
-                }
-            }
-            return [];
+            const r1 = Math.floor((startId - 1) / GRID_COLS);
+            const c1 = (startId - 1) % GRID_COLS;
+            const r2 = Math.floor((destId - 1) / GRID_COLS);
+            const c2 = (destId - 1) % GRID_COLS;
+            const ids = [startId];
+            const colStep = c2 > c1 ? 1 : -1;
+            let col = c1;
+            while (col !== c2) { col += colStep; ids.push(r1 * GRID_COLS + col + 1); }
+            const rowStep = r2 > r1 ? 1 : -1;
+            let row = r1;
+            while (row !== r2) { row += rowStep; ids.push(row * GRID_COLS + c2 + 1); }
+            return ids.map(n => 'N' + n);
         }
 
         // Perpendicular distance from point p to segment ab (2D).

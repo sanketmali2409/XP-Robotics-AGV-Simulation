@@ -1,0 +1,19 @@
+[0.894s] Invoking command in '/home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/grid_navigation': PYTHONPATH=/home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/grid_navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/grid_navigation/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/grid_navigation/build --no-deps symlink_data
+[1.138s] running develop
+[1.345s] running egg_info
+[1.345s] writing grid_navigation.egg-info/PKG-INFO
+[1.345s] writing dependency_links to grid_navigation.egg-info/dependency_links.txt
+[1.345s] writing entry points to grid_navigation.egg-info/entry_points.txt
+[1.345s] writing requirements to grid_navigation.egg-info/requires.txt
+[1.345s] writing top-level names to grid_navigation.egg-info/top_level.txt
+[1.347s] reading manifest file 'grid_navigation.egg-info/SOURCES.txt'
+[1.348s] writing manifest file 'grid_navigation.egg-info/SOURCES.txt'
+[1.349s] running build_ext
+[1.349s] Creating /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/grid_navigation/lib/python3.10/site-packages/grid-navigation.egg-link (link to .)
+[1.350s] Installing go_to_node script to /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/grid_navigation/lib/grid_navigation
+[1.350s] Installing go_to_node_pid script to /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/grid_navigation/lib/grid_navigation
+[1.350s] Installing grid_navigator script to /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/grid_navigation/lib/grid_navigation
+[1.350s] 
+[1.350s] Installed /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/grid_navigation
+[1.350s] running symlink_data
+[1.376s] Invoked command in '/home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/grid_navigation' returned '0': PYTHONPATH=/home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/grid_navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/install/grid_navigation/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/sanket/Documents/XP_Robotics/StepFile_gazebo/AGV/agv_simulation_workspace/build/grid_navigation/build --no-deps symlink_data

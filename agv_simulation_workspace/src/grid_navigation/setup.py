@@ -25,7 +25,8 @@ setup(
     entry_points={
         'console_scripts': [
             'grid_navigator = grid_navigation.main:main',
-            'go_to_node = grid_navigation.go_to_node:main'
+            'go_to_node = grid_navigation.go_to_node:main',
+            'go_to_node_pid = grid_navigation.go_to_node_pid:main'
         ],
     },
 )

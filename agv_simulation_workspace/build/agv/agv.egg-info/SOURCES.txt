@@ -22,6 +22,13 @@ agv/scan_self_filter.py
 agv/test_orchestrator.py
 agv/tf_to_odom.py
 agv/trajectory_visualizer.py
+agv.egg-info/PKG-INFO
+agv.egg-info/SOURCES.txt
+agv.egg-info/dependency_links.txt
+agv.egg-info/entry_points.txt
+agv.egg-info/requires.txt
+agv.egg-info/top_level.txt
+agv.egg-info/zip-safe
 config/agv.rviz
 config/ekf.yaml
 config/nav2_params.yaml

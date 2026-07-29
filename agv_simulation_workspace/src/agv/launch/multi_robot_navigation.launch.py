@@ -46,8 +46,9 @@ def generate_launch_description():
     rsp1 = Node(package='robot_state_publisher', executable='robot_state_publisher', namespace='robot1', parameters=[{'use_sim_time': True, 'robot_description': robot_desc1}])
     spawn1 = Node(package='gazebo_ros', executable='spawn_entity.py', arguments=['-entity', 'robot1', '-topic', '/robot1/robot_description', '-robot_namespace', 'robot1', '-y', '1.0'])
     ekf1 = Node(package='robot_localization', executable='ekf_node', namespace='robot1', parameters=[ekf_config_file, {'use_sim_time': True, 'odom_frame': 'robot1/odom', 'base_link_frame': 'robot1/base_link', 'world_frame': 'robot1/odom'}], remappings=[('odometry/filtered', 'odometry/local')])
-    pid1 = Node(package='agv', executable='goal_pid_controller', namespace='robot1', parameters=[{'use_sim_time': True, 'test_name': 'robot1_ekf_test', 'kp': 1.0, 'ki': 0.05, 'kd': 0.2}])
+    pid1 = Node(package='agv', executable='goal_pid_controller', namespace='robot1', parameters=[{'use_sim_time': True, 'test_name': 'robot1_ekf_test', 'kp': 1.0, 'ki': 0.05, 'kd': 0.2, 'odom_topic': 'odometry/global_amcl'}])
     map_to_odom1 = Node(package='tf2_ros', executable='static_transform_publisher', namespace='robot1', arguments=['0', '1.0', '0', '0', '0', '0', 'map', 'robot1/odom'])
+    tf_odom1 = Node(package='agv', executable='tf_to_odom', namespace='robot1', parameters=[{'base_frame': 'robot1/base_link', 'odom_frame': 'map', 'use_sim_time': True}])
     traj1 = Node(package='agv', executable='trajectory_visualizer', namespace='robot1', parameters=[{'use_sim_time': True, 'robot_name': 'robot1', 'odom_topic': 'odometry/local'}])
 
     # Robot 2 (localize on saved map using LiDAR only)
@@ -179,7 +180,7 @@ def generate_launch_description():
 
     return LaunchDescription([
         gazebo_server, gazebo_client, rviz,
-        rsp1, spawn1, ekf1, pid1, map_to_odom1, traj1,
+        rsp1, spawn1, ekf1, pid1, map_to_odom1, tf_odom1, traj1,
         rsp2, spawn2, ekf2, scan_filter2, amcl, tf_odom2,
         nav2_robot2, traj2, pose_logger2,
         map_server, lifecycle_manager,

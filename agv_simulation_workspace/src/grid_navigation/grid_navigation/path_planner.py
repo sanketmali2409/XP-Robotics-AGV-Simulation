@@ -28,10 +28,20 @@ class GridPlanner:
 
         return neighbors
 
+    def _row_col(self, node_id):
+        idx = node_id - 1
+        return idx // self.cols, idx % self.cols
+
+    def _id(self, row, col):
+        return row * self.cols + col + 1
+
     def plan_path(self, start_node, dest_node):
         """
-        Uses Breadth-First Search (BFS) to find the shortest sequence of nodes
-        from start_node to dest_node.
+        Builds an L-shaped Manhattan path from start_node to dest_node:
+        step horizontally along the start row until the destination column is
+        reached, then step vertically along that column to the destination.
+        The robot therefore passes through every node in between (a full row
+        segment followed by a full column segment).
         Expects node names like 'N1', 'N25'. Returns a list of node names.
         """
         start_id = int(start_node[1:])
@@ -40,21 +50,23 @@ class GridPlanner:
         if start_id == dest_id:
             return [start_node]
 
-        queue = deque([[start_id]])
-        visited = set([start_id])
+        r1, c1 = self._row_col(start_id)
+        r2, c2 = self._row_col(dest_id)
 
-        while queue:
-            path = queue.popleft()
-            current = path[-1]
+        path_ids = [start_id]
 
-            if current == dest_id:
-                return [f"N{node}" for node in path]
+        # Horizontal leg: walk across the start row to the destination column.
+        col_step = 1 if c2 > c1 else -1
+        col = c1
+        while col != c2:
+            col += col_step
+            path_ids.append(self._id(r1, col))
 
-            for neighbor in self.get_neighbors(current):
-                if neighbor not in visited:
-                    visited.add(neighbor)
-                    new_path = list(path)
-                    new_path.append(neighbor)
-                    queue.append(new_path)
+        # Vertical leg: walk down (or up) the destination column to the goal.
+        row_step = 1 if r2 > r1 else -1
+        row = r1
+        while row != r2:
+            row += row_step
+            path_ids.append(self._id(row, c2))
 
-        return [] # No path found
+        return [f"N{n}" for n in path_ids]
